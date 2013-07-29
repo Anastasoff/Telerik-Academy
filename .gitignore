@@ -89,6 +89,10 @@ csx
 AppPackages/
 
 # Others
+*.gdoc
+*.rar
+*.zip
+*.pptx
 [Bb]in
 [Oo]bj
 sql

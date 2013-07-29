@@ -89,6 +89,7 @@ csx
 AppPackages/
 
 # Others
+[Tt]estSolution/
 *.gdoc
 *.rar
 *.zip

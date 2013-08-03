@@ -91,6 +91,7 @@ AppPackages/
 # Others
 $tf/
 [Tt]estSolution/
+*.pdf
 *.gdoc
 *.rar
 *.zip

@@ -12,3 +12,5 @@ Homeworks and projects
 | --- | -------------------------------------------------------------------------------------------------- |
 | 1.  | [C# Part I](https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharpPartOne)   |
 | 2.  | [C# Part II](https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharpPartTwo)  |
+
+---

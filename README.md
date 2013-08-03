@@ -1,4 +1,4 @@
-# Telerik Academy
+Telerik Academy
 ===============
 #### Season 2013/2014
 

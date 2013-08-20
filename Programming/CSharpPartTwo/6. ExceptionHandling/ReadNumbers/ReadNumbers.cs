@@ -20,14 +20,21 @@ class ReadNumbers
 
     static void Main()
     {
+        Console.WriteLine("Enter a number (1, 100): ");
+
         try
         {
             int start = 1;
             int end = 100;
             for (int i = 0; i < 10; i++)
             {
+                Console.Write("Enter a number {0} < : ", start);
                 start = ReadNumber(start, end);
             }
+        }
+        catch (OverflowException)
+        {
+            Console.Error.WriteLine("Invalid number!");
         }
         catch (FormatException)
         {
@@ -36,6 +43,6 @@ class ReadNumbers
         catch (ArgumentOutOfRangeException)
         {
             Console.Error.WriteLine("Invalid number!");
-        }        
+        }
     }
 }

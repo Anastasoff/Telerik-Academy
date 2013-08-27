@@ -1,5 +1,0 @@
-Line 1: This is our first line.
-Line 2: This is our second line.
-Line 3: This is our third line.
-Line 4: This is our fourth line.
-Line 5: This is our fifth line.

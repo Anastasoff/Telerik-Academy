@@ -1,3 +1,0 @@
-proba: 7
-test: 6
-C#: 3

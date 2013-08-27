@@ -1,0 +1,10 @@
+Different -> Line 1: This is our first line.
+Different -> Line 2: This is our second line.
+Same -> Line 3: This is our third line.
+Different -> Line 4: This is our fourth line.
+Same -> Line 5: This is our fifth line.
+Same -> Line 6: This is our sixth line.
+Different -> Line 7: This is our seventh line.
+Different -> Line 8: This is our eighth line.
+Different -> Line 9: This is our ninth line.
+Same -> Line 10: This is our tenth line.

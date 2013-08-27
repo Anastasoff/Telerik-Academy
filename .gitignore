@@ -89,6 +89,7 @@ csx
 AppPackages/
 
 # Others
+*.StyleCop
 $tf/
 [Tt]estSolution/
 *.pdf

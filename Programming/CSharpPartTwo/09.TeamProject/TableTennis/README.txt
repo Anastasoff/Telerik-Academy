@@ -1,6 +1,6 @@
-## Team "Cruella de Vil"
+	Team "Cruella de Vil"
 
-	Dear gamers, Thank you for choosing our product- �Table tennis�. 
+	Dear gamers, Thank you for choosing our product- "Table tennis". 
 Such as one of the most popular games in the word, 
 our virtual console game will provide to you high level emotions and entertainment.
 
@@ -14,7 +14,7 @@ Team members:
 The game:
 
 	Greetings:
-	Dear gamers, Thank you for choosing our product- �Table tennis�. Such as one of the most popular games in the word, our virtual console game will provide you with high level of emotions and entertainment.
+	Dear gamers, Thank you for choosing our product- "Table tennis". Such as one of the most popular games in the word, our virtual console game will provide you with high level of emotions and entertainment.
 	
 	Rules:
 	The Player can play against another player, or play against the computer. For each game, the first player to reach 11 points wins that game, however a game must be won by at least a two point margin.
@@ -29,9 +29,9 @@ The game:
 	On any stage of the game you can pause or stop the game/ by hitting Spacebar or ESC button/. 
 
 	Contacts:
-      	If you notice any unexpected behavior of the game, please contact us at � CruellaTeam@TeleriAcademy.com ,so that ,we can get back to you as soon as possible.
+      	If you notice any unexpected behavior of the game, please contact us ,so that we can get back to you as soon as possible.
 
-The �Cruella De Vil� team wishes you HAPPY GAMING.
+The "Cruella De Vil" team wishes you HAPPY GAMING.
 
 The URL of the game TFS repository:
 https://anastasoff.visualstudio.com/DefaultCollection/Table%20tennis

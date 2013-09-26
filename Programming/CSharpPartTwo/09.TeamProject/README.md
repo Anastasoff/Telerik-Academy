@@ -1,17 +1,23 @@
-##	Team "Cruella de Vil"
+###	Team "Cruella de Vil"
 
 	Dear gamers, Thank you for choosing our product- "Table tennis". 
 Such as one of the most popular games in the word, 
 our virtual console game will provide to you high level emotions and entertainment.
 
-Team members:
-  Zornitza Gencheva  ->  Zornitza_Gencheva
-  Tsvetan Nenchev    ->  nenchev
-  Kiril Asenov       ->  kicata_bg
-  Vasil Bachvarov    ->  vbachvarov
-  Martin Anastasov   ->  Anastasoff
+##### Team members:
 
-The game:
+######  Zornitza Gencheva  =>  Zornitza_Gencheva
+  
+######  Tsvetan Nenchev    =>  nenchev
+  
+######  Kiril Asenov       =>  kicata_bg
+  
+######  Vasil Bachvarov    =>  vbachvarov
+  
+######  Martin Anastasov   =>  Anastasoff
+  
+
+##### The game:
 
 	Greetings:
 	Dear gamers, Thank you for choosing our product- "Table tennis". Such as one of the most popular games in the word, our virtual console game will provide you with high level of emotions and entertainment.

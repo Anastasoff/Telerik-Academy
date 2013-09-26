@@ -1,8 +1,8 @@
 ###	Team "Cruella de Vil"
 
 	Dear gamers, Thank you for choosing our product- "Table tennis". 
-Such as one of the most popular games in the word, 
-our virtual console game will provide to you high level emotions and entertainment.
+	Such as one of the most popular games in the word, 
+	our virtual console game will provide to you high level emotions and entertainment.
 
 ##### Team members:
 

@@ -17,7 +17,7 @@
 7. Write a class GSMTest to test the GSM class:
   * Create an array of few instances of the GSM class.
   * Display the information about the GSMs in the array.
-  * Display the information about the static property IPhone4S.
+  * Display the information about the static property IPhone5S.
 8. Create a class Call to hold a call performed through a GSM. It should contain date, time, dialed phone number and duration (in seconds).
 
 9. Add a property CallHistory in the GSM class to hold a list of the performed calls. Try to use the system class List<Call>.

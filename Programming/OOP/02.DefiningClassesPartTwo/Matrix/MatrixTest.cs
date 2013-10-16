@@ -19,11 +19,18 @@
             intMatrixTwo[0, 1] = -2;
             Console.WriteLine("Subtraction: \n" + (intMatrixOne - intMatrixTwo));
 
-            Matrix<double> doubleMatrixOne = new Matrix<double>(4, 4);
-            Matrix<double> doubleMatrixTwo = new Matrix<double>(4, 4);
+            Matrix<double> doubleMatrixOne = new Matrix<double>(2, 2);
+            Matrix<double> doubleMatrixTwo = new Matrix<double>(2, 2);
 
-            doubleMatrixOne[2, 0] = 5.6;
-            doubleMatrixTwo[2, 0] = 2.8;
+            doubleMatrixOne[0, 0] = 8;
+            doubleMatrixOne[0, 1] = 7;
+            doubleMatrixOne[1, 0] = 6;
+            doubleMatrixOne[1, 1] = 0;
+
+            doubleMatrixTwo[0, 0] = 4;
+            doubleMatrixTwo[0, 1] = 3;
+            doubleMatrixTwo[1, 0] = 2;
+            doubleMatrixTwo[1, 1] = 1;
             Console.WriteLine("Multiplication: \n" + (doubleMatrixOne * doubleMatrixTwo));
 
             Matrix<bool> boolMatrixOne = new Matrix<bool>(2, 3);

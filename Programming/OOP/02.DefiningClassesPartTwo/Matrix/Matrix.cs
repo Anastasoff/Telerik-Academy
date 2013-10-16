@@ -4,13 +4,20 @@
     using System.Text;
 
     // 8. Define a class Matrix<T> to hold a matrix of numbers (e.g. integers, floats, decimals)
-    public class Matrix<T>
+    public class Matrix<T> where T : struct, IComparable, IConvertible, IComparable<T>, IEquatable<T>
     {
         private readonly T[,] matrix;
 
         public Matrix(int row, int col)
-        {
-            this.matrix = new T[row, col];
+        {            
+            if (row < 0 || col < 0)
+            {
+                throw new ApplicationException("Incorrect matrix size.");
+            }
+            else
+            {
+                this.matrix = new T[row, col];
+            }
         }        
 
         public int Rows
@@ -29,17 +36,30 @@
             }
         }
 
-        // 9. Implement an indexer this[row, col] to access the inner matrix cells
         public T this[int row, int col]
         {
             get
             {
-                return this.matrix[row, col];
+                if (this.IsInRange(row, col))
+                {
+                    return this.matrix[row, col];
+                }
+                else
+                {
+                    throw new IndexOutOfRangeException("Index out of range!");
+                }
             }
 
             set
             {
-                this.matrix[row, col] = value;
+                if (this.IsInRange(row, col))
+                {
+                    this.matrix[row, col] = value;
+                }
+                else
+                {
+                    throw new IndexOutOfRangeException("Index out of range!");
+                }
             }
         }
 
@@ -107,7 +127,10 @@
             {
                 for (int j = 0; j < cols; j++)
                 {
-                    resultMatrix[i, j] = (dynamic)firstMatrix[i, j] * secondMatrix[i, j];
+                    for (int k = 0; k < cols; k++)
+                    {
+                        resultMatrix[i, j] += (dynamic)firstMatrix[i, k] * (dynamic)secondMatrix[k, j];
+                    }
                 }
             }
 
@@ -161,6 +184,18 @@
             }
 
             return result.ToString();
+        }
+
+        private bool IsInRange(int row, int col)
+        {
+            if ((row < 0) || (row >= this.matrix.GetLength(0)) || (col < 0) || (col >= this.matrix.GetLength(1)))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }

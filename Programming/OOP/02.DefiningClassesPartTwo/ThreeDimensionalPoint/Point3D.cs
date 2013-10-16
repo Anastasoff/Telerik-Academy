@@ -4,7 +4,7 @@
     public struct Point3D
     {
         // 2. Add a private static read-only field to hold the start of the coordinate system – the point O{0, 0, 0}. Add a static property to return the point O.
-        public static readonly Point3D StartPoint = new Point3D(0, 0, 0);
+        private static readonly Point3D StartPoint = new Point3D(0, 0, 0);
 
         // 2.1 Add a static property to return the point O.
         public static Point3D GetStartPoint

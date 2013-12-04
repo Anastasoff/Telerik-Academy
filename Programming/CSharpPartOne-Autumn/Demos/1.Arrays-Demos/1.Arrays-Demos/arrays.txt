@@ -1,0 +1,16 @@
+01. new string[] {...};
+
+02. array size -> .Length;
+    reversed array;
+    print array;
+
+03. filling array;
+    chech symmetry;
+
+04. string[] <array name> = {...};
+    print each array element;
+
+05. set element's index;
+    print array with foreach loop;
+    assign values to odd elemetns;
+    

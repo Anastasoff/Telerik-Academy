@@ -4,11 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1F4292DC-3009-4191-85F6-8E29705E7BC3}</ProjectGuid>
+    <ProjectGuid>{353445C0-D206-4C03-AC09-86D82EFF9C3C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MobilePhoneDevice</RootNamespace>
-    <AssemblyName>MobilePhoneDevice</AssemblyName>
+    <RootNamespace>SoftwareAcademy</RootNamespace>
+    <AssemblyName>SoftwareAcademy</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -34,21 +33,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Battery.cs" />
-    <Compile Include="BatteryType.cs" />
-    <Compile Include="Call.cs" />
-    <Compile Include="Display.cs" />
-    <Compile Include="GSM.cs" />
-    <Compile Include="GSMCallHistoryTest.cs" />
-    <Compile Include="GSMTest.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SoftwareAcademy.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

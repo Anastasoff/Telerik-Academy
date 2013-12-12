@@ -53,7 +53,7 @@
       <FileName>School.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="School.ICommentable" Collapsed="true">
+  <Interface Name="School.ICommentable">
     <Position X="5.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>

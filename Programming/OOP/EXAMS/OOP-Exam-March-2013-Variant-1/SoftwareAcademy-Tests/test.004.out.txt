@@ -1,1 +1,0 @@
-LocalCourse: Name=Java; Lab=Big Hall

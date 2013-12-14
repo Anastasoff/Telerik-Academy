@@ -1,4 +1,0 @@
-birth deer D (1,1)
-birth lion L (2,2)
-go L (1,1)
-end

@@ -1,7 +1,0 @@
-create rock 10 (0,0)
-create knight K (0,0) 1
-K attack
-create giant B (0,0)
-B gather
-B attack
-end

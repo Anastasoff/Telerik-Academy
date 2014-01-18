@@ -12,5 +12,4 @@ Telerik Academy
  4.  [Object-oriented Programing](https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/OOP)
 
 #### Web Design and UI Technologies
-
-###### COMING SOON
+ 1. [HTML] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/HTML)

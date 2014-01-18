@@ -1,0 +1,7 @@
+.left {
+	text-align: right;
+}
+
+#name, #email, #school {
+	width: 180px;
+}

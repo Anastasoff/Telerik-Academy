@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <title>Calculator</title>
+      <link type="text/css" rel="stylesheet" href="css/styles.css" />
+   </head>
+   <body>
+      <form name="Calc" action="post" method="demo.php">
+         <table cellspacing="0" cellpadding="0">
+            <tr>
+               <th colspan="4">
+                  <div class="result">
+				  <output name="Output" ></output>
+				  </div>
+               </th>
+            </tr>
+            <tr>
+               <td>
+                  <input type="button" value="7" OnClick="Calc.Output.value += '7'" />
+               </td>
+               <td>
+                  <input type="button" value="8" OnClick="Calc.Output.value += '8'" />
+               </td>
+               <td>
+                  <input type="button" value="9" OnClick="Calc.Output.value += '9'" />
+               </td>
+               <td>
+                  <input type="button" value="&divide;" OnClick="Calc.Output.value += ' &divide; '" />
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <input type="button" value="4" OnClick="Calc.Output.value += '4'" />
+               </td>
+               <td>
+                  <input type="button" value="5" OnClick="Calc.Output.value += '5'" />
+               </td>
+               <td>
+                  <input type="button" value="6" OnClick="Calc.Output.value += '6'" />
+               </td>
+               <td>
+                  <input type="button" value="&times;" OnClick="Calc.Output.value += ' &times; '" />
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <input type="button" value="1" OnClick="Calc.Output.value += '1'" />
+               </td>
+               <td>
+                  <input type="button" value="2" OnClick="Calc.Output.value += '2'" />
+               </td>
+               <td>
+                  <input type="button" value="3" OnClick="Calc.Output.value += '3'" />
+               </td>
+               <td>
+                  <input type="button" value="-" OnClick="Calc.Output.value += ' - '" />
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <input type="button" id="zero" value="0" OnClick="Calc.Output.value += '0'" />
+               </td>
+               <td>
+                  <input type="button" value="." OnClick="Calc.Output.value += '.'" />
+               </td>
+               <td>
+                  <input type="button" value="=" OnClick="Calc.Output.value = eval(Calc.Output.value)" />
+               </td>
+               <td>
+                  <input type="button" value="+" OnClick="Calc.Output.value += ' + '" />
+               </td>
+            </tr>
+         </table>
+      </form>
+   </body>
+</html>

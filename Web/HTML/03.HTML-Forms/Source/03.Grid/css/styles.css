@@ -1,0 +1,34 @@
+table {
+	border-collapse: collapse;
+}
+
+table, th, td {
+	border: 1px solid black;
+}
+
+thead, tfoot {
+	background-color: #EBEBEB;
+}
+
+th, td {
+	padding: 5px;
+}
+
+.productID {
+	width: 30px;
+}
+
+.unitPrice, .quantity, .stock {
+	width: 100px;
+}
+
+.pageNumber, .pages {
+	float: left;
+	width: 350;
+}
+
+.counter {
+	float: right;
+	width: 200px;
+	text-align: right;
+}

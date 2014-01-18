@@ -1,0 +1,45 @@
+.mainTable {
+	border: 1px solid black;
+}
+
+.nav{
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+.nav li{
+    display:inline;
+}
+.nav a{
+    display:inline-block;
+    padding:10px;
+}
+
+hr {
+	color: black;
+	background-color: black;
+	height: 2px;
+}
+
+legend {
+	text-align: center;
+	margin: 0;
+}
+
+.ranges {
+	list-style: none;
+}
+
+.right {
+	position: fixed;
+	left: 50%;
+	margin-left: 230px;
+}
+
+.left {
+	position: fixed;
+	left: 50%;
+	margin-left: -222px;
+}

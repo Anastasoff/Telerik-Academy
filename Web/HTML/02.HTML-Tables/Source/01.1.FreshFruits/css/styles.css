@@ -1,0 +1,9 @@
+th {
+	font-style: italic;
+	font-size: 150%
+}
+
+.column-1 {
+	word-wrap: break-word;
+	width: 220px
+}

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    <title>Submit Form</title>
+	<link type="text/css" rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <form method="post" action="demo.aspx">
+        <fieldset style="width: 300px">
+            <legend>Personal Information</legend>
+			
+			<table>
+				<tr>
+					<td class="left">
+						<label for="name">Member name :</label>
+					</td>
+					<td>
+						<input type="text" id="name" required="required" />
+					</td>
+				</tr>
+				<tr>
+					<td class="left">
+						<label for="email">Email :</label>
+					</td>
+					<td>
+						<input type="email" id="email" required="required" placeholder="sample@email.com" />
+					</td>
+				</tr>
+				<tr>
+					<td class="left">
+						<label for="school">School :</label>
+					</td>
+					<td>
+						<input type="text" id="school" required="required" />
+					</td>
+				</tr>
+			</table>
+        </fieldset>
+
+        <div>
+            <input type="image" src="images/submit-button.png" alt="Submit" />
+        </div>
+    </form>
+</body>
+</html>

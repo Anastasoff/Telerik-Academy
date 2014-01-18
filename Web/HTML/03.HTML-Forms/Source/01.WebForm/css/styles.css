@@ -1,0 +1,61 @@
+﻿table {
+    border-collapse: collapse;
+}
+
+.left {
+    width: 150px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.foot {
+    text-align: center;
+    background-color: lightcyan;
+}
+
+#lastName, #firstName, #city, #zip, #country, #email {
+	width: 200px;
+}
+
+#address, #comment {
+	width: 300px;
+	height: 50px;
+}
+
+#state {
+	width: 50px;
+}
+
+.stateCell {	
+	width: 40px;
+	text-align: right;
+	font-weight: bold;
+}
+
+#intCode {
+	width: 25px;
+}
+
+#mobilePrefix {
+	width: 25px;
+}
+
+#NSN {
+	width: 45px;
+}
+
+.birthDate {
+	font-size: 12px;
+}
+
+#month, #day {
+	width: 40px;
+}
+
+#year {
+	width: 50px;
+}
+
+#submit, #reset {
+	font-weight: bold;
+}

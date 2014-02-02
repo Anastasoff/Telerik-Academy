@@ -13,3 +13,4 @@ Telerik Academy
 
 #### Web Design and UI Technologies
  1. [HTML] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/HTML)
+ 2. [CSS] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/CSS)

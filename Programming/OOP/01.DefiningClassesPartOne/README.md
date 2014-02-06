@@ -6,7 +6,7 @@
 
 2. Define several constructors for the defined classes that take different sets of arguments (the full information for the class or part of it). Assume that model and manufacturer are mandatory (the others are optional). All unknown data fill with null.
 
-3. Add an enumeration BatteryType (Li-Ion, NiMH, NiCd, â€¦) and use it as a new field for the batteries.
+3. Add an enumeration BatteryType (Li-Ion, NiMH, NiCd, …) and use it as a new field for the batteries.
 
 4. Add a method in the GSM class for displaying all information about it. Try to override ToString().
 

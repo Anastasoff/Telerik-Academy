@@ -5,7 +5,7 @@
 
     public class GSM
     {
-        // 6. Add a static field and a property IPhone4S in the GSM class to hold the information about iPhone 4S.
+        // 6. Add a static field and a property IPhone5S in the GSM class to hold the information about iPhone 5S.
         private static GSM iPhone5S;
 
         // 1. Define a class that holds information about a mobile phone device:
@@ -15,32 +15,27 @@
         private string owner;
 
         // Class GSM holding instances of the classes Battery and Display
-        private Battery battery = new Battery();
-        private Display display = new Display();
+        private Battery battery;
+        private Display display;
 
         // 9. Try to use the system class List<Call>.
-        private List<Call> callHistory;       
+        private List<Call> callHistory;
 
         // 2. Define constructors for the defined classes that take different sets of arguments.
-        static GSM()
-        {
-            iPhone5S = new GSM("iPhone5S", "Apple", 599, "Gosho", new Battery(BatteryType.LiPol, "Non-removable", 400, 10), new Display(4.5, "16M"));
-        }
-
         public GSM(string model, string manufacturer)
-            : this(model, manufacturer, 0, null, null, null) // Reuse the constructor.
+            : this(model, manufacturer, 0.0, null, null, null)
         {
             this.callHistory = new List<Call>();
         }
 
         public GSM(string model, string manufacturer, double price)
-            : this(model, manufacturer, price, null, null, null) // Reuse the constructor.
+            : this(model, manufacturer, price, null, null, null)
         {
             this.callHistory = new List<Call>();
         }
 
         public GSM(string model, string manufacturer, double price, string owner)
-            : this(model, manufacturer, price, owner, null, null) // Reuse the constructor.
+            : this(model, manufacturer, price, owner, null, null)
         {
         }
 
@@ -52,13 +47,29 @@
             this.owner = owner;
             this.battery = battery;
             this.display = display;
+            this.battery = new Battery();
+            this.display = new Display();
         }
 
-        // Property IPhone4S in the GSM class to hold the information about iPhone 4S.
+        // Property IPhone5S in the GSM class to hold the information about iPhone 5S.
         public static string IPhone5S
         {
             get
             {
+                iPhone5S = new GSM("iPhone5S", "Apple");
+                iPhone5S.Price = 599;
+                iPhone5S.Owner = "Bob";
+
+                iPhone5S.battery = new Battery();
+                iPhone5S.battery.BatteryType = BatteryType.LiPol;
+                iPhone5S.battery.Model = "Non-removable";
+                iPhone5S.battery.Idle = 400;
+                iPhone5S.battery.Talk = 10;
+
+                iPhone5S.display = new Display();
+                iPhone5S.display.Size = 4.5;
+                iPhone5S.display.Colors = "16M";
+
                 return iPhone5S.ToString();
             }
         }

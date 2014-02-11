@@ -4,12 +4,13 @@
     using System.Text;
 
     // 8. Define a class Matrix<T> to hold a matrix of numbers (e.g. integers, floats, decimals)
-    public class Matrix<T> where T : struct, IComparable, IConvertible, IComparable<T>, IEquatable<T>
+    public class Matrix<T>
+        where T : struct, IComparable, IConvertible, IComparable<T>, IEquatable<T>
     {
         private readonly T[,] matrix;
 
         public Matrix(int row, int col)
-        {            
+        {
             if (row < 0 || col < 0)
             {
                 throw new ApplicationException("Incorrect matrix size.");
@@ -18,7 +19,7 @@
             {
                 this.matrix = new T[row, col];
             }
-        }        
+        }
 
         public int Rows
         {
@@ -64,7 +65,6 @@
         }
 
         // 10. Implement the operators + and - (addition and subtraction of matrices of the same size)
-
         // Addition
         public static Matrix<T> operator +(Matrix<T> firstMatrix, Matrix<T> secondMatrix)
         {
@@ -173,11 +173,12 @@
         public override string ToString()
         {
             StringBuilder result = new StringBuilder();
+
             for (int i = 0; i < this.Rows; i++)
             {
                 for (int j = 0; j < this.Cols; j++)
                 {
-                    result.AppendFormat("{0,6}", this[i, j]);                    
+                    result.AppendFormat("{0,6}", this[i, j]);
                 }
 
                 result.AppendLine("\n");

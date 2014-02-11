@@ -7,15 +7,17 @@
     public class GenericList<T>
         where T : IComparable
     {
-        // 5.1 Keep the elements of the list in an array with fixed capacity which is given as parameter in the class constructor. 
+        // 5.1 Keep the elements of the list in an array with fixed capacity which is given as parameter in the class constructor.
         private T[] elements;
-        private int currentPosition = 0;
+
+        private int currentPosition;
         private int capacity;
 
         public GenericList(int size)
         {
             this.capacity = size;
             this.elements = new T[this.capacity];
+            this.currentPosition = 0;
         }
 
         public int Size
@@ -25,9 +27,8 @@
                 return this.currentPosition;
             }
         }
-        
-        // 5.3 Implement methods for:
 
+        // 5.3 Implement methods for:
         // Adding element
         public void Add(T elementToAdd)
         {
@@ -104,11 +105,12 @@
             this.currentPosition = 0;
         }
 
-        // 7. Create generic methods Min<T>() and Max<T>() for finding the minimal and maximal element in the  GenericList<T>. 
+        // 7. Create generic methods Min<T>() and Max<T>() for finding the minimal and maximal element in the  GenericList<T>.
         //  You may need to add a generic constraints for the type T.
         public T Min()
         {
             T smallestElement = this.elements[0];
+
             for (int i = 1; i < this.Size; i++)
             {
                 if (smallestElement.CompareTo(this.elements[i]) > 0)
@@ -119,10 +121,11 @@
 
             return smallestElement;
         }
-        
+
         public T Max()
         {
             T largestElement = this.elements[0];
+
             for (int i = 1; i < this.Size; i++)
             {
                 if (largestElement.CompareTo(this.elements[i]) < 0)
@@ -132,11 +135,12 @@
             }
 
             return largestElement;
-        }        
+        }
 
         public override string ToString()
         {
             StringBuilder result = new StringBuilder();
+
             for (int i = 0; i < this.currentPosition; i++)
             {
                 result.Append(this.elements[i]);
@@ -149,12 +153,13 @@
             return result.ToString();
         }
 
-        // 6. Implement auto-grow functionality: 
+        // 6. Implement auto-grow functionality:
         //  when the internal array is full, create a new array of double size and move all elements to it.
         private void AutoGrow()
         {
             this.capacity *= 2;
             T[] temp = new T[this.capacity];
+
             for (int i = 0; i < this.elements.Length; i++)
             {
                 temp[i] = this.elements[i];

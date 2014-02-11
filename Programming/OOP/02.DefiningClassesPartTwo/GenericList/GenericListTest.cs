@@ -1,7 +1,6 @@
 ﻿namespace GenericList
 {
     using System;
-    using System.Collections.Generic;
 
     public class GenericListTest
     {
@@ -31,7 +30,7 @@
             Console.WriteLine("Max: " + testList.Max());
 
             testList.Clear();
-            Console.WriteLine("Clear: " + testList);
+            Console.WriteLine("Clear: " + testList ?? "[null]");
         }
     }
 }

@@ -11,7 +11,9 @@
             double deltaX = secondPoint.PointX - firstPoint.PointX;
             double deltaY = secondPoint.PointY - firstPoint.PointY;
             double deltaZ = secondPoint.PointZ - firstPoint.PointZ;
+
             distance = Math.Sqrt((deltaX * deltaX) + (deltaY * deltaY) + (deltaZ * deltaZ));
+
             return distance;
         }
     }

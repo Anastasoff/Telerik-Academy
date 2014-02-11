@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-04.ThreeDimensionalPoint", "ThreeDimensionalPoint\01-04.ThreeDimensionalPoint.csproj", "{F73BBD6F-D89D-4144-B703-821B3ECCCD6A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-07.GenericList", "GenericList\05-07.GenericList.csproj", "{0DC37A5B-8C75-49B9-9621-55B677A24901}"

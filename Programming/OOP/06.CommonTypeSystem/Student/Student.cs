@@ -1,8 +1,7 @@
 ﻿// 1. Define a class Student, which contains data about a student:
 // first, middle and last name, SSN, permanent address, mobile phone e-mail, course, specialty, university, faculty. 
 // Use an enumeration for the specialties, universities and faculties. 
-// Override the standard methods, inherited by  System.Object: Equals(), ToString(), GetHashCode() and operators == and !=
-
+// Override the standard methods, inherited by  System.Object: Equals(), ToString(), GetHashCode() and operators == and !=.
 namespace Student
 {
     using System;
@@ -120,6 +119,7 @@ namespace Student
         public override string ToString()
         {
             var result = new StringBuilder();
+
             result.AppendLine(string.Format("Name: {0} {1} {2}", this.FirstName, this.MiddleName, this.LastName));
             result.AppendLine("SSN: " + this.SSN);
             result.AppendLine("Address: " + this.Address);
@@ -129,6 +129,7 @@ namespace Student
             result.AppendLine("Specialty: " + this.Specialty);
             result.AppendLine("University: " + this.University);
             result.AppendLine("Faculty: " + this.Faculty);
+
             return result.ToString();
         }
 

@@ -32,6 +32,7 @@ namespace Human
                 new Student("Mitko", "Todorov", 5),
                 new Student("Atanas", "Kazandjiev", 5)
             };
+
             var orderByGrade = students.OrderBy(x => x.Grade).ThenBy(x => x.FirstName);
             foreach (Student student in orderByGrade)
             {
@@ -53,6 +54,7 @@ namespace Human
                 new Worker("Joro", "Krasimirov", 303.90, 14),
                 new Worker("Asencho", "Asenov", 103.60, 5)
             };
+
             var orderByMoneyPerHour = workers.OrderByDescending(x => x.MoneyPerHour());
             foreach (Worker worker in orderByMoneyPerHour)
             {

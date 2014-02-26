@@ -14,26 +14,20 @@ namespace IEnumerableExtensions
             {
                 int arraySize = randomGenerator.Next(6, 11);
                 int[] numbers = new int[arraySize];
-                Console.Write("{ ");
+
                 for (int i = 0; i < numbers.Length; i++)
                 {
                     numbers[i] = randomGenerator.Next(-10, 11);
-                    Console.Write(numbers[i]);
-                    if (i != numbers.Length - 1)
-                    {
-                        Console.Write(", ");
-                    }
                 }
 
-                Console.WriteLine(" }");
-
-                Console.WriteLine("Sum\t:{0,10}", numbers.Sum<int>());
-                Console.WriteLine("Product\t:{0,10}", numbers.Product<int>());
-                Console.WriteLine("Min\t:{0,10}", numbers.Min<int>());
-                Console.WriteLine("Max\t:{0,10}", numbers.Max<int>());
-                Console.WriteLine("Average\t:{0,10:F2}", numbers.Average<int>());
-
-                Console.WriteLine("\nPress any key to stop...");
+                Action<string> output = Console.WriteLine;
+                output(string.Format("Array\t=> {0}\n", numbers.ToString<int>()));
+                output(string.Format("Sum\t=>{0,10}", numbers.Sum<int>()));
+                output(string.Format("Product\t=>{0,10}", numbers.Product<int>()));
+                output(string.Format("Min\t=>{0,10}", numbers.Min<int>()));
+                output(string.Format("Max\t=>{0,10}", numbers.Max<int>()));
+                output(string.Format("Average\t=>{0,10:F2}", numbers.Average<int>()));
+                output("\nPress any key to stop...");
                 Thread.Sleep(500);
                 Console.Clear();
 
@@ -41,7 +35,7 @@ namespace IEnumerableExtensions
                 {
                     Environment.Exit(0);
                 }
-            }           
+            }
         }
     }
 }

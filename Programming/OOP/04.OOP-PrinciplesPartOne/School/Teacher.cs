@@ -5,33 +5,53 @@
     public class Teacher : Person, ICommentable
     {
         private string comment;
-        private List<Discipline> disciplines;
+        private ICollection<Discipline> disciplines;
 
-        public Teacher(string name, Discipline[] disciplines)
+        public Teacher(string name, ICollection<Discipline> disciplines)
             : base(name)
         {
-            this.disciplines = new List<Discipline>(disciplines);
+            this.Disciplines = new List<Discipline>(disciplines);
         }
 
         public string Comment
         {
-            get { return this.comment; }
-            set { this.comment = value; }
+            get
+            {
+                return this.comment;
+            }
+
+            private set
+            {
+                this.comment = value;
+            }
+        }
+
+        public ICollection<Discipline> Disciplines
+        {
+            get
+            {
+                return this.disciplines;
+            }
+
+            private set
+            {
+                this.disciplines = value;
+            }
         }
 
         public void AddComment(string comment)
         {
-            this.comment = comment;
+            this.Comment = comment;
         }
 
         public void AddDiscipline(Discipline discipline)
         {
-            this.disciplines.Add(discipline);
+            this.Disciplines.Add(discipline);
         }
 
         public void RemoveDiscipline(Discipline discipline)
         {
-            this.disciplines.Remove(discipline);
+            this.Disciplines.Remove(discipline);
         }
     }
 }

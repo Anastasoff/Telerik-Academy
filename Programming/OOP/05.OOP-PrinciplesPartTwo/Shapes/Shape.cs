@@ -1,23 +1,19 @@
 ﻿// Define abstract class Shape with only one abstract method CalculateSurface() and fields width and height.
-
 namespace Shapes
 {
     using System;
 
     public abstract class Shape
     {
-        // fields
         private double width;
         private double height;
 
-        // constructor
         protected Shape(double width, double height)
         {
             this.Width = width;
             this.Height = height;
         }
 
-        // properties
         public double Width
         {
             get
@@ -46,7 +42,6 @@ namespace Shapes
             }
         }
 
-        // methods
         public abstract double CalculateSurface();
 
         private void CheckInput(double value)

@@ -4,27 +4,34 @@
 
     public class School
     {
-        private List<SchoolClass> classesOfStudents;
+        private ICollection<SchoolClass> classesOfStudents;
 
-        public School(SchoolClass[] classessOfStudents)
+        public School(ICollection<SchoolClass> classessOfStudents)
         {
-            this.classesOfStudents = new List<SchoolClass>();
+            this.ClassesOfStudents = new List<SchoolClass>(classessOfStudents);
         }
 
-        public SchoolClass[] ClassesOfStudents
+        public ICollection<SchoolClass> ClassesOfStudents
         {
-            get { return this.classesOfStudents.ToArray(); }
-            private set { }
+            get
+            {
+                return this.classesOfStudents;
+            }
+
+            private set
+            {
+                this.classesOfStudents = value;
+            }
         }
 
         public void AddClass(SchoolClass classOfStudents)
         {
-            this.classesOfStudents.Add(classOfStudents);
+            this.ClassesOfStudents.Add(classOfStudents);
         }
 
         public void RemoveClass(SchoolClass classOfStudents)
         {
-            this.classesOfStudents.Remove(classOfStudents);
+            this.ClassesOfStudents.Remove(classOfStudents);
         }
     }
 }

@@ -2,10 +2,9 @@
 {
     public abstract class Cat : Animal
     {
-        public Cat(int age, string name)
+        public Cat(string name, int age, Sex sex)
+            : base(name, age, sex)
         {
-            this.Age = age;
-            this.Name = name;
         }
     }
 }

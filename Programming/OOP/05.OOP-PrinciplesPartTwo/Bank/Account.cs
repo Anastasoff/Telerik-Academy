@@ -16,7 +16,6 @@
             this.InterestRate = interestRate;
         }
 
-        // Properties
         public Customer Customer
         {
             get
@@ -58,10 +57,9 @@
                 }
 
                 this.interestRate = value;
-            }            
+            }
         }
 
-        // Methods
         public abstract decimal CalculateInterest(int mounts);
 
         protected void InputCheck(decimal amount)

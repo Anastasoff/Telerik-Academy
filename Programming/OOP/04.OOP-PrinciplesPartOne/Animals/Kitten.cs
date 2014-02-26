@@ -4,10 +4,9 @@
 
     public class Kitten : Cat
     {
-        public Kitten(int age, string name)
-            : base(age, name)
+        public Kitten(string name, int age)
+            : base(name, age, Sex.female)
         {
-            this.Sex = Sex.female;
         }
 
         public override void Sound()

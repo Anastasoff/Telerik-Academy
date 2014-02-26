@@ -2,18 +2,16 @@
 {
     using System;
 
-    public class Worker : Human
+    public class Worker : Human, IPerson
     {
         private double weekSalary;
         private double workHoursPerDay;
 
         public Worker(string firstName, string lastName, double weekSalary, double workHoursPerDay)
-        // : base(firstName, lastName)
+            : base(firstName, lastName)
         {
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.weekSalary = weekSalary;
-            this.workHoursPerDay = workHoursPerDay;
+            this.WeekSalary = weekSalary;
+            this.WorkHoursPerDay = workHoursPerDay;
         }
 
         public double WeekSalary
@@ -61,8 +59,7 @@
 
         public override string ToString()
         {
-            return string.Format("{0} {1}, week salary: ${2}, work hours per day: {3}, money per hour: ${4:F2};",
-                this.FirstName, this.LastName, this.weekSalary, this.workHoursPerDay, this.MoneyPerHour());
+            return string.Format("{0} {1} \nweek salary: ${2}; work hours per day: {3}; money per hour: ${4:F2};", this.FirstName, this.LastName, this.weekSalary, this.workHoursPerDay, this.MoneyPerHour());
         }
     }
 }

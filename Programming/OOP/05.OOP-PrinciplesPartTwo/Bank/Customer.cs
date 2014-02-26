@@ -15,18 +15,18 @@
         {
             get
             {
-                return this.name; 
+                return this.name;
             }
 
             set
             {
                 if (value.Length <= 1 || string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentException("Invalid name!");
+                    throw new ArgumentException("Invalid customer name!");
                 }
 
-                this.name = value; 
+                this.name = value;
             }
-        }        
+        }
     }
 }

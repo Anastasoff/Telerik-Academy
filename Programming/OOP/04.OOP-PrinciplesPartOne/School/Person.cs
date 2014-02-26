@@ -8,7 +8,7 @@
 
         public Person(string name)
         {
-            this.name = name;
+            this.Name = name;
         }
 
         public string Name
@@ -20,7 +20,7 @@
 
             set
             {
-                if (string.IsNullOrEmpty(value))
+                if (string.IsNullOrEmpty(value) || value.Length <= 2)
                 {
                     throw new ArgumentException("Invalid name!");
                 }

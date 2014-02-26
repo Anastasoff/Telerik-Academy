@@ -2,9 +2,16 @@
 {
     public abstract class Animal : ISound
     {
-        public int Age { get; set; }
+        public Animal(string name, int age, Sex sex)
+        {
+            this.Name = name;
+            this.Age = age;
+            this.Sex = sex;
+        }
 
         public string Name { get; set; }
+
+        public int Age { get; set; }
 
         public Sex Sex { get; set; }
 

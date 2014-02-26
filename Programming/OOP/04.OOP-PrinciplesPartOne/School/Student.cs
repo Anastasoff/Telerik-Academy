@@ -10,14 +10,14 @@
         public Student(string name, int classNumber)
             : base(name)
         {
-            this.classNumber = classNumber;
+            this.ClassNumber = classNumber;
         }
 
         public int ClassNumber
         {
-            get 
-            { 
-                return this.classNumber; 
+            get
+            {
+                return this.classNumber;
             }
 
             set
@@ -33,13 +33,20 @@
 
         public string Comment
         {
-            get { return this.comment; }
-            set { this.comment = value; }
+            get
+            {
+                return this.comment;
+            }
+
+            private set
+            {
+                this.comment = value;
+            }
         }
 
         public void AddComment(string comment)
         {
-            this.comment = comment;
+            this.Comment = comment;
         }
     }
 }

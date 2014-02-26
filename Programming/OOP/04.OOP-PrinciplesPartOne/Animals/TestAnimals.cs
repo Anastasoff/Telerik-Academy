@@ -1,7 +1,7 @@
 ﻿/*
-3. Create a hierarchy Dog, Frog, Cat, Kitten, Tomcat and define useful constructors and methods. 
-Dogs, frogs and cats are Animals. All animals can produce sound (specified by the ISound interface). 
-Kittens and tomcats are cats. All animals are described by age, name and sex. 
+3. Create a hierarchy Dog, Frog, Cat, Kitten, Tomcat and define useful constructors and methods.
+Dogs, frogs and cats are Animals. All animals can produce sound (specified by the ISound interface).
+Kittens and tomcats are cats. All animals are described by age, name and sex.
 Kittens can be only female and tomcats can be only male. Each animal produces a specific sound.
 Create arrays of different kinds of animals and calculate the average age of each kind of animal using a static method (you may use LINQ).
 */
@@ -14,7 +14,7 @@ namespace Animals
 
     public class TestAnimals
     {
-        public static void CalculateAverageAge(List<Animal> animals)
+        public static void CalculateAverageAge(IEnumerable<Animal> animals)
         {
             var sorted =
                 from animal in animals
@@ -35,16 +35,16 @@ namespace Animals
         {
             List<Animal> animals = new List<Animal>()
             {
-                new Dog(22, "Sharo", Sex.male),
-                new Dog(17, "Sara", Sex.female),
-                new Dog(14, "Bobcho", Sex.male),
-                new Dog(4, "Roska", Sex.female),
-                new Frog(1, "Milko", Sex.male),
-                new Frog(4, "Boko", Sex.male),
-                new Kitten(2, "Bochka"), 
-                new Kitten(2, "Chochka"),
-                new Tomcat(11, "Tom"), 
-                new Tomcat(15, "Garfield")
+                new Dog("Sharo", 22, Sex.male),
+                new Dog("Sara", 17, Sex.female),
+                new Dog("Bobcho", 14, Sex.male),
+                new Dog("Roska", 4, Sex.female),
+                new Frog("Milko", 1, Sex.male),
+                new Frog("Boko", 4, Sex.male),
+                new Kitten("Bochka", 2),
+                new Kitten("Chochka", 2),
+                new Tomcat("Tom", 11),
+                new Tomcat("Garfield", 15)
             };
 
             foreach (var animal in animals)
@@ -53,6 +53,7 @@ namespace Animals
             }
 
             Console.WriteLine(new string('=', 35));
+
             CalculateAverageAge(animals);
         }
     }

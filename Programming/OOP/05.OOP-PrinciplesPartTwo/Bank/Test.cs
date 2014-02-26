@@ -1,10 +1,10 @@
 ﻿/*
-  2. A bank holds different types of accounts for its customers: 
- deposit accounts, loan accounts and mortgage accounts. 
+  2. A bank holds different types of accounts for its customers:
+ deposit accounts, loan accounts and mortgage accounts.
  Customers could be individuals or companies.
 
- Your task is to write a program to model the bank system by classes and interfaces. 
- You should identify the classes, interfaces, base classes and abstract actions 
+ Your task is to write a program to model the bank system by classes and interfaces.
+ You should identify the classes, interfaces, base classes and abstract actions
  and implement the calculation of the interest functionality through overridden methods.
 */
 

@@ -1,6 +1,5 @@
 ﻿// Define class Circle and suitable constructor so that at initialization height must be kept equal to width 
 // and implement the CalculateSurface() method. 
-
 namespace Shapes
 {
     using System;

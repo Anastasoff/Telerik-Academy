@@ -6,7 +6,7 @@
     {
         public void Subscribe(Timer start)
         {
-            start.Act += new Timer.EventHandler(this.ExecuteMe);
+            start.Act += new Timer.TimerEventHandler(this.ExecuteMe);
         }
 
         public void ExecuteMe(Timer timer, EventArgs e)

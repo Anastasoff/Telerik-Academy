@@ -28,7 +28,7 @@
                 else
                 {
                     return (((this.InterestRate / 2) * this.Balance) * mounts) + ((this.InterestRate * this.Balance) * (mounts - 12));
-                }                
+                }
             }
             else if (this.Customer is Individual)
             {

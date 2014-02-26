@@ -4,10 +4,9 @@
 
     public class Tomcat : Cat
     {
-        public Tomcat(int age, string name)
-            : base(age, name)
+        public Tomcat(string name, int age)
+            : base(name, age, Sex.male)
         {
-            this.Sex = Sex.male;
         }
 
         public override void Sound()

@@ -4,11 +4,9 @@
 
     public class Frog : Animal
     {
-        public Frog(int age, string name, Sex sex)
+        public Frog(string name, int age, Sex sex)
+            : base(name, age, sex)
         {
-            this.Age = age;
-            this.Name = name;
-            this.Sex = sex;
         }
 
         public override void Sound()

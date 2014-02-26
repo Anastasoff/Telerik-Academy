@@ -7,9 +7,9 @@
     {
         private EventArgs e = null;
 
-        public delegate void EventHandler(Timer counter, EventArgs e);
+        public delegate void TimerEventHandler(Timer counter, EventArgs e);
 
-        public event EventHandler Act;        
+        public event TimerEventHandler Act;        
 
         public void Start(int seconds)
         {

@@ -7,21 +7,21 @@
     {
         private string textID;
         private string comment;
-        private List<Student> students;
-        private List<Teacher> teachers;
+        private ICollection<Student> students;
+        private ICollection<Teacher> teachers;
 
-        public SchoolClass(string textID, Student[] students, Teacher[] teachers)
+        public SchoolClass(string textID, ICollection<Student> students, ICollection<Teacher> teachers)
         {
-            this.textID = textID;
-            this.students = new List<Student>(students);
-            this.teachers = new List<Teacher>(teachers);
+            this.TextID = textID;
+            this.Students = new List<Student>(students);
+            this.Teachers = new List<Teacher>(teachers);
         }
 
         public string TextID
         {
-            get 
-            { 
-                return this.textID; 
+            get
+            {
+                return this.textID;
             }
 
             set
@@ -37,45 +37,66 @@
 
         public string Comment
         {
-            get { return this.comment; }
-            set { this.comment = value; }
+            get
+            {
+                return this.comment;
+            }
+
+            set
+            {
+                this.comment = value;
+            }
         }
 
-        public Student[] Students
+        public ICollection<Student> Students
         {
-            get { return this.students.ToArray(); }
-            private set { }
+            get
+            {
+                return this.students;
+            }
+
+            private set
+            {
+                this.students = value;
+            }
         }
 
-        public Teacher[] Teachers
+        public ICollection<Teacher> Teachers
         {
-            get { return this.teachers.ToArray(); }
-            private set { }
+            get
+            {
+                return this.teachers;
+            }
+
+            private set
+            {
+                this.teachers = value;
+            }
         }
 
         public void AddComment(string comment)
         {
-            this.comment = comment;
+            this.Comment = comment;
         }
 
         public void AddStudent(Student student)
         {
-            this.students.Add(student);
+            this.Students.Add(student);
         }
 
         public void RemoveStudent(Student student)
         {
-            this.students.Remove(student);
+            this.Students.Remove(student);
         }
 
         public void AddTeacher(Teacher teacher)
         {
-            this.teachers.Add(teacher);
+            this.Teachers.Add(teacher);
         }
 
         public void RemoveTeacher(Teacher teacher)
         {
-            this.teachers.Remove(teacher);
+            this.Teachers.Remove(teacher);
         }
     }
 }

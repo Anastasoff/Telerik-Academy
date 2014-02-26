@@ -1,4 +1,4 @@
-﻿// Define a class InvalidRangeException<T> that holds information about an error condition related to invalid range. 
+﻿// Define a class InvalidRangeException<T> that holds information about an error condition related to invalid range.
 // It should hold error message and a range definition [start … end].
 
 namespace Exceptions
@@ -11,7 +11,8 @@ namespace Exceptions
     {
         #region Constructors
 
-        public InvalidRangeException() : base()
+        public InvalidRangeException()
+            : base()
         {
         }
 
@@ -32,13 +33,13 @@ namespace Exceptions
             this.End = end;
         }
 
-        // A constructor is needed for serialization when an 
+        // A constructor is needed for serialization when an
         // exception propagates from a remote server to the client. By MSDN
         protected InvalidRangeException(SerializationInfo info, StreamingContext context)
         {
         }
 
-        #endregion
+        #endregion Constructors
 
         #region Properties
 
@@ -46,7 +47,7 @@ namespace Exceptions
 
         public T End { get; private set; }
 
-        #endregion
+        #endregion Properties
 
         #region Methods
 
@@ -58,6 +59,6 @@ namespace Exceptions
             }
         }
 
-        #endregion
+        #endregion Methods
     }
 }

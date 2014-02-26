@@ -4,12 +4,6 @@
     {
         private string comment;
 
-        public string Name { get; set; }
-
-        public int NumberOfLectures { get; set; }
-
-        public int NumberOfExercises { get; set; }        
-
         public Discipline(string name, int numberOfLectures, int numberOfExercises)
         {
             this.Name = name;
@@ -19,13 +13,26 @@
 
         public string Comment
         {
-            get { return this.comment; }
-            set { this.comment = value; }
+            get
+            {
+                return this.comment;
+            }
+
+            private set
+            {
+                this.comment = value;
+            }
         }
+
+        public string Name { get; set; }
+
+        public int NumberOfLectures { get; private set; }
+
+        public int NumberOfExercises { get; private set; }
 
         public void AddComment(string comment)
         {
-            this.comment = comment;
+            this.Comment = comment;
         }
     }
 }

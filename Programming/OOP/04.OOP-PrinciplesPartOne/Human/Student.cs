@@ -2,23 +2,21 @@
 {
     using System;
 
-    public class Student : Human
+    public class Student : Human, IPerson
     {
         private int grade;
 
         public Student(string firstName, string lastName, int grade)
-        // : base(firstName, lastName)
+            : base(firstName, lastName)
         {
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.grade = grade;
+            this.Grade = grade;
         }
 
         public int Grade
         {
-            get 
-            { 
-                return this.grade; 
+            get
+            {
+                return this.grade;
             }
 
             set

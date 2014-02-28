@@ -8,7 +8,7 @@ namespace NamesByAge
     {
         public static void Main()
         {
-            Student[] students = 
+            Student[] students =
             {
                 new Student("Pesho", "Georgiev", 16),
                 new Student("Gosho", "Peshev", 19),
@@ -26,8 +26,8 @@ namespace NamesByAge
                 Console.WriteLine(student.ToString());
             }
 
-            // -------------------
-            // UseAnnonymousTypes();
+            Console.WriteLine("\nUsing anonymous types...");
+            UseAnnonymousTypes();
         }
 
         public static void UseAnnonymousTypes()

@@ -16,15 +16,15 @@ namespace SortStudentsByName
                 new {FirstName = "Atanas", LastName = "Atanasov"}
             };
 
-            Console.WriteLine("Sorted with Lambda expression:\n");
+            Console.WriteLine("Sorted with Lambda expression:");
             students.OrderByDescending(student => student.FirstName).ThenByDescending(student => student.LastName);
             foreach (var student in students)
             {
                 Console.WriteLine("{0} {1}", student.FirstName, student.LastName);
             }
 
-            Console.WriteLine(new string('-', 20));
-            Console.WriteLine("\nSorted with LINQ:\n");
+            Console.WriteLine(new string('-', 20) + "\n");
+            Console.WriteLine("Sorted with LINQ query:");
             var orderByName =
                 from student in students
                 orderby student.FirstName descending, student.LastName descending

@@ -1,7 +1,7 @@
 ﻿namespace FirstNameBeforeLastName
 {
     public class Student
-    {        
+    {
         public Student(string firstName, string lastName)
         {
             this.FirstName = firstName;

@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.SubstringForStringBuilder", "SubstringForStringBuilder\01.SubstringForStringBuilder.csproj", "{F19F8826-F95D-4627-BE80-33D782644E26}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.IEnumerableExtensions", "IEnumerableExtensions\02.IEnumerableExtensions.csproj", "{E588E959-D57C-4C50-AB6F-5F44C25E801F}"
@@ -16,6 +18,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.ExecuteAtTime", "ExecuteAtTime\07.ExecuteAtTime.csproj", "{3800E107-375F-4316-9F6E-24E5F900B1CA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.EventTimer", "EventTimer\08.EventTimer.csproj", "{00C8BBD9-F9F8-42D6-9E3E-F59CF2BD8390}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09-16.Students", "Students\09-16.Students.csproj", "{B59ECA18-4B3F-4A47-BCE9-5D76C6165C58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17.MaxStringLengthInArray", "MaxStringLengthInArray\17.MaxStringLengthInArray.csproj", "{29447387-DEFC-4F57-BC52-442FB06F7515}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18-19.GroupNames", "GroupNames\18-19.GroupNames.csproj", "{93DD3D13-6521-4307-A068-C4EE26AB2BBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20.UniversalMethod", "UniversalMethod\20.UniversalMethod.csproj", "{3E32FE6E-8B37-432B-BAC9-38F6F83BFFF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +65,22 @@ Global
 		{00C8BBD9-F9F8-42D6-9E3E-F59CF2BD8390}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00C8BBD9-F9F8-42D6-9E3E-F59CF2BD8390}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00C8BBD9-F9F8-42D6-9E3E-F59CF2BD8390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B59ECA18-4B3F-4A47-BCE9-5D76C6165C58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B59ECA18-4B3F-4A47-BCE9-5D76C6165C58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B59ECA18-4B3F-4A47-BCE9-5D76C6165C58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B59ECA18-4B3F-4A47-BCE9-5D76C6165C58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29447387-DEFC-4F57-BC52-442FB06F7515}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29447387-DEFC-4F57-BC52-442FB06F7515}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29447387-DEFC-4F57-BC52-442FB06F7515}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29447387-DEFC-4F57-BC52-442FB06F7515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93DD3D13-6521-4307-A068-C4EE26AB2BBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93DD3D13-6521-4307-A068-C4EE26AB2BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93DD3D13-6521-4307-A068-C4EE26AB2BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93DD3D13-6521-4307-A068-C4EE26AB2BBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E32FE6E-8B37-432B-BAC9-38F6F83BFFF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E32FE6E-8B37-432B-BAC9-38F6F83BFFF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E32FE6E-8B37-432B-BAC9-38F6F83BFFF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E32FE6E-8B37-432B-BAC9-38F6F83BFFF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

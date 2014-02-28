@@ -1,4 +1,4 @@
-﻿// 6. Write a program that prints from given array of integers all numbers that are divisible by 7 and 3. 
+﻿// 6. Write a program that prints from given array of integers all numbers that are divisible by 7 and 3.
 //      Use the built-in extension methods and lambda expressions. Rewrite the same with LINQ.
 namespace PrintAllNumbersDivisibleBy3And7
 {
@@ -10,30 +10,38 @@ namespace PrintAllNumbersDivisibleBy3And7
     {
         public static void Main()
         {
-            List<int> numbers = new List<int>();
-            for (int i = 1; i <= 100; i++)
-            {
-                numbers.Add(i);   
-            }
+            int arraySize = 100;
+            int[] numbers = GetArray(arraySize, 0, 200);
 
             Console.WriteLine("Found with Lambda expression:\n");
-            var resultWithLambda = numbers.FindAll(x => (x % 3) == 0 && (x % 7) == 0);
-            foreach (var number in resultWithLambda)
-            {
-                Console.Write("{0} ", number);
-            }
-
-            Console.WriteLine();
+            var resultWithLambda = Array.FindAll(numbers, x => (x % 3) == 0 && (x % 7) == 0);
+            PrintArray(resultWithLambda);
 
             Console.WriteLine(new string('-', 20));
 
-            Console.WriteLine("\nFound with LINQ:\n");
+            Console.WriteLine("\nFound with LINQ query:\n");
             var resultWithLinq =
                 from number in numbers
-                where number % 21 == 0
+                where (number % 3) == 0 && (number % 7) == 0
                 select number;
+            PrintArray(resultWithLinq);
+        }
 
-            foreach (var number in resultWithLinq)
+        private static int[] GetArray(int size, int lower, int upper)
+        {
+            Random rnd = new Random();
+            int[] array = new int[size];
+            for (int i = 0; i < size; i++)
+            {
+                array[i] = rnd.Next(lower, upper + 1);
+            }
+
+            return array;
+        }
+
+        private static void PrintArray<T>(IEnumerable<T> value)
+        {
+            foreach (var number in value)
             {
                 Console.Write("{0} ", number);
             }

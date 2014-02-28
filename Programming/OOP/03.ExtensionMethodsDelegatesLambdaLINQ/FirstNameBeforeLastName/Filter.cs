@@ -9,7 +9,7 @@
 
         public Filter(Student[] inputArray)
         {
-            this.inputArray = inputArray;
+            this.InputArray = inputArray;
         }
 
         public Student[] InputArray

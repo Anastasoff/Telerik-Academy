@@ -6,7 +6,6 @@
 
     public class BitArray64 : IEnumerable<int>
     {
-        // Constructor
         public BitArray64()
             : this(0)
         {
@@ -17,7 +16,6 @@
             this.BitArrayValue = bitArrayValue;
         }
 
-        // Property
         public ulong BitArrayValue { get; private set; }
 
         public int this[int index]

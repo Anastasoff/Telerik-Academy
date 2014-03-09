@@ -6,12 +6,12 @@ Telerik Academy
 
 ##### Contents:
 #### Programming
- 1.  [C# Programing Part I - Spring](https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharpPartOne-Spring)
- 2.  [C# Programing Part I - Autumn](https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharpPartOne-Autumn)
- 3.  [C# Programing Part II - Spring](https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharpPartTwo-Spring)
- 4.  [Object-oriented Programing](https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/OOP)
- 5.  [Fundamentals of Computer Programming] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/FundamentalsOfComputerProgrammingWithC%23)
- 6.  [Team Projects] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/TeamProjects)
+ 1.  [Team Projects] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/TeamProjects)
+ 2.  [C# Programing Part I - Spring](https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharpPartOne-Spring)
+ 3.  [C# Programing Part I - Autumn](https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharpPartOne-Autumn)
+ 4.  [C# Programing Part II - Spring](https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharpPartTwo-Spring)
+ 5.  [Object-oriented Programing](https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/OOP)
+ 6.  [Fundamentals of Computer Programming] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/FundamentalsOfComputerProgrammingWithC%23)
 
 #### Web Design and UI Technologies
  1. [HTML] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/HTML)

@@ -4,7 +4,7 @@ namespace ArithmeticPerformance
     using System;
     using System.Diagnostics;
 
-    internal class ArithmeticPerformance
+    internal class ArithmeticOperations
     {
         private const int Loops = 100000;
 

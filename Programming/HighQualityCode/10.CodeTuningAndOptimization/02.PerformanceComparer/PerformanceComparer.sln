@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.ArithmeticOperations", "ArithmeticOperations\02.ArithmeticOperations.csproj", "{51C5B0A9-4D31-4AC0-9AF3-17D848F34127}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathOperations", "MathOperations\MathOperations.csproj", "{04E42631-A2A3-401C-9FAD-9C092EEF75C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51C5B0A9-4D31-4AC0-9AF3-17D848F34127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51C5B0A9-4D31-4AC0-9AF3-17D848F34127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51C5B0A9-4D31-4AC0-9AF3-17D848F34127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51C5B0A9-4D31-4AC0-9AF3-17D848F34127}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04E42631-A2A3-401C-9FAD-9C092EEF75C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04E42631-A2A3-401C-9FAD-9C092EEF75C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04E42631-A2A3-401C-9FAD-9C092EEF75C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04E42631-A2A3-401C-9FAD-9C092EEF75C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

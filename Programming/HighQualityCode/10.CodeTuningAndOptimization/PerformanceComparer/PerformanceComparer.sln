@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.ArithmeticOperations", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.MathOperations", "MathOperations\03.MathOperations.csproj", "{04E42631-A2A3-401C-9FAD-9C092EEF75C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.SortingAlgorithms", "SortingAlgorithms\04.SortingAlgorithms.csproj", "{C695AE17-760D-4E99-8735-600023CAA518}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{04E42631-A2A3-401C-9FAD-9C092EEF75C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04E42631-A2A3-401C-9FAD-9C092EEF75C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04E42631-A2A3-401C-9FAD-9C092EEF75C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C695AE17-760D-4E99-8735-600023CAA518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C695AE17-760D-4E99-8735-600023CAA518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C695AE17-760D-4E99-8735-600023CAA518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C695AE17-760D-4E99-8735-600023CAA518}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

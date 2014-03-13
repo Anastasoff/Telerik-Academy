@@ -4,15 +4,16 @@ Telerik Academy
 
 ##### Homeworks and projects
 
-##### Contents:
 #### Programming
- 1.  [Team Projects] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/TeamProjects)
- 2.  [C# Programing Part I - Spring](https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharpPartOne-Spring)
- 3.  [C# Programing Part I - Autumn](https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharpPartOne-Autumn)
- 4.  [C# Programing Part II - Spring](https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharpPartTwo-Spring)
- 5.  [Object-oriented Programing](https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/OOP)
- 6.  [Fundamentals of Computer Programming] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/FundamentalsOfComputerProgrammingWithC%23)
+ 1.  <b>[Team Projects] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/TeamProjects)</b>
+  - [Table tennis] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/TeamProjects/01.TableTennis)
+  - [Football Stats] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/TeamProjects/02.FootballStats)
+ 2.  <b>[C# Programing Part I - Spring](https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharpPartOne-Spring)</b>
+ 3.  <b>[C# Programing Part I - Autumn](https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharpPartOne-Autumn)</b>
+ 4.  <b>[C# Programing Part II - Spring](https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharpPartTwo-Spring)</b>
+ 5.  <b>[Object-oriented Programing](https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/OOP)</b>
+ 6.  <b>[Fundamentals of Computer Programming] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/FundamentalsOfComputerProgrammingWithC%23)</b>
 
 #### Web Design and UI Technologies
- 1. [HTML] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/HTML)
- 2. [CSS] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/CSS)
+ 1. <b>[HTML] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/HTML)</b>
+ 2. <b>[CSS] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/CSS)</b>

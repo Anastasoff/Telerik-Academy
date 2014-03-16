@@ -13,18 +13,17 @@
 			<li><a href="#">What is LinkedIn?</a></li>
 			<li><a href="#">Join Today</a></li>
 			<li>
-			<form method="POST" action="index.php">
+			<form method="post" action="index.php">
 				<fieldset>
-					<legend>Sign In</legend>
-					
+					<legend>Sign In</legend>					
 					<ul>
 						<li>
-							<label for="email">Email:</label>
-							<input type="email" id="email" required="required" placeholder="sample@email.com" autofocus tabindex="1"  />
+							<label for="emailSignIn">Email:</label>
+							<input type="email" id="emailSignIn" required="required" placeholder="sample@email.com" autofocus tabindex="1"  />
 						</li>
 						<li>
-							<label for="password">Password:</label>
-							<input type="password" id="password" required="required" placeholder="password" tabindex="2" />
+							<label for="passwordSignIn">Password:</label>
+							<input type="password" id="passwordSignIn" required="required" placeholder="password" tabindex="2" />
 						</li>
 						<li>
 							<input type="submit" id="signIn" value="Sign In" tabindex="3" />
@@ -35,10 +34,8 @@
 			</li>
 		</ul>
 		</nav>
-	</header>
-	
-	<hr />
-	
+	</header>	
+	<hr />	
 	<article>
 		<h1>Over 175 million professionals use LinkedIn to exchange information, ideas and opportunities</h1>		
 		<ul>
@@ -55,24 +52,24 @@
 				
 				<ul>
 					<li>
-						<label for="firstName">First Name:</label>
+						<label for="firstNameSignUp">First Name:</label>
 						<br />
-						<input type="text" id="firstName" required="required" placeholder="First Name" />
+						<input type="text" id="firstNameSignUp" required="required" placeholder="First Name" />
 					</li>
 					<li>
-						<label for="lastName">Last Name:</label>
+						<label for="lastNameSignUp">Last Name:</label>
 						<br />
-						<input type="text" id="lastName" required="required" placeholder="Last Name" />
+						<input type="text" id="lastNameSignUp" required="required" placeholder="Last Name" />
 					</li>
 					<li>
-						<label for="email">Email:</label>
+						<label for="emailSignUp">Email:</label>
 						<br />
-						<input type="email" id="email" required="required" placeholder="sample@email.com" />
+						<input type="email" id="emailSignUp" required="required" placeholder="sample@email.com" />
 					</li>
 					<li>
-						<label for="password">Password:</label>
+						<label for="passwordSignUp">Password:</label>
 						<br />
-						<input type="password" id="password" required="required" placeholder="password" />
+						<input type="password" id="passwordSignUp" required="required" placeholder="password" />
 						<p>6 or more characters</p>
 					</li>
 				</ul>
@@ -89,12 +86,12 @@
 		<form method="GET" action="index.php">
 			<ul>
 				<li>
-					<label for="firstName">First Name:</label>
-					<input type="text" id="firstName" placeholder="First Name" />
+					<label for="firstNameSearch">First Name:</label>
+					<input type="text" id="firstNameSearch" placeholder="First Name" />
 				</li>
 				<li>
-					<label for="lastName">Last Name:</label>
-					<input type="text" id="lastName" placeholder="Last Name" />
+					<label for="lastNameSearch">Last Name:</label>
+					<input type="text" id="lastNameSearch" placeholder="Last Name" />
 				</li>
 			</ul>
 			<p>

@@ -1,0 +1,22 @@
+@mixin clearfix
+{
+zoom: 1;
+&:after{
+content: "/0020";
+display: block;
+height: 0;
+overflow: hidden;
+clear: both;
+}
+}
+
+@mixin gradient($top, $bottom)
+{
+background: $top; /* Old browsers */
+background: -webkit-linear-gradient(top, $top 0%, $bottom 22%);
+background: -moz-linear-gradient(top, $top 0%, $bottom 22%);
+background: -o-linear-gradient(top, $top 0%, $bottom 22%);
+background: -ms-linear-gradient(top, $top 0%, $bottom 22%);
+background: linear-gradient(top, $top 0%, $bottom 22%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$top}', endColorstr='#{$top}',GradientType=0 ); /* IE6-9 */
+}

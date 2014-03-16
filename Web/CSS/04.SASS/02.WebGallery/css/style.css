@@ -1,0 +1,23 @@
+ul, li, img, label, input {
+  margin: 0;
+  padding: 0; }
+
+#wrapper {
+  width: 960px;
+  margin: 0 auto; }
+
+#imagesList ul li {
+  display: inline; }
+  #imagesList ul li label img {
+    zoom: 0.2;
+    cursor: pointer; }
+  #imagesList ul li input[type="radio"] {
+    display: none; }
+    #imagesList ul li input[type="radio"] + img {
+      display: none; }
+  #imagesList ul li input:checked + img {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -472px;
+    left: 50%;
+    display: block; }

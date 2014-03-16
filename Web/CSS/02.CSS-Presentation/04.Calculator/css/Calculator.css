@@ -1,0 +1,406 @@
+﻿body, div, ul, li, input {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #172f4b;
+    font-family: 'Segoe UI',sans-serif;
+    font-size: 12px;
+}
+
+.clear {
+    *zoom: 1;
+}
+
+    .clear:after {
+        content: "";
+        display: block;
+        clear: both;
+        height: 0;
+    }
+
+#calculator {
+    position: relative;
+    width: 421px;
+    height: 387px;
+    margin: 50px auto;
+    background: #9a9a9a;
+    border: 1px solid #7d7d7d;
+}
+
+.icon {
+    margin: 5px 11px;
+}
+
+.name {
+    position: relative;
+    top: 3px;
+    margin-left: 140px;
+    color: #000;
+    font-size: 15.3px;
+    vertical-align: top;
+}
+
+.main-button {
+    float: right;
+    padding-top: 0;
+}
+
+
+input[alt=close] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 6px;
+}
+
+input[alt=maximize] {
+    position: absolute;
+    top: 0;
+    right: 52px;
+}
+
+input[alt=minimize] {
+    position: absolute;
+    top: 0;
+    right: 78px;
+}
+
+.body {
+    margin: 0 6px 6px 6px;
+    overflow: hidden;
+    height: 350px;
+    background: #f5f6f7;
+    border: 1px solid #7d7d7d;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    border-bottom: 1px solid #e8e9ea;
+}
+
+    .menu li {
+        float: left;
+        position: relative;
+        width: 40px;
+        padding: 2px 0 0 0;
+        border: 1px solid transparent;
+        text-align: center;
+    }
+
+        .menu li:before {
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            content: '';
+            width: 40px;
+            height: 19px;
+            border: 1px solid transparent;
+        }
+
+        .menu li:hover {
+            background: #d5e7f8;
+        }
+
+            .menu li:hover:before {
+                border: 1px solid #7ab1e8;
+            }
+
+        .menu li:first-letter {
+            text-decoration: underline;
+        }
+
+        .menu li:first-child {
+        }
+
+    .menu a {
+        padding: 3px 5px 3px 7px;
+        color: #000;
+        text-decoration: none;
+    }
+
+        .menu a + a {
+            padding-left: 0;
+        }
+
+.holder {
+    padding: 0 0 7px 0;
+    height: 313px;
+    background: #f0f3f8;
+    background: url('http://dpeeva.files.wordpress.com/2013/01/calc-gradient.jpg');
+    background: -moz-linear-gradient(top, #f0f3f8 0%, #ecf5fe 1%, #ebf2fa 2%, #e7f0f9 10%, #e5eef7 10%, #e1e9f4 15%, #dce6f2 22%, #dae4ee 23%, #dae3f2 23%, #dae3f2 98%, #e0e2f1 99%, #cee9f0 99%, #dfe1f0 99%, #d3e4f4 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f3f8), color-stop(1%,#ecf5fe), color-stop(2%,#ebf2fa), color-stop(10%,#e7f0f9), color-stop(10%,#e5eef7), color-stop(15%,#e1e9f4), color-stop(22%,#dce6f2), color-stop(23%,#dae4ee), color-stop(23%,#dae3f2), color-stop(98%,#dae3f2), color-stop(99%,#e0e2f1), color-stop(99%,#cee9f0), color-stop(99%,#dfe1f0), color-stop(100%,#d3e4f4)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f0f3f8 0%,#ecf5fe 1%,#ebf2fa 2%,#e7f0f9 10%,#e5eef7 10%,#e1e9f4 15%,#dce6f2 22%,#dae4ee 23%,#dae3f2 23%,#dae3f2 98%,#e0e2f1 99%,#cee9f0 99%,#dfe1f0 99%,#d3e4f4 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f0f3f8 0%,#ecf5fe 1%,#ebf2fa 2%,#e7f0f9 10%,#e5eef7 10%,#e1e9f4 15%,#dce6f2 22%,#dae4ee 23%,#dae3f2 23%,#dae3f2 98%,#e0e2f1 99%,#cee9f0 99%,#dfe1f0 99%,#d3e4f4 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f0f3f8 0%,#ecf5fe 1%,#ebf2fa 2%,#e7f0f9 10%,#e5eef7 10%,#e1e9f4 15%,#dce6f2 22%,#dae4ee 23%,#dae3f2 23%,#dae3f2 98%,#e0e2f1 99%,#cee9f0 99%,#dfe1f0 99%,#d3e4f4 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #f0f3f8 0%,#ecf5fe 1%,#ebf2fa 2%,#e7f0f9 10%,#e5eef7 10%,#e1e9f4 15%,#dce6f2 22%,#dae4ee 23%,#dae3f2 23%,#dae3f2 98%,#e0e2f1 99%,#cee9f0 99%,#dfe1f0 99%,#d3e4f4 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f3f8', endColorstr='#d3e4f4',GradientType=0 ); /* IE6-8 */
+}
+
+.section, .buttons div {
+    border: 1px solid #8e9cad;
+    border-radius: 2px;
+}
+
+.section {
+    margin: 5px 11px;
+}
+
+.result {
+    margin: 11px 11px 0 11px;
+}
+
+#total-result {
+    width: 378px;
+    min-height: 41px;
+    margin: 0;
+    padding: 5px 3px 0 0;
+    background: #e5effb;
+    background: url('http://dpeeva.files.wordpress.com/2013/01/result-gradient.jpg');
+    background: -moz-linear-gradient(top, #e5effb 0%, #e7effc 11%, #e6eef9 15%, #ecf3fd 39%, #f0f5fb 46%, #fafbff 67%, #ffffff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5effb), color-stop(11%,#e7effc), color-stop(15%,#e6eef9), color-stop(39%,#ecf3fd), color-stop(46%,#f0f5fb), color-stop(67%,#fafbff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #e5effb 0%,#e7effc 11%,#e6eef9 15%,#ecf3fd 39%,#f0f5fb 46%,#fafbff 67%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #e5effb 0%,#e7effc 11%,#e6eef9 15%,#ecf3fd 39%,#f0f5fb 46%,#fafbff 67%,#ffffff 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #e5effb 0%,#e7effc 11%,#e6eef9 15%,#ecf3fd 39%,#f0f5fb 46%,#fafbff 67%,#ffffff 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #e5effb 0%,#e7effc 11%,#e6eef9 15%,#ecf3fd 39%,#f0f5fb 46%,#fafbff 67%,#ffffff 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5effb', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
+    border: 1px solid #fff;
+    border-radius: 2px;
+    color: #000;
+    font-family: Consolas,sans-serif;
+    font-size: 23px;
+    text-align: right;
+}
+
+.bits:before, .buttons input {
+    border: 1px solid #fff;
+    border-radius: 2px;
+}
+
+.bits {
+    position: relative;
+    height: 60px;
+}
+
+    .bits:before {
+        position: absolute;
+        content: '';
+        width: 381px;
+        height: 58px;
+        line-height: 39px;
+    }
+
+    .bits > .bytes {
+        margin-top: 3px;
+    }
+
+.bits-position {
+    color: #857565;
+}
+
+    .bits-position + .bytes {
+        margin-top: 1px;
+    }
+
+    .bytes span,
+    .bits-position span {
+        float: left;
+        margin: 0 10px;
+        font-family: Consolas,sans-serif;
+        font-size: 13px;
+        line-height: 13px;
+    }
+
+        .bytes span:first-child,
+        .bits-position span:first-child {
+            margin-left: 6px;
+        }
+
+        .bytes span:last-child,
+        .bytes span.last {
+            float: right;
+            margin: 0 9px 0 0;
+        }
+
+        .bits-position span:last-child,
+        .bits-position span.last {
+            float: right;
+            margin-right: 9px;
+        }
+
+    .bits-position .second {
+        margin: 0 130px 0 168px;
+    }
+
+.buttons {
+    float: right;
+    position: relative;
+    width: 312px;
+    left: -6px;
+    margin: 0;
+}
+
+    .buttons div {
+        float: left;
+        width: 32px;
+        height: 25px;
+        margin: 0 3px 5px 2px;
+    }
+
+        .buttons div + div:hover {
+            border: 1px solid #ffdb01;
+        }
+
+    .buttons input {
+        width: 32px;
+        height: 25px;
+        background: #f2fbff;
+        background: url('http://dpeeva.files.wordpress.com/2013/01/button-gradient.jpg');
+        background: -moz-linear-gradient(top, #f2fbff 0%, #f1f6fa 4%, #eaeef9 35%, #e4eef7 39%, #e4edf6 43%, #e0e9f2 48%, #d8e2eb 52%, #d5dfe9 57%, #d6e2ee 65%, #d6deeb 74%, #d8e1f0 78%, #d2dfef 83%, #d5e2f2 87%, #d4dff1 91%, #d8e2eb 96%, #dbe2ea 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2fbff), color-stop(4%,#f1f6fa), color-stop(35%,#eaeef9), color-stop(39%,#e4eef7), color-stop(43%,#e4edf6), color-stop(48%,#e0e9f2), color-stop(52%,#d8e2eb), color-stop(57%,#d5dfe9), color-stop(65%,#d6e2ee), color-stop(74%,#d6deeb), color-stop(78%,#d8e1f0), color-stop(83%,#d2dfef), color-stop(87%,#d5e2f2), color-stop(91%,#d4dff1), color-stop(96%,#d8e2eb), color-stop(100%,#dbe2ea)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #f2fbff 0%,#f1f6fa 4%,#eaeef9 35%,#e4eef7 39%,#e4edf6 43%,#e0e9f2 48%,#d8e2eb 52%,#d5dfe9 57%,#d6e2ee 65%,#d6deeb 74%,#d8e1f0 78%,#d2dfef 83%,#d5e2f2 87%,#d4dff1 91%,#d8e2eb 96%,#dbe2ea 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #f2fbff 0%,#f1f6fa 4%,#eaeef9 35%,#e4eef7 39%,#e4edf6 43%,#e0e9f2 48%,#d8e2eb 52%,#d5dfe9 57%,#d6e2ee 65%,#d6deeb 74%,#d8e1f0 78%,#d2dfef 83%,#d5e2f2 87%,#d4dff1 91%,#d8e2eb 96%,#dbe2ea 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #f2fbff 0%,#f1f6fa 4%,#eaeef9 35%,#e4eef7 39%,#e4edf6 43%,#e0e9f2 48%,#d8e2eb 52%,#d5dfe9 57%,#d6e2ee 65%,#d6deeb 74%,#d8e1f0 78%,#d2dfef 83%,#d5e2f2 87%,#d4dff1 91%,#d8e2eb 96%,#dbe2ea 100%); /* IE10+ */
+        background: linear-gradient(to bottom, #f2fbff 0%,#f1f6fa 4%,#eaeef9 35%,#e4eef7 39%,#e4edf6 43%,#e0e9f2 48%,#d8e2eb 52%,#d5dfe9 57%,#d6e2ee 65%,#d6deeb 74%,#d8e1f0 78%,#d2dfef 83%,#d5e2f2 87%,#d4dff1 91%,#d8e2eb 96%,#dbe2ea 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2fbff', endColorstr='#dbe2ea',GradientType=0 ); /* IE6-8 */
+        color: #1c3959;
+        font-family: 'Segoe UI',sans-serif;
+        font-size: 11px;
+    }
+
+        .buttons input:hover, .buttons input.number:hover {
+            background: #fff6ed;
+            background: url('http://dpeeva.files.wordpress.com/2013/01/button-hover1.jpg');
+            background: -moz-linear-gradient(top, #fff6ed 0%, #fef2e4 9%, #ffebd8 36%, #fee8d0 45%, #ffdb7b 50%, #ffdd7f 59%, #fede87 64%, #ffe18f 73%, #fde090 77%, #fee58b 82%, #fee893 86%, #feec9a 95%, #fff5ae 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff6ed), color-stop(9%,#fef2e4), color-stop(36%,#ffebd8), color-stop(45%,#fee8d0), color-stop(50%,#ffdb7b), color-stop(59%,#ffdd7f), color-stop(64%,#fede87), color-stop(73%,#ffe18f), color-stop(77%,#fde090), color-stop(82%,#fee58b), color-stop(86%,#fee893), color-stop(95%,#feec9a), color-stop(100%,#fff5ae)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #fff6ed 0%,#fef2e4 9%,#ffebd8 36%,#fee8d0 45%,#ffdb7b 50%,#ffdd7f 59%,#fede87 64%,#ffe18f 73%,#fde090 77%,#fee58b 82%,#fee893 86%,#feec9a 95%,#fff5ae 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #fff6ed 0%,#fef2e4 9%,#ffebd8 36%,#fee8d0 45%,#ffdb7b 50%,#ffdd7f 59%,#fede87 64%,#ffe18f 73%,#fde090 77%,#fee58b 82%,#fee893 86%,#feec9a 95%,#fff5ae 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #fff6ed 0%,#fef2e4 9%,#ffebd8 36%,#fee8d0 45%,#ffdb7b 50%,#ffdd7f 59%,#fede87 64%,#ffe18f 73%,#fde090 77%,#fee58b 82%,#fee893 86%,#feec9a 95%,#fff5ae 100%); /* IE10+ */
+            background: linear-gradient(to bottom, #fff6ed 0%,#fef2e4 9%,#ffebd8 36%,#fee8d0 45%,#ffdb7b 50%,#ffdd7f 59%,#fede87 64%,#ffe18f 73%,#fde090 77%,#fee58b 82%,#fee893 86%,#feec9a 95%,#fff5ae 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff6ed', endColorstr='#fff5ae',GradientType=0 ); /* IE6-8 */
+        }
+
+    .buttons div.simple-background:hover {
+        border: 1px solid #fedc01;
+    }
+
+    .buttons input.simple-background {
+        background: #d4e0ee;
+    }
+
+        .buttons input.simple-background:hover {
+            background: #ffdc78;
+            background: url('http://dpeeva.files.wordpress.com/2013/01/button-hover2.jpg');
+            background: -moz-linear-gradient(top, #ffdc78 0%, #fdd069 5%, #ffcd6a 9%, #ffce67 18%, #ffcf69 50%, #fed472 64%, #fed873 73%, #ffdc78 77%, #fde277 82%, #ffea81 91%, #feee8c 95%, #fdf7ab 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffdc78), color-stop(5%,#fdd069), color-stop(9%,#ffcd6a), color-stop(18%,#ffce67), color-stop(50%,#ffcf69), color-stop(64%,#fed472), color-stop(73%,#fed873), color-stop(77%,#ffdc78), color-stop(82%,#fde277), color-stop(91%,#ffea81), color-stop(95%,#feee8c), color-stop(100%,#fdf7ab)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #ffdc78 0%,#fdd069 5%,#ffcd6a 9%,#ffce67 18%,#ffcf69 50%,#fed472 64%,#fed873 73%,#ffdc78 77%,#fde277 82%,#ffea81 91%,#feee8c 95%,#fdf7ab 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #ffdc78 0%,#fdd069 5%,#ffcd6a 9%,#ffce67 18%,#ffcf69 50%,#fed472 64%,#fed873 73%,#ffdc78 77%,#fde277 82%,#ffea81 91%,#feee8c 95%,#fdf7ab 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #ffdc78 0%,#fdd069 5%,#ffcd6a 9%,#ffce67 18%,#ffcf69 50%,#fed472 64%,#fed873 73%,#ffdc78 77%,#fde277 82%,#ffea81 91%,#feee8c 95%,#fdf7ab 100%); /* IE10+ */
+            background: linear-gradient(to bottom, #ffdc78 0%,#fdd069 5%,#ffcd6a 9%,#ffce67 18%,#ffcf69 50%,#fed472 64%,#fed873 73%,#ffdc78 77%,#fde277 82%,#ffea81 91%,#feee8c 95%,#fdf7ab 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffdc78', endColorstr='#fdf7ab',GradientType=0 ); /* IE6-8 */
+            border: 1px solid #ffefcb;
+        }
+
+    .buttons div.disabled,
+    .buttons div.disabled:hover {
+        border: 1px solid #b6c2d0;
+    }
+
+    .buttons input.disabled {
+        border: none;
+        background: #dae3f2;
+    }
+
+    .buttons input[name*=letter],
+    .buttons .bigger {
+        font-size: 16px;
+    }
+
+    .buttons input.number {
+        background: #f8fcff;
+        background: url('http://dpeeva.files.wordpress.com/2013/01/numbers-gradient.jpg');
+        background: -moz-linear-gradient(top, #f8fcff 0%, #eff4f8 41%, #edf2f8 45%, #e8ecf5 50%, #e7eef6 77%, #e9f2f7 86%, #ecf1f5 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8fcff), color-stop(41%,#eff4f8), color-stop(45%,#edf2f8), color-stop(50%,#e8ecf5), color-stop(77%,#e7eef6), color-stop(86%,#e9f2f7), color-stop(100%,#ecf1f5)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #f8fcff 0%,#eff4f8 41%,#edf2f8 45%,#e8ecf5 50%,#e7eef6 77%,#e9f2f7 86%,#ecf1f5 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #f8fcff 0%,#eff4f8 41%,#edf2f8 45%,#e8ecf5 50%,#e7eef6 77%,#e9f2f7 86%,#ecf1f5 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #f8fcff 0%,#eff4f8 41%,#edf2f8 45%,#e8ecf5 50%,#e7eef6 77%,#e9f2f7 86%,#ecf1f5 100%); /* IE10+ */
+        background: linear-gradient(to bottom, #f8fcff 0%,#eff4f8 41%,#edf2f8 45%,#e8ecf5 50%,#e7eef6 77%,#e9f2f7 86%,#ecf1f5 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8fcff', endColorstr='#ecf1f5',GradientType=0 ); /* IE6-8 */
+    }
+
+    .buttons div.zero {
+        width: 71px;
+    }
+
+    .buttons input[name=zero] {
+        width: 71px;
+    }
+
+    .buttons div.equal {
+        float: right;
+        height: 57px;
+    }
+
+    .buttons input.equal {
+        height: 57px;
+        background: #eff7fa;
+        background: url('http://dpeeva.files.wordpress.com/2013/01/button-equals-background.jpg'); /* for IE7 & IE9*/
+        background: -moz-linear-gradient(top, #eff7fa 0%, #edf4fc 15%, #ebf2f8 19%, #eaf1f9 28%, #e7eef4 35%, #e2eaf5 48%, #d6e0ec 50%, #d5e1ef 52%, #d4e0ec 65%, #d5e1ed 83%, #d6e2f0 87%, #d7e1ed 91%, #d7e4ed 93%, #d9e2f1 96%, #d7e5ee 98%, #d9e5f1 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eff7fa), color-stop(15%,#edf4fc), color-stop(19%,#ebf2f8), color-stop(28%,#eaf1f9), color-stop(35%,#e7eef4), color-stop(48%,#e2eaf5), color-stop(50%,#d6e0ec), color-stop(52%,#d5e1ef), color-stop(65%,#d4e0ec), color-stop(83%,#d5e1ed), color-stop(87%,#d6e2f0), color-stop(91%,#d7e1ed), color-stop(93%,#d7e4ed), color-stop(96%,#d9e2f1), color-stop(98%,#d7e5ee), color-stop(100%,#d9e5f1)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #eff7fa 0%,#edf4fc 15%,#ebf2f8 19%,#eaf1f9 28%,#e7eef4 35%,#e2eaf5 48%,#d6e0ec 50%,#d5e1ef 52%,#d4e0ec 65%,#d5e1ed 83%,#d6e2f0 87%,#d7e1ed 91%,#d7e4ed 93%,#d9e2f1 96%,#d7e5ee 98%,#d9e5f1 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #eff7fa 0%,#edf4fc 15%,#ebf2f8 19%,#eaf1f9 28%,#e7eef4 35%,#e2eaf5 48%,#d6e0ec 50%,#d5e1ef 52%,#d4e0ec 65%,#d5e1ed 83%,#d6e2f0 87%,#d7e1ed 91%,#d7e4ed 93%,#d9e2f1 96%,#d7e5ee 98%,#d9e5f1 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #eff7fa 0%,#edf4fc 15%,#ebf2f8 19%,#eaf1f9 28%,#e7eef4 35%,#e2eaf5 48%,#d6e0ec 50%,#d5e1ef 52%,#d4e0ec 65%,#d5e1ed 83%,#d6e2f0 87%,#d7e1ed 91%,#d7e4ed 93%,#d9e2f1 96%,#d7e5ee 98%,#d9e5f1 100%); /* IE10+ */
+        background: linear-gradient(to bottom, #eff7fa 0%,#edf4fc 15%,#ebf2f8 19%,#eaf1f9 28%,#e7eef4 35%,#e2eaf5 48%,#d6e0ec 50%,#d5e1ef 52%,#d4e0ec 65%,#d5e1ed 83%,#d6e2f0 87%,#d7e1ed 91%,#d7e4ed 93%,#d9e2f1 96%,#d7e5ee 98%,#d9e5f1 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eff7fa', endColorstr='#d9e5f1',GradientType=0 ); /* IE6-8 */
+        font-size: 23px;
+    }
+
+
+        .buttons input.equal:hover {
+            background: #fff7ec;
+            background: url('http://dpeeva.files.wordpress.com/2013/01/button-equals-hover.jpg'); /* for IE7 & IE9*/
+            background: -moz-linear-gradient(top, #fff7ec 0%, #fff1e4 2%, #fff0dd 13%, #ffead5 22%, #ffebd2 28%, #fde2c4 48%, #ffd06e 50%, #ffda82 72%, #ffdb87 74%, #fee193 85%, #ffec90 93%, #fff498 96%, #fffba2 98%, #fffec6 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff7ec), color-stop(2%,#fff1e4), color-stop(13%,#fff0dd), color-stop(22%,#ffead5), color-stop(28%,#ffebd2), color-stop(48%,#fde2c4), color-stop(50%,#ffd06e), color-stop(72%,#ffda82), color-stop(74%,#ffdb87), color-stop(85%,#fee193), color-stop(93%,#ffec90), color-stop(96%,#fff498), color-stop(98%,#fffba2), color-stop(100%,#fffec6)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #fff7ec 0%,#fff1e4 2%,#fff0dd 13%,#ffead5 22%,#ffebd2 28%,#fde2c4 48%,#ffd06e 50%,#ffda82 72%,#ffdb87 74%,#fee193 85%,#ffec90 93%,#fff498 96%,#fffba2 98%,#fffec6 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #fff7ec 0%,#fff1e4 2%,#fff0dd 13%,#ffead5 22%,#ffebd2 28%,#fde2c4 48%,#ffd06e 50%,#ffda82 72%,#ffdb87 74%,#fee193 85%,#ffec90 93%,#fff498 96%,#fffba2 98%,#fffec6 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #fff7ec 0%,#fff1e4 2%,#fff0dd 13%,#ffead5 22%,#ffebd2 28%,#fde2c4 48%,#ffd06e 50%,#ffda82 72%,#ffdb87 74%,#fee193 85%,#ffec90 93%,#fff498 96%,#fffba2 98%,#fffec6 100%); /* IE10+ */
+            background: linear-gradient(to bottom, #fff7ec 0%,#fff1e4 2%,#fff0dd 13%,#ffead5 22%,#ffebd2 28%,#fde2c4 48%,#ffd06e 50%,#ffda82 72%,#ffdb87 74%,#fee193 85%,#ffec90 93%,#fff498 96%,#fffba2 98%,#fffec6 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff7ec', endColorstr='#fffec6',GradientType=0 ); /* IE6-8 */
+        }
+
+    .buttons input[name=left-arrow] {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+.systems,
+.data-types {
+    list-style: none;
+    width: 61px;
+    height: 81px;
+    padding: 4px 5px 4px 5px;
+    font-size: 11.4px;
+}
+
+.data-types {
+    margin-top: 5px;
+}
+
+    .systems li,
+    .data-types li {
+        padding: 3px 1px 0 1px;
+    }
+
+    .systems label,
+    .data-types label {
+        position: relative;
+        top: -3px;
+        vertical-align: middle;
+    }
+
+    noindex:-o-prefocus, .systems label, .data-types label {
+        top: -1px;
+        line-height: 17px;
+    }

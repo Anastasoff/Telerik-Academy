@@ -111,17 +111,10 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="FootballStats.TestProgram" Collapsed="true">
-    <Position X="12.75" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>TestProgram.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="FootballStats.ViewModels.CreatePersonViewModel" Collapsed="true">
     <Position X="11" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAQAEEAAAACAIQCIEAQAAAAAABQAAAAAAAAAACAGAo=</HashCode>
+      <HashCode>AAAQAEEAAAAAAIQCIEAQAAAAAABQAAAAAAAAAACAGAo=</HashCode>
       <FileName>ViewModels\CreatePersonViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>

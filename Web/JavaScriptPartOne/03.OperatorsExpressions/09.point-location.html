@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Point location</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="task">
+        <p>Write an expression that checks for given point (x, y) if it is within the circle K( (1,1), 3) and out of the rectangle R(top=1, left=-1, width=6, height=2).</p>
+    </div>
+    <label for="pointX">Point X: </label>
+    <input type="text" id="pointX" />
+    <br />
+    <label for="pointY">Point Y: </label>
+    <input type="text" id="pointY" />
+    <br />
+    <a href="#" onclick="checkPointLocation()">Check location</a>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function checkPointLocation() {
+            var pointX = jsConsole.readFloat("#pointX");
+            var pointY = jsConsole.readFloat("#pointY");
+
+            // within the circle K[{1, 1}, R = 3]
+            var circleX = 1, circleY = 1, radius = 3;
+            var resultX = (pointX - circleX) * (pointX - circleX);
+            var resultY = (pointY - circleY) * (pointY - circleY);
+            var InCircle = (resultX + resultY) < (radius * radius);
+
+            // out of the rectangle [{-1, 1}, {5, -1}] -> (top = 1, left = -1, width = 6, height = 2)
+            var outOfRectangle = (pointX < -1 || pointX > 5) || (pointY < -1 || pointY > 1);
+
+            var endResult = InCircle && outOfRectangle;
+
+            jsConsole.writeLine("=> " + endResult);
+        }
+    </script>
+</body>
+</html>

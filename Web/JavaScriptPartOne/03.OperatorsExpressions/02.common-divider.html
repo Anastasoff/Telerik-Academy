@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Common divider</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="task">
+        <p>Write a boolean expression that checks for given integer if it can be divided (without remainder) by 7 and 5 in the same time.</p>
+    </div>
+    <label for="number">Number: </label>
+    <input type="text" id="number" />
+    <br />
+    <a href="#" onclick="onCommonDivider()">Is divisible on 7 and 5</a>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function onCommonDivider() {
+            var integer = jsConsole.readInteger("#number");
+            var resultStr = "Is " + integer + " % 7 == 0 && " + integer + " % 5 == 0 ? => ";
+            var expression = integer % 7 == 0 && integer % 5 == 0;
+
+            if (expression) {
+                jsConsole.writeLine(resultStr + expression);
+            } else {
+                jsConsole.writeLine(resultStr + expression);
+            }
+        }
+    </script>
+</body>
+</html>

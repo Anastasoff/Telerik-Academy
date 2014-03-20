@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Digit name</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>Write script that asks for a digit and depending on the input shows the name of that digit (in English) using a switch statement.</p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <label for="digit">Digit</label>
+        <input type="text" id="digit" />
+        <br />
+        <a href="#" onclick="onDigitName()">Show</a>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function onDigitName() {
+            var digit = jsConsole.readInteger("#digit");
+
+            switch (digit) {
+                case 0: jsConsole.writeLine("zero"); break;
+                case 1: jsConsole.writeLine("one"); break;
+                case 2: jsConsole.writeLine("two"); break;
+                case 3: jsConsole.writeLine("three"); break;
+                case 4: jsConsole.writeLine("four"); break;
+                case 5: jsConsole.writeLine("five"); break;
+                case 6: jsConsole.writeLine("six"); break;
+                case 7: jsConsole.writeLine("seven"); break;
+                case 8: jsConsole.writeLine("eight"); break;
+                case 9: jsConsole.writeLine("nine"); break;
+                default: jsConsole.writeLine("Invalid digit! Please try again!");
+            }
+        }
+    </script>
+</body>
+</html>

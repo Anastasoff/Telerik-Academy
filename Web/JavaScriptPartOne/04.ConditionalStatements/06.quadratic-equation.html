@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Quadratic equation</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>Write a script that enters the coefficients a, b and c of a quadratic equation <strong>ax<sup>2</sup> + bx + c = 0 </strong> and calculates and prints its real roots. Note that quadratic equations may have 0, 1 or 2 real roots.</p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <label for="a">Enter a:</label>
+        <input type="text" id="a" />
+        <br />
+        <label for="b">Enter b:</label>
+        <input type="text" id="b" />
+        <br />
+        <label for="c">Enter c:</label>
+        <input type="text" id="c" />
+        <br />
+        <a href="#" onclick="onCalculateEquation()">Calculate</a>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function onCalculateEquation() {
+            var a = jsConsole.readFloat("#a");
+            var b = jsConsole.readFloat("#b");
+            var c = jsConsole.readFloat("#c");
+
+            jsConsole.writeLine(a + "x<sup>2</sup> + " + b + "x + " + c + " = 0");
+
+            var discriminant = (b * b) - (4 * a * c);
+            var x, x1, x2;
+
+            if (discriminant > 0) {
+                x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+                x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+                jsConsole.writeLine("Two real roots:");
+                jsConsole.writeLine("x<sup>1</sup> = " + x1);
+                jsConsole.writeLine("x<sup>2</sup> = " + x2);
+            } else if (discriminant < 0) {
+                jsConsole.writeLine("No real roots!");
+            } else {
+                x = (-b + Math.Sqrt(discriminant)) / (2 * a);
+                jsConsole.writeLine("One real root:");
+                jsConsole.writeLine("x = " + x);
+            }
+        }
+    </script>
+</body>
+</html>

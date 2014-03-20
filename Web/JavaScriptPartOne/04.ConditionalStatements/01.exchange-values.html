@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Exchange values</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>Write an if statement that examines two integer variables and exchanges their values if the first one is greater than the second one.</p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <label for="firstValue">First value: </label>
+        <input type="text" id="firstValue" />
+        <br />
+        <label for="secondValue">Second value: </label>
+        <input type="text" id="secondValue" />
+        <br />
+        <a href="#" onclick="onExchangeValues()">Examine values</a>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function onExchangeValues() {
+            var firstValue = jsConsole.readInteger("#firstValue");
+            var secondValue = jsConsole.readInteger("#secondValue");
+
+            if (firstValue > secondValue) {
+                firstValue ^= secondValue;
+                secondValue ^= firstValue;
+                firstValue ^= secondValue;
+            }
+
+            jsConsole.writeLine("First value: " + firstValue);
+            jsConsole.writeLine("Second value: " + secondValue);
+        }
+    </script>
+</body>
+</html>

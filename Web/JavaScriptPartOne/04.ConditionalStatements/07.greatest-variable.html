@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Greatest variable</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>Write a script that finds the greatest of given 5 variables.</p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <label for="var1">Variable: </label>
+        <input type="text" id="var1" />
+        <br />
+        <label for="var2">Variable: </label>
+        <input type="text" id="var2" />
+        <br />
+        <label for="var3">Variable: </label>
+        <input type="text" id="var3" />
+        <br />
+        <label for="var4">Variable: </label>
+        <input type="text" id="var4" />
+        <br />
+        <label for="var5">Variable: </label>
+        <input type="text" id="var5" />
+        <br />
+        <a href="#" onclick="onFindGreatest()">Find</a>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function onFindGreatest() {
+            var greatest = Number.NEGATIVE_INFINITY; // Number.MIN_VALUE ?!?!
+
+            for (var i = 1; i <= 5; i++) {
+                var temp = jsConsole.readInteger("#var" + i);
+                if (temp > greatest) {
+                    greatest = temp;
+                }
+            }
+
+            jsConsole.writeLine("The greatest variable is " + greatest);
+        }
+    </script>
+</body>
+</html>

@@ -14,11 +14,11 @@
     <label for="pointY">Point Y: </label>
     <input type="text" id="pointY" />
     <br />
-    <a href="#" onclick="checkPointLocation()">Check location</a>
+    <a href="#" onclick="onCheckPointLocation()">Check location</a>
     <div id="js-console"></div>
     <script src="scripts/js-console.js"></script>
     <script>
-        function checkPointLocation() {
+        function onCheckPointLocation() {
             var pointX = jsConsole.readFloat("#pointX");
             var pointY = jsConsole.readFloat("#pointY");
 

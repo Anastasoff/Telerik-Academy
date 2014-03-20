@@ -14,11 +14,11 @@
     <label for="position">Position: </label>
     <input type="text" id="position" />
     <br />
-    <a href="#" onclick="checkDigitAtPosition()">Check digit</a>
+    <a href="#" onclick="onCheckDigitAtPosition()">Check digit</a>
     <div id="js-console"></div>
     <script src="scripts/js-console.js"></script>
     <script>
-        function checkDigitAtPosition() {
+        function onCheckDigitAtPosition() {
             var number = jsConsole.readInteger("#number");
             var position = jsConsole.readInteger("#position");
             var digit = 0;

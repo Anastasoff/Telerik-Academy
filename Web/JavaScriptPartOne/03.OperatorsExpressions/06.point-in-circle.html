@@ -17,11 +17,11 @@
     <label for="radius">Circle radius: </label>
     <input type="text" id="radius" />
     <br />
-    <a href="#" onclick="checkPointsIsInCircle()">Check points</a>
+    <a href="#" onclick="onCheckPointsIsInCircle()">Check points</a>
     <div id="js-console"></div>
     <script src="scripts/js-console.js"></script>
     <script>
-        function checkPointsIsInCircle() {
+        function onCheckPointsIsInCircle() {
             var pointX = jsConsole.readFloat("#pointX");
             var pointY = jsConsole.readFloat("#pointY");
             var circleRadius = jsConsole.readFloat("#radius");

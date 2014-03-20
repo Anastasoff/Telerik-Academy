@@ -14,11 +14,11 @@
     <label for="bit">Bit: </label>
     <input type="text" id="bit" />
     <br />
-    <a href="#" onclick="checkBit()">Check bit</a>
+    <a href="#" onclick="onCheckBit()">Check bit</a>
     <div id="js-console"></div>
     <script src="scripts/js-console.js"></script>
     <script>
-        function checkBit() {
+        function onCheckBit() {
             var number = jsConsole.readInteger("#number");
             var bit = jsConsole.readInteger("#bit");
 

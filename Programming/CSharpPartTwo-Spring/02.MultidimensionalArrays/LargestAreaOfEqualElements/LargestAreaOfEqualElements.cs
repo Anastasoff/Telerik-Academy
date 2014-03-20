@@ -3,9 +3,9 @@
 using System;
 using System.Collections.Generic;
 
-class LargestAreaOfEqualElements
+public class LargestAreaOfEqualElements
 {
-    static int[,] matrix =
+    private static int[,] matrix =
     {
         { 1, 3, 2, 2, 2, 4 },
         { 3, 3, 3, 2, 4, 4 },
@@ -14,11 +14,11 @@ class LargestAreaOfEqualElements
         { 4, 3, 3, 3, 1, 1 }
     };
 
-    static int currentArea = 0;
-    static int maxArea = int.MinValue;
-    static List<Tuple<int, int>> visited = new List<Tuple<int, int>>();
-    static int matrixRowsLength = matrix.GetLength(0);
-    static int matrixColsLength = matrix.GetLength(1);
+    private static int currentArea = 0;
+    private static int maxArea = int.MinValue;
+    private static List<Tuple<int, int>> visited = new List<Tuple<int, int>>();
+    private static int matrixRowsLength = matrix.GetLength(0);
+    private static int matrixColsLength = matrix.GetLength(1);
 
     public static void Check(int row, int col, int previousRow, int previousCol)
     {
@@ -42,7 +42,7 @@ class LargestAreaOfEqualElements
         }
     }
 
-    static void PrintMatrix(int[,] matrix)
+    private static void PrintMatrix(int[,] matrix)
     {
         int mid = matrixRowsLength / 2;
         for (int row = 0; row < matrixRowsLength; row++)
@@ -63,7 +63,7 @@ class LargestAreaOfEqualElements
         Console.WriteLine();
     }
 
-    static void Main()
+    public static void Main()
     {
         for (int row = 0; row < matrixRowsLength; row++)
         {

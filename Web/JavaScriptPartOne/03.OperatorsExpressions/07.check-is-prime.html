@@ -11,11 +11,11 @@
     <label for="number">Number: </label>
     <input type="text" id="number" />
     <br />
-    <a href="#" onclick="isPrime()">Check prime</a>
+    <a href="#" onclick="onCheckIsPrime()">Check prime</a>
     <div id="js-console"></div>
     <script src="scripts/js-console.js"></script>
     <script>
-        function isPrime() {
+        function onCheckIsPrime() {
             var number = jsConsole.readInteger("#number");
 
             var expression = ((number % 2 > 0) && (number % 3 > 0)

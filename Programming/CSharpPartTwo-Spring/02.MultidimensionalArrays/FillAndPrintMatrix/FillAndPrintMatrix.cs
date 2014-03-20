@@ -2,24 +2,44 @@
 
 using System;
 
-class FillAndPrintMatrix
+internal class FillAndPrintMatrix
 {
-    // a)
-    static void MatrixA(int[,] matrix, int size, int counter)
+    /****************************
+     * a)
+     *
+     *  1     5     9    13
+     *
+     *  2     6    10    14
+     *
+     *  3     7    11    15
+     *
+     *  4     8    12    16
+     */
+    private static void MatrixA(int[,] matrix, int size, int counter)
     {
         for (int col = 0; col < size; col++)
         {
             for (int row = 0; row < size; row++)
             {
-                matrix[row, col] = counter++; 
+                matrix[row, col] = counter++;
             }
         }
 
         PrintMatrix(matrix, size);
     }
 
-    // b)
-    static void MatrixB(int[,] matrix, int size, int counter)
+    /****************************
+     * b)
+     *
+     *  1     8     9    16
+     *
+     *  2     7    10    15
+     *
+     *  3     6    11    14
+     *
+     *  4     5    12    13
+     */
+    private static void MatrixB(int[,] matrix, int size, int counter)
     {
         for (int col = 0; col < size; col++)
         {
@@ -42,8 +62,18 @@ class FillAndPrintMatrix
         PrintMatrix(matrix, size);
     }
 
-    // c)
-    static void MatrixC(int[,] matrix, int size, int counter)
+    /****************************
+     * c)
+     *
+     *  7    11    14    16
+     *
+     *  4     8    12    15
+     *
+     *  2     5     9    13
+     *
+     *  1     3     6    10
+     */
+    private static void MatrixC(int[,] matrix, int size, int counter)
     {
         for (int row = size - 1; row >= 0; row--)
         {
@@ -64,8 +94,18 @@ class FillAndPrintMatrix
         PrintMatrix(matrix, size);
     }
 
-    // d)
-    static void MatrixD(int[,] matrix, int size, int counter)
+    /****************************
+     * d)
+     *
+     *  1    12    11    10
+     *
+     *  2    13    16     9
+     *
+     *  3    14    15     8
+     *
+     *  4     5     6     7
+     */
+    private static void MatrixD(int[,] matrix, int size, int counter)
     {
         for (int index = 0; index <= size / 2; index++)
         {
@@ -102,7 +142,7 @@ class FillAndPrintMatrix
         PrintMatrix(matrix, size + 1);
     }
 
-    static void PrintMatrix(int[,] matrix, int size)
+    private static void PrintMatrix(int[,] matrix, int size)
     {
         for (int row = 0; row < size; row++)
         {
@@ -119,7 +159,7 @@ class FillAndPrintMatrix
         Console.WriteLine();
     }
 
-    static void Main()
+    private static void Main()
     {
         Console.Write("Enter n = ");
         int size = int.Parse(Console.ReadLine());

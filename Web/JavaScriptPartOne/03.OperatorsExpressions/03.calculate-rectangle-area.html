@@ -14,11 +14,11 @@
     <label for="height">Height: </label>
     <input type="text" id="height" />
     <br />
-    <a href="#" onclick="calculateArea()">Calculate area</a>
+    <a href="#" onclick="onCalculateArea()">Calculate area</a>
     <div id="js-console"></div>
     <script src="scripts/js-console.js"></script>
     <script>
-        function calculateArea() {
+        function onCalculateArea() {
             var width = jsConsole.readFloat("#width");
             var height = jsConsole.readFloat("#height");
             var result = width * height;

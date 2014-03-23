@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Numbers 1 to n</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a script that prints all the numbers from 1 to N
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <label for="n">N: </label>
+        <input type="text" id="n" />
+        <br />
+        <a href="#" onclick="onPrintNumbers()">Print</a>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function onPrintNumbers() {
+            var n = jsConsole.readInteger("#n");
+
+            for (var i = 1; i <= n; i++) {
+                jsConsole.writeLine(i);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Find properties</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+    <style type="text/css">
+        #js-console mark {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a script that finds the lexicographically smallest and largest property in document, window and navigator objects.
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <a href="#" onclick="onFindAllProperties()">Find</a>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var markOpen = "<mark>";
+        var markClose = "</mark>";
+
+        function onFindAllProperties() {
+            findSmallestProperty(document);
+            findLargestProperty(document);
+
+
+            findSmallestProperty(window);
+            findLargestProperty(window);
+
+
+            findSmallestProperty(navigator);
+            findLargestProperty(navigator);
+        }
+
+        function findSmallestProperty(obj) {
+            var smallest = "z";
+            for (var p in obj) {
+                if (smallest > p) {
+                    smallest = p;
+                }
+            }
+
+            jsConsole.writeLine("Smallest property in " + obj + " is " + markOpen + smallest + markClose);
+        }
+
+        function findLargestProperty(obj) {
+            var largest = "a";
+            for (var p in obj) {
+                if (largest < p) {
+                    largest = p;
+                }
+            }
+
+            jsConsole.writeLine("Largest property in " + obj + " is " + markOpen + largest + markClose);
+        }
+    </script>
+</body>
+</html>

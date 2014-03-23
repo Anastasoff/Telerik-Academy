@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Max and min number</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+    <style type="text/css">
+        #numbers {
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a script that finds the max and min number from a sequence of numbers.
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <label for="numbers">Numbers: </label>
+        <input type="text" id="numbers" /> <span>(Enter the numbers separated with empty space " ")</span>
+        <br />
+        <a href="#" onclick="onFindMinAndMax()">Find</a>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function onFindMinAndMax() {
+            var numbers = jsConsole.read("#numbers").split(" ");
+
+            for (var i = 0; i < numbers.length; i++) {
+                numbers[i] = +numbers[i];
+            }
+
+            var max = min = numbers[0];
+            for (var i = 0; i < numbers.length; i++) {
+                if (max < numbers[i]) {
+                    max = numbers[i];
+                }
+
+                if (min > numbers[i]) {
+                    min = numbers[i];
+                }
+            }
+
+            jsConsole.writeLine("Max number: " + max);
+            jsConsole.writeLine("Min number: " + min);
+        }
+    </script>
+</body>
+</html>

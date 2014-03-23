@@ -34,9 +34,9 @@
     <script src="scripts/js-console.js"></script>
     <script>
         function onFindGreatest() {
-            var greatest = Number.NEGATIVE_INFINITY; // Number.MIN_VALUE ?!?!
+			var greatest = jsConsole.readInteger("#var1");
 
-            for (var i = 1; i <= 5; i++) {
+            for (var i = 2; i <= 5; i++) {
                 var temp = jsConsole.readInteger("#var" + i);
                 if (temp > greatest) {
                     greatest = temp;

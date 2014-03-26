@@ -9,7 +9,7 @@
             width: 740px;
         }
 
-        #js-console table {
+        #js-console #result {
             margin: 0;
             padding: 0;
             display: inline-block;
@@ -17,10 +17,10 @@
             border: 1px solid white;
         }
 
-        #js-console td {
-            border: 1px solid white;
-            padding: 0 5px 0 5px;
-        }
+            #js-console #result td {
+                border: 1px solid white;
+                padding: 0 5px 0 5px;
+            }
     </style>
 </head>
 <body>
@@ -28,8 +28,6 @@
     <div id="task">
         <p>
             Sorting an array means to arrange its elements in increasing order. Write a script to sort an array.
-            Use the "selection sort" algorithm: Find the smallest element, move it at the first position, find the smallest from the rest, move it at the second position, etc.
-            Hint: Use a second array
         </p>
     </div>
     <!-- Input -->
@@ -49,7 +47,7 @@
         // Selection sort
         function onSelectionSortBtnClick() {
             var array = jsConsole.readNumbersArray("#array", " ");
-            // TODO: if array is empty
+            // TODO: check if array is empty
 
             var length = array.length;
             for (var i = 0; i < length - 1; i++) {
@@ -69,7 +67,7 @@
         // Bubble sort
         function onBubbleSortBtnClick() {
             var array = jsConsole.readNumbersArray("#array", " ");
-            // TODO: if array is empty
+            // TODO: check if array is empty
 
             var length = array.length;
             for (var i = 0; i < length; i++) {
@@ -86,23 +84,31 @@
         // Insertion sort
         function onInsertionSortBtnClick() {
             var array = jsConsole.readNumbersArray("#array", " ");
+            // TODO: check if array is empty
+
+            var length = array.length;
+            for (var i = 1; i < length; i++) {
+                var j = i;
+                while (j > 0 && array[j] < array[j - 1]) {
+                    swap(array, j, j - 1);
+                    j--;
+                }
+            }
 
             printResult(array, "Insertion sort");
         }
 
-        function swap(array, i, min) {
-            var temp = array[i];
-            array[i] = array[min];
-            array[min] = temp;
+        function swap(array, a, b) {
+            var temp = array[a];
+            array[a] = array[b];
+            array[b] = temp;
         }
 
         function printResult(array, sortName) {
-            var table = "";
-            table += "<table><tr>";
+            var table = "<table id=\"result\"><tr>";
             for (var i = 0; i < array.length; i++) {
                 table += "<td>" + array[i] + "</td>";
             }
-
             table += "</tr></table>";
             jsConsole.writeLine(sortName + ": " + table);
         }

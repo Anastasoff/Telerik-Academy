@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sorting algorithms</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+    <style type="text/css">
+        #input #array {
+            width: 740px;
+        }
+
+        #js-console table {
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            border-collapse: collapse;
+            border: 1px solid white;
+        }
+
+        #js-console td {
+            border: 1px solid white;
+            padding: 0 5px 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Sorting an array means to arrange its elements in increasing order. Write a script to sort an array.
+            Use the "selection sort" algorithm: Find the smallest element, move it at the first position, find the smallest from the rest, move it at the second position, etc.
+            Hint: Use a second array
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <label for="array">Array: </label>
+        <input type="text" id="array" value="6 4 2 5 3 1" placeholder="Enter the numbers separated with comma and whitespace" />
+        <br />
+        <a href="#" onclick="onSelectionSortBtnClick()">Selection sort</a>
+        <a href="#" onclick="onInsertionSortBtnClick()">Insertion sort</a>
+        <a href="#" onclick="onBubbleSortBtnClick()">Bubble sort</a>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <!-- Solution -->
+    <script>
+        // Selection sort
+        function onSelectionSortBtnClick() {
+            var array = jsConsole.readNumbersArray("#array", " ");
+            // TODO: if array is empty
+
+            var length = array.length;
+            for (var i = 0; i < length - 1; i++) {
+                var min = i;
+                for (var j = i + 1; j < length; j++) {
+                    if (array[min] > array[j]) {
+                        min = j;
+                    }
+                }
+
+                swap(array, i, min);
+            }
+
+            printResult(array, "Selection sort");
+        }
+
+        // Bubble sort
+        function onBubbleSortBtnClick() {
+            var array = jsConsole.readNumbersArray("#array", " ");
+            // TODO: if array is empty
+
+            var length = array.length;
+            for (var i = 0; i < length; i++) {
+                for (var j = 1; j < length - i; j++) {
+                    if (array[j - 1] > array[j]) {
+                        swap(array, j, j - 1);
+                    }
+                }
+            }
+
+            printResult(array, "Bubble sort");
+        }
+
+        // Insertion sort
+        function onInsertionSortBtnClick() {
+            var array = jsConsole.readNumbersArray("#array", " ");
+
+            printResult(array, "Insertion sort");
+        }
+
+        function swap(array, i, min) {
+            var temp = array[i];
+            array[i] = array[min];
+            array[min] = temp;
+        }
+
+        function printResult(array, sortName) {
+            var table = "";
+            table += "<table><tr>";
+            for (var i = 0; i < array.length; i++) {
+                table += "<td>" + array[i] + "</td>";
+            }
+
+            table += "</tr></table>";
+            jsConsole.writeLine(sortName + ": " + table);
+        }
+    </script>
+</body>
+</html>

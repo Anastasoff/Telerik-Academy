@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Blank project</title>
+    <title>Max increasing sequence</title>
     <link href="styles/js-console.css" rel="stylesheet" />
     <link href="styles/main-page.css" rel="stylesheet" />
     <style type="text/css">
@@ -14,15 +14,15 @@
     <!-- Task -->
     <div id="task">
         <p>
-            Write a script that finds the maximal sequence of equal elements in an array.
+            Write a script that finds the maximal increasing sequence in an array.
             <br />
-            Example: { 2, 1, 1, 2, 3, 3, 2, 2, 2, 1 } => { 2, 2, 2 }.
+            Example: {3, 2, 3, 4, 2, 2, 4} => {2, 3, 4}.
         </p>
     </div>
     <!-- Input -->
     <div id="input">
         <label for="sequence">Sequence: </label>
-        <input type="text" id="sequence" placeholder="Enter the numbers separated with comma and whitespace" />
+        <input type="text" id="sequence" placeholder="Enter the numbers separated with comma and whitespace">
         <br />
         <a href="#" onclick="onFindMaxSequenceBtnClick()">Find max sequence</a>
     </div>
@@ -37,7 +37,8 @@
             var max = 1;
             var temp = 1;
             for (var i = 1; i < array.length; i++) {
-                if (array[i] == array[i - 1]) {
+
+                if (array[i] > array[i - 1]) {
                     temp++;
                 } else {
                     temp = 1;
@@ -47,9 +48,9 @@
                     max = temp;
                 }
             }
-            
-            // TODO: printResult() function
+
             jsConsole.writeLine("Max: " + max);
+            // TODO: printResult() function
         }
     </script>
 </body>

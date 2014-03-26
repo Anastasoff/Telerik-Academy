@@ -33,8 +33,11 @@
     <!-- Solution -->
     <script>
         function onCompareArraysBtnClick() {
-            var firstArray = jsConsole.read("#first-array").split(" ");
-            var secondArray = jsConsole.read("#second-array").split(" ");
+            //var firstArray = jsConsole.read("#first-array").split(" ");
+            //var secondArray = jsConsole.read("#second-array").split(" ");
+
+            var firstArray = jsConsole.readArray("#first-array", " ");
+            var secondArray = jsConsole.readArray("#second-array", " ");
 
             if (firstArray[0] == "" && secondArray[0] == "") {
                 jsConsole.writeLine("Arrays are empty!");

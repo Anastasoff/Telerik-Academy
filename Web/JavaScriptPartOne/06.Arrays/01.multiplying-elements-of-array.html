@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Multiplying elements of array</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a script that allocates array of 20 integers and initializes each element by its index multiplied by 5. Print the obtained array on the console.
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <!-- Solution -->
+    <script>
+        var array = new Array(20);
+
+        for (var i = 0; i < array.length; i++) {
+            array[i] = i * 5;
+        }
+
+        jsConsole.writeLine(array.join(", "));
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Blank project</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+    <style type="text/css">
+        #sequence {
+            width: 700px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a script that finds the maximal sequence of equal elements in an array.
+            <br />
+            Example: { 2, 1, 1, 2, 3, 3, 2, 2, 2, 1 } => { 2, 2, 2 }.
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <label for="sequence">Sequence: </label>
+        <input type="text" id="sequence" placeholder="Enter the numbers separated with comma and whitespace" />
+        <br />
+        <a href="#" onclick="onFindMaxSequenceBtnClick()">Find max sequence</a>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <!-- Solution -->
+    <script>
+        function onFindMaxSequenceBtnClick() {
+            var array = jsConsole.read("#sequence").split(", ");
+
+            var max = 0;
+            var temp = 1;
+            for (var i = 1; i < array.length; i++) {
+                if (array[i] == array[i - 1]) {
+                    temp++;
+                } else {
+                    temp = 1;
+                }
+
+                if (max < temp) {
+                    max = temp;
+                }
+            }
+
+            jsConsole.writeLine("Max: " + max);
+        }
+    </script>
+</body>
+</html>

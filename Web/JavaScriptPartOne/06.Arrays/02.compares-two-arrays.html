@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Compares two arrays</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+    <style type="text/css">
+        #first-array, #second-array {
+            width: 700px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a script that compares two char arrays lexicographically (letter by letter).
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <label for="first-array">First array: </label>
+        <input type="text" id="first-array" placeholder="Enter the characters separated with whitespace" />
+        <br />
+        <label for="second-array">Second array: </label>
+        <input type="text" id="second-array" placeholder="Enter the characters separated with whitespace" />
+        <br />
+        <a href="#" onclick="onCompareArraysBtnClick()">Compare arrays</a>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <!-- Solution -->
+    <script>
+        function onCompareArraysBtnClick() {
+            var firstArray = jsConsole.read("#first-array").split(" ");
+            var secondArray = jsConsole.read("#second-array").split(" ");
+
+            if (firstArray[0] == "" && secondArray[0] == "") {
+                jsConsole.writeLine("Arrays are empty!");
+            } else if (firstArray.length != secondArray.length) {
+                jsConsole.writeLine("Arrays have different length!");
+
+            } else {
+                var areTheSame = true;
+                for (var i = 0; i < firstArray.length; i++) {
+                    if (firstArray[i] != secondArray[i]) {
+                        jsConsole.writeLine("Element #" + i + " is different in one of the arrays!");
+                        areTheSame = false;
+                        break;
+                    }
+                }
+
+                if (areTheSame == true) {
+                    jsConsole.writeLine("Arrays are the same!");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

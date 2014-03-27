@@ -9,19 +9,35 @@
     <!-- Task -->
     <div id="task">
         <p>
-
+            Write a function that reverses the digits of given decimal number. Example: 256 => 652
         </p>
     </div>
     <!-- Input -->
     <div id="input">
-
+        <label for="number">Number: </label>
+        <input type="text" id="number" />
+        <br />
+        <a href="#" onclick="onReverseNumberBtnClick()">Reverse</a>
     </div>
     <!-- jsConsole -->
     <div id="js-console"></div>
     <script src="scripts/js-console.js"></script>
     <!-- Solution -->
     <script>
+        function onReverseNumberBtnClick() {
+            var number = jsConsole.readInteger("#number");
+            jsConsole.writeLine(reverseNumber(number));
+        }
 
+        function reverseNumber(number) {
+            var reversed = 0;
+            while (number > 0) {
+                reversed *= 10;
+                reversed += number % 10;
+                number = Math.floor(number / 10);
+            }
+            return reversed;
+        }
     </script>
 </body>
 </html>

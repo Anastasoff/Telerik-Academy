@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Last digit</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a function that returns the last digit of given integer as an English word.
+            <br />
+            Examples: 512 => "two", 1024 => "four", 12309 => "nine"
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <label for="integer">Integer: </label>
+        <input type="text" id="integer" />
+        <br />
+        <a href="#" onclick="onFindDigit()">Find digit</a>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <!-- Solution -->
+    <script>
+        function onFindDigit() {
+            var integer = jsConsole.readInteger("#integer");
+            jsConsole.writeLine(lastDigitInEnglish(integer));
+        }
+
+        function lastDigitInEnglish(integer) {
+            var digit = integer % 10;
+            var digits = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+            return digits[digit];
+        }
+    </script>
+</body>
+</html>

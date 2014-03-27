@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Most frequent number</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+    <style type="text/css">
+        #input #array {
+            width: 740px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a program that finds the most frequent number in an array.
+            <br />
+            Example: {4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3} => 4 (5 times)
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <label for="array">Array: </label>
+        <input type="text" id="array"
+               value="4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3"
+               placeholder="Enter the numbers separated with comma and whitespace" />
+        <br />
+        <a href="#" onclick="onFindMostFrequentNumberBtnClick()">Find number</a>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <!-- Solution -->
+    <script>
+        function onFindMostFrequentNumberBtnClick() {
+            var array = jsConsole.readNumbersArray("#array", ", ");
+
+            var lookup = {};
+            for (var i = 0; i < array.length; i++) {
+                if (!(lookup[array[i]] > 0)) {
+                    lookup[array[i]] = 1;
+                } else {
+                    lookup[array[i]] += 1;
+                }
+            }
+
+            var mostFrequent = 0;
+            var times = 0;
+            for (var key in lookup) {
+                if (lookup[key] > times) {
+                    mostFrequent = key;
+                    times = lookup[key];
+                }
+            }
+
+            jsConsole.writeLine(mostFrequent + " (" + times + " times)");
+        }
+    </script>
+</body>
+</html>

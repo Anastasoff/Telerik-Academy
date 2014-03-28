@@ -45,15 +45,6 @@
             }
         }
 
-        function onFindOccurrencesBtnClick() {
-            var text = jsConsole.read("#inputText").split(" ");
-            var word = jsConsole.read("#inputWord");
-
-            var occurrences = findOccurrences(text, word, isCaseSensitive);
-
-            jsConsole.writeLine("Word \"" + word + "\" occurs " + occurrences + " times.");
-        }
-
         function findOccurrences(text, word, isCaseSensitive) {
             function findOccurrencesCaseSensiteve(word) {
                 var count = 0;
@@ -82,6 +73,26 @@
                 case 3: return isCaseSensitive ? findOccurrencesCaseSensiteve(word) : findOccurrencesCaseInsensitive(word);
                 default: return -1;
             }
+        }
+
+        function getWords(inputText) {
+            var words = inputText.split(/[\s\.,-?!)(]/);
+            for (var i = 0, length = words.length; i < length; i++) {
+                if (words[i] == "") {
+                    words.splice(i, 1);
+                }
+            }
+
+            return words;
+        }
+
+        function onFindOccurrencesBtnClick() {
+            var words = getWords(jsConsole.read("#inputText"));
+            var word = jsConsole.read("#inputWord");
+
+            var occurrences = findOccurrences(words, word, isCaseSensitive);
+
+            jsConsole.writeLine("Word \"" + word + "\" occurs " + occurrences + " times.");
         }
     </script>
 </body>

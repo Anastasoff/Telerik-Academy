@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Blank project</title>
+    <title>Divs count</title>
     <link href="styles/js-console.css" rel="stylesheet" />
     <link href="styles/main-page.css" rel="stylesheet" />
     <style type="text/css">
@@ -19,7 +19,10 @@
     </div>
     <!-- Input -->
     <div id="input">
-        <a href="#" onclick="onGetDivsCountBtnClick()">Count &lt;div&gt; elements</a>
+        <label for="tagName">Tag name: </label>
+        &lt; <input type="text" id="tagName" /> &gt;
+        <br />
+        <a href="#" onclick="onGetDivsCountBtnClick()">Count</a>
     </div>
     <!-- jsConsole -->
     <div id="js-console"></div>
@@ -27,7 +30,9 @@
     <!-- Solution -->
     <script>
         function onGetDivsCountBtnClick() {
-            jsConsole.writeLine("Count: " + document.getElementsByTagName("div").length + " &lt;div&gt; elements");
+            var tagName = jsConsole.read("#tagName");
+            var count = document.getElementsByTagName(tagName).length;
+            jsConsole.writeLine("Count: " + count + " => &lt;" + tagName + "&gt; elements");
         }
     </script>
 </body>

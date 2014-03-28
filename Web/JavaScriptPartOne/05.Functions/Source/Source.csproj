@@ -63,6 +63,7 @@
   <ItemGroup>
     <Content Include="01.last-digit.html" />
     <Content Include="02.reverse-number.html" />
+    <Content Include="03.word-in-text.html" />
     <Content Include="blank.html" />
     <Content Include="scripts\js-console.js" />
     <Content Include="styles\js-console.css" />

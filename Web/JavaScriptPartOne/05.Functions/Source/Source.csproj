@@ -59,17 +59,13 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="01.last-digit.html" />
     <Content Include="02.reverse-number.html" />
     <Content Include="03.word-in-text.html" />
+    <Content Include="04.count-divs.html" />
     <Content Include="blank.html" />
     <Content Include="scripts\js-console.js" />
-    <Content Include="styles\js-console.css" />
-    <Content Include="styles\js-console.min.css" />
-    <Content Include="styles\main-page.css" />
-    <Content Include="styles\main-page.min.css" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="styles\js-console.less" />

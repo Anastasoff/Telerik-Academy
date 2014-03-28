@@ -29,31 +29,52 @@
         <input type="text" id="inputWord" />
         <br />
         <a href="#" onclick="onFindOccurrencesBtnClick()">Find</a>
-        <label for="case-sensitive"><input type="checkbox" />Case sensitive</label>
+        <label for="case-sensitive"><input type="checkbox" id="case-sensitive" onclick="onCaseSensitiveBtnClick()" />Case sensitive</label>
     </div>
     <!-- jsConsole -->
     <div id="js-console"></div>
     <script src="scripts/js-console.js"></script>
     <!-- Solution -->
     <script>
+        var isCaseSensitive = false;
+        function onCaseSensitiveBtnClick() {
+            if (isCaseSensitive == false) {
+                isCaseSensitive = true;
+            } else {
+                isCaseSensitive = false;
+            }
+        }
+
         function onFindOccurrencesBtnClick() {
             var text = jsConsole.read("#inputText").split(" ");
             var word = jsConsole.read("#inputWord");
 
-            var occurrences = findOccurrences(text, word);
+            var occurrences = findOccurrences(text, word, isCaseSensitive);
 
-            jsConsole.writeLine(occurrences);
+            jsConsole.writeLine("Word \"" + word + "\" occurs " + occurrences + " times.");
         }
 
         function findOccurrences(text, word, isCaseSensitive) {
             function findOccurrencesCaseSensiteve(word) {
-                return 3;
+                var count = 0;
+                for (var i = 0; i < text.length; i++) {
+                    if (text[i] == word) {
+                        count++;
+                    }
+                }
+                return count;
             }
 
             function findOccurrencesCaseInsensitive(word) {
-                text
-
-                return 2;
+                var count = 0;
+                var lowerWord = word.toLowerCase();
+                for (var i = 0; i < text.length; i++) {
+                    var currentWord = text[i].toLowerCase();
+                    if (currentWord == lowerWord) {
+                        count++;
+                    }
+                }
+                return count;
             }
 
             switch (arguments.length) {

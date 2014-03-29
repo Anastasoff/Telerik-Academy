@@ -64,7 +64,9 @@
     <Content Include="02.reverse-number.html" />
     <Content Include="03.words-in-text.html" />
     <Content Include="04.divs-count.html" />
-    <Content Include="blank.html" />
+    <Content Include="05.numbers-count.html" />
+    <Content Include="06.bigger-than-neighbors.html" />
+    <Content Include="07.first-bigger-element.html" />
     <Content Include="scripts\js-console.js" />
   </ItemGroup>
   <ItemGroup>

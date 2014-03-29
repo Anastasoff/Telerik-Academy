@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Numbers count</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+    <style type="text/css">
+        #input #array {
+            width: 740px;
+        }
+
+        #input #number {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a function that counts how many times given number appears in given array. Write a test function to check if the function is working correctly.
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <label for="array">Array: </label>
+        <input type="text" id="array" />
+        <br />
+        <label for="number">Number: </label>
+        <input type="text" id="number" />
+        <br />
+        <a href="#" onclick="onFindNumberAppearancesBtnClick()">Find</a>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <!-- Solution -->
+    <script>
+        function onFindNumberAppearancesBtnClick() {
+            var array = jsConsole.readNumbersArray("#array", " ");
+            var number = jsConsole.readInteger("#number");
+
+            var count = findAppearances(array, number);
+            jsConsole.writeLine("Number " + number + " was found " + count + " times");
+        }
+
+        function findAppearances(array, number) {
+            var counter = 0;
+            var length = array.length;
+            for (var i = 0; i < length; i++) {
+                if (number == array[i]) {
+                    counter++;
+                }
+            }
+            return counter;
+        }
+    </script>
+</body>
+</html>

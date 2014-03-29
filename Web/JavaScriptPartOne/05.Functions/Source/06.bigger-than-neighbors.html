@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Bigger than neighbors</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+    <style type="text/css">
+        #input #array {
+            width: 740px;
+        }
+
+        #input #position {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a function that checks if the element at given position in given array of integers is bigger than its two neighbors (when such exist).
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <label for="array">Array: </label>
+        <input type="text" id="array" />
+        <br />
+        <label for="position">Position: </label>
+        <input type="text" id="position" />
+        <br />
+        <a href="#" onclick="onFindIsBiggerBtnClick()">Find</a>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <!-- Solution -->
+    <script>
+        function onFindIsBiggerBtnClick() {
+            var array = jsConsole.readNumbersArray("#array", " ");
+            var position = jsConsole.readInteger("#position");
+
+            var isBigger = findIsBigger(array, position);
+            var result = "Is number at position " + position + " is bigger? => " + isBigger;
+            jsConsole.writeLine(result);
+        }
+
+        function findIsBigger(array, pos) {
+            var length = array.length;
+            if (pos < 0 || pos > length - 1) {
+                jsConsole.writeLine("Position is out of the array!"); // throw exception !!!
+                return false;
+            }
+
+            if (pos == 0 || pos == length - 1) {
+                return false;
+            }
+
+            if ((array[pos] > array[pos - 1]) && (array[pos] > array[pos + 1])) {
+                return true;
+            }
+
+            return false;
+        }
+    </script>
+</body>
+</html>

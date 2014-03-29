@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>First bigger element</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+    <style type="text/css">
+        #input #array {
+            width: 740px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a Function that returns the index of the first element in array that is bigger than its neighbors, or -1, if there’s no such element.
+            <br />
+            Use the function from the previous exercise.
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <label for="array">Array: </label>
+        <input type="text" id="array" />
+        <br />
+        <a href="#" onclick="onFindFirstBiggerBtnClick()">Find</a>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <!-- Solution -->
+    <script>
+        function onFindFirstBiggerBtnClick() {
+            var array = jsConsole.readNumbersArray("#array", " ");
+
+            var index = findBiggerElement(array);
+
+            jsConsole.writeLine("The first element is with index: " + index);
+        }
+
+        function findIsBigger(array, pos) {
+            var length = array.length;
+            if (pos < 0 || pos > length - 1) {
+                jsConsole.writeLine("Position is out of the array!"); // throw exception !!!
+                return false;
+            }
+
+            if (pos == 0 || pos == length - 1) {
+                return false;
+            }
+
+            if ((array[pos] > array[pos - 1]) && (array[pos] > array[pos + 1])) {
+                return true;
+            }
+
+            return false;
+        }
+
+        function findBiggerElement(array) {
+            var length = array.length;
+            for (var i = 0; i < length; i++) {
+                if (findIsBigger(array, i) == true) {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+    </script>
+</body>
+</html>

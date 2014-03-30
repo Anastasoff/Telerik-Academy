@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Group function</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a function that groups an array of persons by age, first or last name.
+            The function must return an associative array, with keys - the groups, and values -arrays with persons in this groups
+            <br />
+            Use function overloading (i.e. just one function)
+            <br />
+            var persons = {…};<br />
+            var groupedByFname = group(persons,"firstName");<br />
+            var groupedByAge= group(persons,"age");
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <a href="#" onclick="onGroupPeopleBtnClick()">Group people</a>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <!-- Solution -->
+    <script>
+        function group(array, param) {
+            // Group people by firstName
+            function groupByFirstName() {
+                var grouped = {};
+                for (var i = 0, len = array.length; i < len; i++) {
+                    var key = array[i].firstName;
+                    if (typeof (grouped[key]) == "undefined") {
+                        grouped[key] = [];
+                    }
+
+                    grouped[key].push(array[i]);
+                }
+
+                return grouped;
+            }
+
+            // Group people by lastName
+            function groupByLastName() {
+                var grouped = {};
+                for (var i = 0, len = array.length; i < len; i++) {
+                    var key = array[i].lastName;
+                    if (typeof (grouped[key]) == "undefined") {
+                        grouped[key] = [];
+                    }
+
+                    grouped[key].push(array[i]);
+                }
+
+                return grouped;
+            }
+
+            // Group people by age
+            function groupByAge() {
+                var grouped = {};
+                for (var i = 0, len = array.length; i < len; i++) {
+                    var key = array[i].age;
+                    if (typeof (grouped[key]) == "undefined") {
+                        grouped[key] = [];
+                    }
+
+                    grouped[key].push(array[i]);
+                }
+
+                return grouped;
+            }
+
+            switch (param) {
+                case "firstName":
+                    return groupByFirstName();
+                case "lastName":
+                    return groupByLastName();
+                case "age":
+                    return groupByAge();
+                default:
+                    throw new Error("The input parameter '" + param + "' for grouping is not valid.");
+            }
+        }
+
+        function printGroupedArrays(arr) {
+            for (var i in arr) {
+                var key = arr[i];
+                for (var j = 0; j < key.length; j++) {
+                    jsConsole.writeLine(key[j].firstName + " " + key[j].lastName + " " + key[j].age);
+                }
+            }
+        }
+
+        function onGroupPeopleBtnClick() {
+
+            // TODO: implement UI
+
+            var people = [
+                { firstName: "Pesho", lastName: "Peshev", age: 33 },
+                { firstName: "Gosho", lastName: "Goshev", age: 25 },
+                { firstName: "Atanas", lastName: "Atanasov", age: 28 },
+                { firstName: "Ivan", lastName: "Ivanov", age: 18 },
+                { firstName: "Gosho", lastName: "Nikolov", age: 44 },
+                { firstName: "Vasil", lastName: "Peshev", age: 18 },
+            ];
+
+            var groupedByFname = group(people, "firstName");
+            var groupedByLname = group(people, "lastName");
+            var groupedByAge = group(people, "age");
+
+            printGroupedArrays(groupedByFname);
+            jsConsole.writeLine("------------------------");
+            printGroupedArrays(groupedByLname);
+            jsConsole.writeLine("------------------------");
+            printGroupedArrays(groupedByAge);
+        }
+    </script>
+</body>
+</html>

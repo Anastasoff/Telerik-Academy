@@ -65,6 +65,8 @@
     <Content Include="02.remove-elements.html" />
     <Content Include="03.deep-copy.html" />
     <Content Include="04.contain-property.html" />
+    <Content Include="05.youngest-person.html" />
+    <Content Include="06.group-function.html" />
     <Content Include="blank.html" />
     <Content Include="scripts\js-console.js" />
     <Content Include="styles\js-console.css" />

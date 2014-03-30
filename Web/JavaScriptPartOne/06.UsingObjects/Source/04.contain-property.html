@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Contain property</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a function that checks if a given object contains a given property
+            <br />
+            var obj  = …;
+            <br />
+            var hasProp = hasProperty(obj,"length");
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <!-- Solution -->
+    <script>
+
+        // TODO: implement UI
+
+        var student = {
+            firstName: "Pesho",
+            lastName: "Peshev",
+            age: 33,
+            toString: function () {
+                return "Name: " + this.firstName + " " + this.lastName + ", age: " + this.age;
+            }
+        }
+
+        jsConsole.writeLine(student);
+
+        var hasProp = hasProperty(student, "age");
+        jsConsole.writeLine("Does obj have property 'age'? => " + hasProp);
+
+        function hasProperty(obj, prop) {
+            return obj.hasOwnProperty(prop);
+        }
+    </script>
+</body>
+</html>

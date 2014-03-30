@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Remove elements</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+    <style type="text/css">
+        #input #array {
+            width: 740px;
+        }
+
+        #input #value {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a function that removes all elements with a given value
+            <br />
+            var arr = [1, 2, 1, 4, 1, 3, 4, 1, 111, 3, 2, 1, "1"];
+            <br />
+            arr.remove(1); // arr = [2, 4, 3, 4, 111, 3, 2, "1"];
+            <br />
+            Attach it to the array class
+            <br />
+            Read about prototype and how to attach methods
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <label for="array">Array: </label>
+        <input type="text" id="array" placeholder="Enter the numbers separated with comma and whitespace" />
+        <br />
+        <label for="value">Value: </label>
+        <input type="text" id="value" />
+        <br />
+        <a href="#" onclick="onRemoveElementsBtnClick()">Remove elements</a>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <!-- Solution -->
+    <script>
+        function onRemoveElementsBtnClick() {
+            var arr = jsConsole.readArray("#array", ", ");
+            var value = jsConsole.read("#value");
+
+            jsConsole.writeLine("Array: [ " + arr.join(", ") + " ]");
+            arr.remove(value);
+            jsConsole.writeLine("Array: [ " + arr.join(", ") + " ]");
+        }
+
+        Array.prototype.remove = function (value) {
+            for (var i = 0; i < this.length; i++) {
+                if (this[i] == value) {
+                    this.splice(i, 1);
+                    i--;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

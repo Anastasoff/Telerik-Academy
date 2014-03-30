@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Deep copy</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a function that makes a deep copy of an object
+            <br />
+            The function should work for both primitive and reference types
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <a href="#" onclick="onDeepCopyBtnClick()">Deep copy</a>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <!-- Solution -->
+    <script>
+        function onDeepCopyBtnClick() {
+
+            // TODO: implement UI
+
+            var marks = [
+                    { subject: "JavaScript", score: 5.50 },
+                    { subject: "OOP", score: 5.00 },
+                    { subject: "Slice and Dice", score: 6.00 },
+                    { subject: "Photoshop", score: 4.00 }
+            ];
+
+            var student = buildStudent("Pesho", "Peshev", 33, marks);
+            jsConsole.writeLine(student);
+
+            var copiedStudent = student.deepCopy();
+
+            student.firstName = "Gosho";
+            marks[2].subject = "C#";
+            marks[2].score = 4.00;
+
+            jsConsole.writeLine(copiedStudent);
+
+            // Reference types
+            var array = [1, 2, 3];
+            var deepClonedArray = array.deepCopy();
+            deepClonedArray.push(4);
+
+            jsConsole.writeLine(array.join(', ') + " != " + deepClonedArray.join(', '));
+
+            var obj = {
+                x: 4,
+                sqrt: function () {
+                    return Math.sqrt(this.x);
+                }
+            }
+
+            var deepClonedObj = obj.deepCopy();
+            deepClonedObj.x = 16;
+
+            jsConsole.writeLine(obj.sqrt() + " != " + deepClonedObj.sqrt());
+        }
+
+        // TODO: not sure if this function makes deep copy of reference types
+        Object.prototype.deepCopy = function () {
+            if (this == null || typeof this != "object") {
+                return this;
+            }
+
+            var copy = this.constructor();
+            for (var attr in this) {
+                if (this.hasOwnProperty(attr)) {
+                    copy[attr] = this[attr];
+                }
+            }
+
+            return copy;
+        }
+
+        function buildStudent(firstName, lastName, age, marks) {
+            return {
+                firstName: firstName,
+                lastName: lastName,
+                age: age,
+                marks: marks,
+                toString: function getStudentInfo() {
+                    return "Name: " + this.firstName + " " + this.lastName + " age: " + this.age + "<br />" + marksToString(marks);
+                }
+            };
+
+            function marksToString(marks) {
+                var result = "";
+                for (var i in marks) {
+                    result += (marks[i].subject + ": " + marks[i].score) + "<br />";
+                }
+
+                return result; // TODO: last line is undefined
+            }
+        }
+    </script>
+</body>
+</html>

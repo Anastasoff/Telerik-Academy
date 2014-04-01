@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Change text with tags</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+    <style type="text/css">
+        #input #inputText {
+            width: 795px;
+            height: 45px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            You are given a text. Write a function that changes the text in all regions:<br />
+            &lt;upcase&gt;text&lt;/upcase&gt; to uppercase.<br />
+            &lt;lowcase&gt;text&lt;/lowcase&gt; to lowercase<br />
+            &lt;mixcase&gt;text&lt;/mixcase&gt; to mix casing(random)<br />
+            The expected result:<br />
+            We are LiVinG in a YELLOW SUBMARINE. We dOn'T have anything else.<br />
+            Regions can be nested
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <textarea id="inputText"></textarea>
+        <button onclick="onChangeTextBtnClick()">Change text</button>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <!-- Solution -->
+    <script>
+        var openUpCase = "<upcase>";
+        var closeUpCase = "</upcase>";
+        var openLowCase = "<lowcase>";
+        var closeLowCase = "</lowcase>";
+        var openMixCase = "<mixcase>";
+        var closeMixCase = "</mixcase>";
+        var lenOpenUp = openUpCase.length, lenOpenLow = openLowCase.length, lenOpenMix = openMixCase.length;
+
+        // TODO: do not work with nested regions
+        function onChangeTextBtnClick() {
+            var text = jsConsole.read("#inputText");
+
+            var result = "", temp, length = text.length;
+            for (var i = 0; i < length; i++) {
+                if (text[i] == "<") {
+                    if (text.substr(i, lenOpenUp) == openUpCase) {
+                        temp = proccessingChars(text, i + lenOpenUp).toUpperCase();
+                        i += lenOpenUp + temp.length + closeUpCase.length - 1;
+                    } else if (text.substr(i, lenOpenLow) == openLowCase) {
+                        temp = proccessingChars(text, i + lenOpenLow).toLowerCase();
+                        i += lenOpenLow + temp.length + closeLowCase.length - 1;
+                    } else if (text.substr(i, lenOpenMix) == openMixCase) {
+                        temp = proccessingChars(text, i + lenOpenMix).toMixCase();
+                        i += lenOpenMix + temp.length + closeMixCase.length - 1;
+                    }
+
+                    result += temp;
+                } else {
+                    result += text[i];
+                }
+            }
+
+            jsConsole.writeLine(result);
+        }
+
+        function proccessingChars(text, i) {
+            var temp = "";
+            while (text[i] != "<") {
+                temp += text[i];
+                i++;
+            }
+
+            return temp;
+        }
+
+        String.prototype.toMixCase = function () {
+            toMixCase = "";
+            for (var i = 0; i < this.length; i++) {
+                if (i % 2 == randomIntMinMax(0, 1)) {
+                    toMixCase += this[i].toLowerCase();
+                } else {
+                    toMixCase += this[i].toUpperCase();
+                }
+            }
+
+            return toMixCase;
+        }
+
+        function randomIntMinMax(min, max) {
+            var rand = Math.floor(Math.random() * (max - min + 1) + min);
+            return rand;
+        }
+    </script>
+</body>
+</html>

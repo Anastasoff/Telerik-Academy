@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Extract content from HTML</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+    <style type="text/css">
+        #input #inputText {
+            width: 795px;
+            height: 45px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a function that extracts the content of a HTML page given as text. The function should return anything that is in a tag, without the tags.
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <textarea id="inputText"></textarea>
+        <button onclick="onExtractContentBtnClick()">Extract content</button>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <!-- Solution -->
+    <script>
+        function onExtractContentBtnClick() {
+            var text = jsConsole.read("#inputText");
+
+            var content = text.replace(/<[^>]*>/g, "").replace(/\n/g, "").replace(/\s\s/g, "").trim(); // TODO: not good implementation
+
+            jsConsole.writeLine(content);
+        }
+    </script>
+</body>
+</html>

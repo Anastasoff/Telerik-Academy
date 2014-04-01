@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Reverse string</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a JavaScript function reverses string and returns it.
+            <br />
+            Example: "sample" => "elpmas".
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <label for="inputStr">String: </label>
+        <input type="text" id="inputStr" />
+        <br />
+        <button onclick="onReverseStringBtnClick()">Reverse string</button>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <!-- Solution -->
+    <script>
+        function onReverseStringBtnClick() {
+            var str = jsConsole.read("#inputStr");
+
+            var reversed = "";
+            var length = str.length
+            for (var i = 0; i < length; i++) {
+                reversed += str[length - i - 1];
+            }
+
+            jsConsole.writeLine("Reversed string: " + reversed);
+        }
+    </script>
+</body>
+</html>

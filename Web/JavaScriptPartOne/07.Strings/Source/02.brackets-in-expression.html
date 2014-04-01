@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Brackets in expression</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a JavaScript function to check if in a given expression the brackets are put correctly.
+            <br />
+            Example of correct expression: ((a+b)/5-d).
+            <br />
+            Example of incorrect expression: )(a+b)).
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <label for="inputExpression">Expression</label>
+        <input type="text" id="inputExpression" />
+        <br />
+        <button onclick="onCheckExpressionBtnClick()">Check expression</button>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <!-- Solution -->
+    <script>
+        function onCheckExpressionBtnClick() {
+            var expression = jsConsole.read("#inputExpression");
+
+            var brackets = [];
+            var isCorrect = true;
+            var length = expression.length;
+            for (var i = 0; i < length; i++) {
+                if (expression[i] == "(") {
+                    brackets.push("(");
+                }
+
+                if (expression[i] == ")") {
+                    if (brackets.length == 0) {
+                        isCorrect = false;
+                        break;
+                    }
+
+                    brackets.pop();
+                }
+
+
+            }
+
+            if (isCorrect) {
+                jsConsole.writeLine("Brackets are correct!");
+            } else {
+                jsConsole.writeLine("Brackets are incorrect!");
+            }
+        }
+    </script>
+</body>
+</html>

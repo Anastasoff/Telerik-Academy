@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Substring in text</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+    <style type="text/css">
+        #input #inputText {
+            width: 795px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a JavaScript function that finds how many times a substring is contained in a given text (perform case insensitive search).<br />
+            Example: The target substring is "in". The text is as follows:<br />
+            We are living in an yellow submarine. We don't have anything else. Inside the submarine is very tight. So we are drinking all the day. We will move out of it in 5 days.<br />
+            The result is: 9.
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <textarea id="inputText"></textarea>
+        <br />
+        <label for="target">Target substring: </label>
+        <input type="text" id="target" />
+        <br />
+        <button onclick="onFindSubstringsBtnClick()">Find substrings</button>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <!-- Solution -->
+    <script>
+        function onFindSubstringsBtnClick() {
+            var text = jsConsole.read("#inputText").toLowerCase();
+            var target = jsConsole.read("#target").toLowerCase();
+
+            var result = 0;
+            var targetLen = target.length
+            var length = text.length - targetLen;
+            for (var i = 0; i < length; i++) {
+                if (text.substr(i, targetLen) == target) {
+                    result++;
+                }
+            }
+
+            jsConsole.writeLine("The result is: " + result);
+        }
+    </script>
+</body>
+</html>

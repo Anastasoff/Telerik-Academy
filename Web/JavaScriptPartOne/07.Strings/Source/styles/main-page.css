@@ -1,0 +1,40 @@
+body #task > p {
+  margin: 0;
+  padding: 5px 10px;
+  display: block;
+  border: 1px solid black;
+  border-bottom: 0;
+  font-family: sans-serif;
+  font-size: 14px;
+  background-color: #e6e6e6;
+  width: 800px;
+}
+body #input {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid black;
+  width: 800px;
+}
+body #input input,
+body #input label {
+  margin-bottom: 5px;
+}
+body #input button {
+  font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  margin: 5px 0 0 0;
+  font-size: 16px;
+  background: #ED5E2F;
+  border: 0px none;
+  outline: 0px none;
+}
+body #input button:hover {
+  background: #74A599;
+}
+body #input button:active {
+  background: #F6A953;
+}

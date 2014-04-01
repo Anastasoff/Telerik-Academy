@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Replace non breaking white-space</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+    <style type="text/css">
+        #input #inputText {
+            width: 795px;
+            height: 45px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a function that replaces non breaking white-spaces in a text with &amp;nbsp;
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <textarea id="inputText"></textarea>
+        <button onclick="onReplaceNBSPBtnClick()">Replace &amp;nbsp;</button>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <!-- Solution -->
+    <script>
+        function onReplaceNBSPBtnClick() {
+            var text = jsConsole.read("#inputText");
+
+            var length = text.length, result = "";
+            for (var i = 0; i < length; i++) {
+                if (text[i] == " ") {
+                    result += "&nbsp;";
+                } else {
+                    result += text[i];
+                }
+            }
+
+            jsConsole.writeLine(result);
+        }
+    </script>
+</body>
+</html>

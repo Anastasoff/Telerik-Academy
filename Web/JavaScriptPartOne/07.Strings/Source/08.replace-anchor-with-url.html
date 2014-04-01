@@ -16,7 +16,7 @@
     <!-- Task -->
     <div id="task">
         <p>
-            Write a JavaScript function that replaces in a HTML document given as string all the tags &lt;a href="…"&gt;…&lt;/a&gt; with corresponding tags [URL=…]…[URL]. Sample HTML fragment:
+            Write a JavaScript function that replaces in a HTML document given as string all the tags &lt;a href="…"&gt;…&lt;/a&gt; with corresponding tags [URL=…]…[/URL]. Sample HTML fragment:
         </p>
     </div>
     <!-- Input -->
@@ -29,6 +29,15 @@
     <script src="scripts/js-console.js"></script>
     <!-- Solution -->
     <script>
+        //// Works well too
+        //function onReplaceBtnClick() {
+        //    var str = jsConsole.read("#inputText");
+        //    str = str.replace("<a href=\"", "[URL=\"", "gi");
+        //    str = str.replace("\">", "\"]", "gi");
+        //    str = str.replace("</a>", "[/URL]", "gi");
+        //    jsConsole.writeLine(str);
+        //}
+
         function onReplaceBtnClick() {
             var str = jsConsole.read("#inputText");
 
@@ -36,17 +45,23 @@
                 length = str.length,
                 result = "";
             for (i = 0; i < length; i++) {
-                // find anchor
-                var anchor = findAnchor(str);
-                // find href
-                // replace anchor with URL
-                result = str.replace();
-                // increment 'i' enough
+                if (str[i] == "<" && str[i + 1] == "a") {
+                    var anchor = findAnchor(str, i);
+                    var url = createURL(anchor.url, anchor.content);
+                    str = str.replace(anchor.tag, url, "g");
+                    i += anchor.tag.length;
+                }
             }
+
+            jsConsole.writeLine(str);
         }
 
-        function createURL(url) {
-            var result = "";
+        function createURL(url, content) {
+            var result = "[URL=";
+            result += url + "]";
+            result += content;
+            result += "[/URL]";
+            return result;
         }
 
         function findAnchor(str) {
@@ -57,6 +72,7 @@
             var endIndexURL = str.indexOf("\"", startIndexURl);
             anchor.tag = str.substring(startIndex, endIndex);
             anchor.url = str.substring(startIndexURl, endIndexURL);
+            anchor.content = str.substring(str.indexOf(">", endIndexURL), str.indexOf("<", endIndexURL));
             return anchor;
         }
 

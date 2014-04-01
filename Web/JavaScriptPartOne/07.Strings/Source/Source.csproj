@@ -68,6 +68,7 @@
     <Content Include="05.replace-nbsp.html" />
     <Content Include="06.extract-content.html" />
     <Content Include="07.parse-url-address.html" />
+    <Content Include="08.replace-anchor-with-url.html" />
     <Content Include="blank.html" />
     <Content Include="scripts\js-console.js" />
     <Content Include="styles\main-page.min.css">

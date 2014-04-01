@@ -12,7 +12,7 @@ using System;
 
 internal class ParseURLAddress
 {
-    private static string ExtractResource(string fullAddress, string server)
+    private static string ExtractResource(string fullAddress)
     {
         string resource = string.Empty;
         char slash = '/';
@@ -72,7 +72,7 @@ internal class ParseURLAddress
         string server = ExtractServer(fullAddress, protocol);
         Console.WriteLine("[server] = \"{0}\"", server);
 
-        string resource = ExtractResource(fullAddress, server);
+        string resource = ExtractResource(fullAddress);
         Console.WriteLine("[resource] = \"{0}\"", resource);
     }
 }

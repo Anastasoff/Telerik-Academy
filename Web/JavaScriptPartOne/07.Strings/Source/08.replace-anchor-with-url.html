@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+    <style type="text/css">
+        #input #inputText {
+            width: 795px;
+            height: 45px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a JavaScript function that replaces in a HTML document given as string all the tags &lt;a href="…"&gt;…&lt;/a&gt; with corresponding tags [URL=…]…[URL]. Sample HTML fragment:
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <textarea id="inputText"></textarea>
+        <button onclick="onReplaceBtnClick()">Replace</button>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <!-- Solution -->
+    <script>
+        function onReplaceBtnClick() {
+            var str = jsConsole.read("#inputText");
+
+            var i,
+                length = str.length,
+                result = "";
+            for (i = 0; i < length; i++) {
+                // find anchor
+                var anchor = findAnchor(str);
+                // find href
+                // replace anchor with URL
+                result = str.replace();
+                // increment 'i' enough
+            }
+        }
+
+        function createURL(url) {
+            var result = "";
+        }
+
+        function findAnchor(str) {
+            var anchor = {};
+            var startIndex = str.indexOf("<a");
+            var endIndex = str.indexOf("</a>", startIndex) + 4;
+            var startIndexURl = str.indexOf("href=\"", startIndex) + "href=\"".length;
+            var endIndexURL = str.indexOf("\"", startIndexURl);
+            anchor.tag = str.substring(startIndex, endIndex);
+            anchor.url = str.substring(startIndexURl, endIndexURL);
+            return anchor;
+        }
+
+    </script>
+</body>
+</html>

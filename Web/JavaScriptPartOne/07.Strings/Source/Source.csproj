@@ -69,6 +69,10 @@
     <Content Include="06.extract-content.html" />
     <Content Include="07.parse-url-address.html" />
     <Content Include="08.replace-anchor-with-url.html" />
+    <Content Include="09.extract-emails.html" />
+    <Content Include="10.extract-palindromes.html" />
+    <Content Include="11.string-format.html" />
+    <Content Include="12.template.html" />
     <Content Include="blank.html" />
     <Content Include="scripts\js-console.js" />
     <Content Include="styles\main-page.min.css">

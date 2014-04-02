@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>String format</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>
+            Write a function that formats a string using placeholders:<br />
+            var str = stringFormat("Hello {0}!","Peter");<br />
+            //str = "Hello Peter!";<br />
+            The function should work with up to 30 placeholders and all types:<br />
+            var format = "{0}, {1}, {0} text {2}";<br />
+            var str = stringFormat(format,1,"Pesho","Gosho");<br />
+            //str = "1, Pesho, 1 text Gosho"<br />
+        </p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <button onclick="onStringFormatBtnClick()">Execute</button>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <!-- Solution -->
+    <script>
+        function onStringFormatBtnClick() {
+            var str1 = stringFormat("Hello {0}!", "Peter");
+            jsConsole.writeLine(str1);
+
+            var format = "{0}, {1}, {0} text {2}";
+            var str2 = stringFormat(format, 1, "Pesho", "Gosho");
+            jsConsole.writeLine(str2);
+        }
+
+        function stringFormat(str) {
+            var selfArguments = arguments;
+
+            return str.replace(/\{(\d+)\}/g, function (match, arg) {
+                return selfArguments[+arg + 1];
+            })
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+html, body, div, ul, li, a, span, img, fieldset, legend, label, select, textarea {
+    margin: 0;
+    padding: 0;
+}
+
+/* Mixin */
+.gradient (@origin: top, @start: #ffffff, @stop: #000000) {
+    background-color: @start;
+    background-image: -webkit-linear-gradient(@origin, @start, @stop);
+    background-image: -moz-linear-gradient(@origin, @start, @stop);
+    background-image: -o-linear-gradient(@origin, @start, @stop);
+    background-image: -ms-linear-gradient(@origin, @start, @stop);
+    background-image: linear-gradient(@origin, @start, @stop);
+}
+
+#wrapper {
+    margin: 20px;
+    font-size: 16px;
+
+    .invisible {
+        display: none;
+    }
+
+    ul {
+        li.popup-item {
+            position: relative;
+            padding: 5px;
+            width: 110px;
+            list-style: none;
+            border-top: 1px solid #000;
+
+            a {
+                text-decoration: none;
+
+                .current {
+                    font-weight: bold;
+                }
+
+                &:visited {
+                    color: #000;
+                }
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            .popup-content {
+                position: absolute;
+                left: 140px;
+                top: 0;
+
+                a.btn-popup-close {
+                    border: 1px solid #000;
+                    border-radius: 5px;
+                    padding: 0 5px;
+                    text-decoration: none;
+                    position: absolute;
+                    right: 15px;
+                    top: 15px;
+
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                fieldset {
+                    padding: 15px;
+
+                    legend {
+                        padding: 0 5px;
+                        font-size: 1.2em;
+                        font-weight: bold;
+                    }
+
+                    label:nth-of-type(2) {
+                        margin: 0;
+                        display: block;
+                    }
+
+                    button {
+                        margin: 0;
+                        padding: 5px 10px;
+                        border: none;
+                        border-radius: 15px;
+                        .gradient(top, #CACACA, #686868);
+
+                        &:hover {
+                            background: #CCCCCC;
+                        }
+                    }
+                }
+            }
+        }
+
+        li.popup-item:last-of-type {
+            border-bottom: 1px solid #000;
+        }
+    }
+}

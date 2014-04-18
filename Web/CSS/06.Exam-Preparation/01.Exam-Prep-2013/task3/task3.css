@@ -1,4 +1,4 @@
-html,
+﻿html,
 body,
 div,
 ul,
@@ -31,12 +31,10 @@ textarea {
 }
 #wrapper ul li.popup-item a {
   text-decoration: none;
+  color: #000;
 }
 #wrapper ul li.popup-item a .current {
   font-weight: bold;
-}
-#wrapper ul li.popup-item a:visited {
-  color: #000;
 }
 #wrapper ul li.popup-item a img {
   width: 24px;

@@ -1,0 +1,78 @@
+﻿html,
+body,
+div,
+ul,
+li,
+a,
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+#wrapper {
+  width: 960px;
+  font-family: Cambria, 'Times New Roman', 'Nimbus Roman No9 L', 'Freeserif', Times, serif;
+  font-size: 16px;
+  margin: 15px;
+}
+#wrapper ul.tab-strip {
+  width: 340px;
+  height: 230px;
+  border: 1px solid #000;
+  position: relative;
+}
+#wrapper ul.tab-strip > li.current {
+  font-weight: bold;
+}
+#wrapper ul.tab-strip .current .tab-content {
+  display: block;
+}
+#wrapper ul.tab-strip > li {
+  margin: 0;
+  display: inline-block;
+  padding: 5px 15px;
+  border-bottom: 1px solid #000;
+  border-radius: 5px;
+  font-size: 1.2em;
+  border-right: 1px solid #000;
+}
+#wrapper ul.tab-strip > li:last-of-type {
+  border-right: none;
+}
+#wrapper ul.tab-strip > li:hover {
+  background-color: #808080;
+}
+#wrapper ul.tab-strip > li a {
+  text-decoration: none;
+  color: #000;
+}
+#wrapper ul.tab-strip > li .tab-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  border: 1px solid #000;
+  font-weight: normal;
+  /*Tab 1*/
+  /*Tab 2*/
+}
+#wrapper ul.tab-strip > li .tab-content ul li {
+  display: block;
+  padding-left: 40px;
+}
+#wrapper ul.tab-strip > li .tab-content table {
+  height: 150px;
+  width: 300px;
+}
+#wrapper ul.tab-strip > li .tab-content table tr,
+#wrapper ul.tab-strip > li .tab-content table th,
+#wrapper ul.tab-strip > li .tab-content table td {
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+/*# sourceMappingURL=task2.css.map */

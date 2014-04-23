@@ -1,0 +1,87 @@
+﻿/*---Template---*/
+html,
+body,
+div,
+ul,
+li,
+a,
+h1,
+h2,
+h3,
+p,
+span {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Courier New', Courier, 'Nimbus Mono L', monospace;
+  font-size: 16px;
+  color: #000;
+}
+body #wrapper {
+  width: 960px;
+}
+body #wrapper .menu {
+  margin: 5px;
+  position: relative;
+}
+body #wrapper .menu a {
+  text-decoration: none;
+  color: #0000FF;
+}
+body #wrapper .menu > li {
+  background: #7995e2;
+  background: -moz-linear-gradient(top, #25dcf2 0, #7995e2 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #25dcf2), color-stop(100%, #7995e2));
+  background: -webkit-linear-gradient(top, #25dcf2 0, #7995e2 100%);
+  background: -o-linear-gradient(top, #25dcf2 0, #7995e2 100%);
+  background: -ms-linear-gradient(top, #25dcf2 0, #7995e2 100%);
+  background: linear-gradient(to bottom, #25dcf2 0, #7995e2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#25dcf2', endColorstr='#7995e2', GradientType=0);
+  display: inline-block;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px 25px;
+}
+body #wrapper .menu > li:hover {
+  padding: 10px 45px;
+}
+body #wrapper .menu > li:hover > a {
+  font-size: 1.5em;
+}
+body #wrapper .menu > li:hover .content {
+  display: block;
+}
+body #wrapper .menu > li .content {
+  background: #a0d8ef;
+  background: -moz-linear-gradient(top, #ffffff 0, #a0d8ef 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(100%, #a0d8ef));
+  background: -webkit-linear-gradient(top, #ffffff 0, #a0d8ef 100%);
+  background: -o-linear-gradient(top, #ffffff 0, #a0d8ef 100%);
+  background: -ms-linear-gradient(top, #ffffff 0, #a0d8ef 100%);
+  background: linear-gradient(to bottom, #ffffff 0, #a0d8ef 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#a0d8ef', GradientType=0);
+  display: none;
+  position: absolute;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 25px 20px;
+  padding-bottom: 10px;
+  min-height: 90px;
+  top: 45px;
+}
+body #wrapper .menu > li .content h3 {
+  text-decoration: underline;
+  padding-top: 5px;
+  padding-bottom: 25px;
+}
+body #wrapper .menu > li .content ul {
+  list-style-type: none;
+}
+body #wrapper .menu > li .content a:hover {
+  text-decoration: underline;
+}
+body #wrapper .menu > li .content span {
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

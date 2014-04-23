@@ -1,0 +1,84 @@
+﻿html,
+body,
+div,
+header,
+h1,
+nav,
+ul,
+li,
+a,
+article,
+p {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #575E5B;
+  font-size: 14px;
+}
+#wrapper {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+#wrapper header {
+  position: relative;
+  padding: 15px;
+  background: url("images/header-bg.png") repeat;
+}
+#wrapper header h1 {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+#wrapper header #nav {
+  font-size: 14px;
+}
+#wrapper header #nav ul {
+  list-style-type: none;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+#wrapper header #nav ul li {
+  display: inline-block;
+  padding-left: 15px;
+}
+#wrapper #searchBar {
+  position: relative;
+  font-size: 14px;
+  background-color: #000;
+  padding: 10px 5px;
+  color: #C6C6C6;
+}
+#wrapper #searchBar a {
+  text-decoration: none;
+  color: #C6C6C6;
+}
+#wrapper #searchBar #archives {
+  padding-left: 5px;
+}
+#wrapper #searchBar #search {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+#wrapper #content h1 {
+  font-size: 24px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+#wrapper #content article {
+  font-size: 14px;
+}
+#wrapper #content article p {
+  padding: 8px 0;
+}
+#wrapper #content article p:last-of-type {
+  padding-bottom: 15px;
+}
+.clear {
+  clear: both;
+}
+/*# sourceMappingURL=style.css.map */

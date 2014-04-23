@@ -3,74 +3,78 @@ html, body, div, ul, li, a, table, thead, tbody, tfoot, tr, th, td {
     padding: 0;
 }
 
-#wrapper {
-    width: 960px;
+body {
+    color: #000;
     font-family: Cambria, 'Times New Roman', 'Nimbus Roman No9 L', 'Freeserif', Times, serif;
     font-size: 16px;
-    margin: 15px;
 
-    ul.tab-strip {
-        width: 340px;
-        height: 230px;
-        border: 1px solid #000;
-        position: relative;
+    #wrapper {
+        width: 960px;
+        margin: 15px;
 
-        & > li.current {
-            font-weight: bold;
-        }
+        ul.tab-strip {
+            width: 340px;
+            height: 230px;
+            border: 1px solid #000;
+            position: relative;
 
-        .current .tab-content {
-            display: block;
-        }
-
-        & > li {
-            margin: 0;
-            display: inline-block;
-            padding: 5px 15px;
-            border-bottom: 1px solid #000;
-            border-radius: 5px;
-            font-size: 1.2em;
-            border-right: 1px solid #000;
-
-            &:last-of-type {
-                border-right: none;
+            & > li.current {
+                font-weight: bold;
             }
 
-            &:hover {
-                background-color: #808080;
+            .current .tab-content {
+                display: block;
             }
 
-            a {
-                text-decoration: none;
-                color: #000;
-            }
+            & > li {
+                margin: 0;
+                display: inline-block;
+                padding: 5px 15px;
+                border-bottom: 1px solid #000;
+                border-radius: 5px;
+                font-size: 1.2em;
+                border-right: 1px solid #000;
 
-            .tab-content {
-                display: none;
-                position: absolute;
-                left: 0;
-                top: 40px;
-                border: 1px solid #000;
-                font-weight: normal;
-                /*Tab 1*/
-                ul {
-                    li {
-                        display: block;
-                        padding-left: 40px;
+                &:last-of-type {
+                    border-right: none;
+                }
+
+                &:hover {
+                    background-color: #808080;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #000;
+                }
+
+                .tab-content {
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    top: 40px;
+                    border: 1px solid #000;
+                    font-weight: normal;
+                    /*Tab 1*/
+                    ul {
+                        li {
+                            display: block;
+                            padding-left: 40px;
 
 
-                        ul {
+                            ul {
+                            }
                         }
                     }
-                }
-                /*Tab 2*/
-                table {
-                    height: 150px;
-                    width: 300px;
+                    /*Tab 2*/
+                    table {
+                        height: 150px;
+                        width: 300px;
 
-                    tr, th, td {
-                        border: 1px solid #000;
-                        border-collapse: collapse;
+                        tr, th, td {
+                            border: 1px solid #000;
+                            border-collapse: collapse;
+                        }
                     }
                 }
             }

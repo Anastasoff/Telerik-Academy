@@ -14,25 +14,28 @@ td {
   margin: 0;
   padding: 0;
 }
-#wrapper {
-  width: 960px;
+body {
+  color: #000;
   font-family: Cambria, 'Times New Roman', 'Nimbus Roman No9 L', 'Freeserif', Times, serif;
   font-size: 16px;
+}
+body #wrapper {
+  width: 960px;
   margin: 15px;
 }
-#wrapper ul.tab-strip {
+body #wrapper ul.tab-strip {
   width: 340px;
   height: 230px;
   border: 1px solid #000;
   position: relative;
 }
-#wrapper ul.tab-strip > li.current {
+body #wrapper ul.tab-strip > li.current {
   font-weight: bold;
 }
-#wrapper ul.tab-strip .current .tab-content {
+body #wrapper ul.tab-strip .current .tab-content {
   display: block;
 }
-#wrapper ul.tab-strip > li {
+body #wrapper ul.tab-strip > li {
   margin: 0;
   display: inline-block;
   padding: 5px 15px;
@@ -41,17 +44,17 @@ td {
   font-size: 1.2em;
   border-right: 1px solid #000;
 }
-#wrapper ul.tab-strip > li:last-of-type {
+body #wrapper ul.tab-strip > li:last-of-type {
   border-right: none;
 }
-#wrapper ul.tab-strip > li:hover {
+body #wrapper ul.tab-strip > li:hover {
   background-color: #808080;
 }
-#wrapper ul.tab-strip > li a {
+body #wrapper ul.tab-strip > li a {
   text-decoration: none;
   color: #000;
 }
-#wrapper ul.tab-strip > li .tab-content {
+body #wrapper ul.tab-strip > li .tab-content {
   display: none;
   position: absolute;
   left: 0;
@@ -61,17 +64,17 @@ td {
   /*Tab 1*/
   /*Tab 2*/
 }
-#wrapper ul.tab-strip > li .tab-content ul li {
+body #wrapper ul.tab-strip > li .tab-content ul li {
   display: block;
   padding-left: 40px;
 }
-#wrapper ul.tab-strip > li .tab-content table {
+body #wrapper ul.tab-strip > li .tab-content table {
   height: 150px;
   width: 300px;
 }
-#wrapper ul.tab-strip > li .tab-content table tr,
-#wrapper ul.tab-strip > li .tab-content table th,
-#wrapper ul.tab-strip > li .tab-content table td {
+body #wrapper ul.tab-strip > li .tab-content table tr,
+body #wrapper ul.tab-strip > li .tab-content table th,
+body #wrapper ul.tab-strip > li .tab-content table td {
   border: 1px solid #000;
   border-collapse: collapse;
 }

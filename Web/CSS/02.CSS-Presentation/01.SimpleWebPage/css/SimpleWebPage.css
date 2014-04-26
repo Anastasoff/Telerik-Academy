@@ -1,9 +1,4 @@
-﻿@font-face {
-    font-family: 'Edwardian Script ITC';
-    src: url('/fonts/edwardian-script-itc.ttf');
-}
-
-p {
+﻿p {
     font-family: Consolas;
     color: #0094ff;
 }
@@ -13,6 +8,6 @@ p {
     }
 
     p:first-letter {
-        font-family: 'Edwardian Script ITC', Consolas;
+        font-family:'Edwardian Script ITC';
         font-size: 2em;
     }

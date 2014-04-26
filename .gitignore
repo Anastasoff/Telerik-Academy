@@ -92,15 +92,13 @@ csx
 AppPackages/
 
 # Others
+Thumbs.db
 *.StyleCop
 $tf/
 [Tt]estSolution/
-*.pdf
 *.gdoc
 *.rar
 *.zip
-*.pptx
-*.db
 [Bb]in
 [Oo]bj
 sql

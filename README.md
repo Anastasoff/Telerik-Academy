@@ -5,8 +5,8 @@ Telerik Academy
 ##### Homeworks and projects
 
 #### Team Projects
-  1. <b>[Table tennis] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/TeamProjects/01.TableTennis)</b>
-  2. <b>[Football Stats] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/TeamProjects/02.FootballStats)</b>
+  1. <b>[Table tennis] (https://github.com/Anastasoff/Telerik-Academy/tree/master/TeamProjects/01.TableTennis)</b>
+  2. <b>[Football Stats] (https://github.com/Anastasoff/Telerik-Academy/tree/master/TeamProjects/02.FootballStats)</b>
 
 #### Programming
  1.  <b>[C# Programing Part I] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharpPartOne)</b>

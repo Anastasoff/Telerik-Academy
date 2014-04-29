@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get color from input</title>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Does not work with Firefox -->
+        <!-- Implement proper color picker -->
+        <input type="color" id="color" />
+        <button onclick="onGetColorBtnClick()">Click me</button>
+    </div>
+    <script>
+        function onGetColorBtnClick() {
+            var color = document.getElementById('color').value;
+
+            document.body.style.background = color;
+        }
+    </script>
+</body>
+</html>

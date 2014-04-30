@@ -94,15 +94,6 @@ namespace Events
             }
         }
 
-        public static void Main(string[] args)
-        {
-            while (ExecuteNextCommand())
-            {
-            }
-
-            Console.WriteLine(output);
-        }
-
         private static bool ExecuteNextCommand()
         {
             string command = Console.ReadLine();
@@ -179,6 +170,15 @@ namespace Events
             DateTime date = DateTime.Parse(command.Substring(commandType.Length + 1, 20));
 
             return date;
+        }
+
+        public static void Main(string[] args)
+        {
+            while (ExecuteNextCommand())
+            {
+            }
+
+            Console.WriteLine(output);
         }
     }
 }

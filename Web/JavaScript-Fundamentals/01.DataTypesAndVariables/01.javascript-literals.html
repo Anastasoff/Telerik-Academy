@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JavaScript Literals</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>Assign all the possible JavaScript literals to different variables.</p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <a href="#" onclick="onPrintLiteralsBtnClick()">Print Literals</a>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function onPrintLiteralsBtnClick() {
+            var integer = 2014,
+                double = 3.14;
+            jsConsole.writeLine('Numbers: ' + integer + ', ' + double);
+
+            var boolean = true;
+            jsConsole.writeLine('Boolean: ' + boolean);
+
+            var string = 'Hello, World!';
+            jsConsole.writeLine('String: ' + string);
+
+            var nullable = null;
+            jsConsole.writeLine('Null: ' + nullable);
+
+            jsConsole.writeLine('Undefined: ' + undefined);
+
+            var object = {
+                name: 'PI',
+                value: Math.PI
+            };
+            jsConsole.writeLine('Object: ' + object.name + ' ' + object.value);
+
+            var array = [integer, double, boolean, string, nullable, undefined, object];
+
+            function printArray(array) {
+                jsConsole.writeLine('Array: ');
+                for (var i = 0, len = array.length; i < len; i++) {
+                    jsConsole.writeLine(i + ' => ' + array[i]);
+                }
+            }
+
+            printArray(array);
+        }
+    </script>
+</body>
+</html>

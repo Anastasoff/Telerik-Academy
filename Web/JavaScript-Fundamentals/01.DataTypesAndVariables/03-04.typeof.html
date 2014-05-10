@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>typeof</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+    <link href="styles/main-page.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Task -->
+    <div id="task">
+        <p>Try typeof on all variables you created.</p>
+    </div>
+    <!-- Input -->
+    <div id="input">
+        <a href="#" onclick="onTryTypeofBtnClick()">Try typeof</a>
+    </div>
+    <!-- jsConsole -->
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function onTryTypeofBtnClick() {
+            function printTypeof(variable) {
+                jsConsole.writeLine('typeof ' + variable + ' => \'' + typeof variable + '\'');
+            }
+
+            printTypeof(2014);
+            printTypeof(3.14);
+            printTypeof(true);
+            printTypeof('Hello, World!');
+            printTypeof(null);
+            printTypeof(undefined);
+            printTypeof(new Date());
+            printTypeof([1, 2, 3]);
+            printTypeof(Math.abs);
+        }
+    </script>
+</body>
+</html>

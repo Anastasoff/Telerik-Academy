@@ -38,18 +38,21 @@
     <!-- Solution -->
     <script>
         function onLinearSearchBtnClick() {
-            var array = jsConsole.readNumbersArray("#array", " ");
-            var target = jsConsole.readFloat("#target");
+            var array = jsConsole.readNumbersArray('#array', ' ');
+            var target = jsConsole.readFloat('#target');
             var index = linearSearch(array, target);
-            jsConsole.writeLine("Array: " + array.join(" ") + " => index: " + index);
+
+            jsConsole.writeLine('Array: ' + array.join(' ') + ' => index: ' + index);
         }
 
         function onBinarySearchBtnClick() {
-            var array = jsConsole.readNumbersArray("#array", " ");
-            var target = jsConsole.readFloat("#target");
+            var array = jsConsole.readNumbersArray('#array', ' ');
+            var target = jsConsole.readFloat('#target');
+
             array.sort(function (a, b) { return a - b; });
             var index = binarySearch(array, target, 0, array.length - 1);
-            jsConsole.writeLine("Array: " + array.join(" ") + " => index: " + index);
+
+            jsConsole.writeLine('Array: ' + array.join(' ') + ' => index: ' + index);
         }
 
         function linearSearch(array, target) {
@@ -58,6 +61,7 @@
                     return i;
                 }
             }
+
             return -1;
         }
 

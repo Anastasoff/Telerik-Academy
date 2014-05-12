@@ -16,14 +16,14 @@
     <script src="scripts/js-console.js"></script>
     <script>
         function onCheckIsPrime() {
-            var number = jsConsole.readInteger("#number");
+            var number = jsConsole.readInteger('#number');
 
             var expression = ((number % 2 > 0) && (number % 3 > 0)
                             && (number % 5 > 0) && (number % 7 > 0))
                             || ((number == 2) || (number == 3)
                             || (number == 5) || (number == 7));
 
-            jsConsole.writeLine("Is it prime? => "+expression);
+            jsConsole.writeLine('Is it prime? => ' + expression);
         }
     </script>
 </body>

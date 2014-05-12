@@ -28,31 +28,31 @@
     <script src="scripts/js-console.js"></script>
     <script>
         function onSortDescendingOrder() {
-            var firstNumber = jsConsole.readFloat("#first");
-            var secondNumber = jsConsole.readFloat("#second");
-            var thirdNumber = jsConsole.readFloat("#third");
+            var firstNumber = jsConsole.readFloat('#first');
+            var secondNumber = jsConsole.readFloat('#second');
+            var thirdNumber = jsConsole.readFloat('#third');
 
             if (firstNumber >= secondNumber && thirdNumber < firstNumber) {
                 if (secondNumber > thirdNumber) {
-                    jsConsole.writeLine(firstNumber + " " + secondNumber + " " + thirdNumber);
+                    jsConsole.writeLine(firstNumber + ' ' + secondNumber + ' ' + thirdNumber);
                 } else {
-                    jsConsole.writeLine(firstNumber + " " + thirdNumber + " " + secondNumber);
+                    jsConsole.writeLine(firstNumber + ' ' + thirdNumber + ' ' + secondNumber);
                 }
             }
 
             if (thirdNumber >= secondNumber && firstNumber <= thirdNumber) {
                 if (secondNumber > firstNumber) {
-                    jsConsole.writeLine(thirdNumber + " " + secondNumber + " " + firstNumber);
+                    jsConsole.writeLine(thirdNumber + ' ' + secondNumber + ' ' + firstNumber);
                 } else {
-                    jsConsole.writeLine(thirdNumber + " " + firstNumber + " " + secondNumber);
+                    jsConsole.writeLine(thirdNumber + ' ' + firstNumber + ' ' + secondNumber);
                 }
             }
 
             if (secondNumber > firstNumber && thirdNumber < secondNumber) {
                 if (firstNumber > thirdNumber) {
-                    jsConsole.writeLine(secondNumber + " " + firstNumber + " " + thirdNumber);
+                    jsConsole.writeLine(secondNumber + ' ' + firstNumber + ' ' + thirdNumber);
                 } else {
-                    jsConsole.writeLine(secondNumber + " " + thirdNumber + " " + firstNumber);
+                    jsConsole.writeLine(secondNumber + ' ' + thirdNumber + ' ' + firstNumber);
                 }
             }
         }

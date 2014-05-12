@@ -22,16 +22,16 @@
     <script src="scripts/js-console.js"></script>
     <script>
         function onCheckPointsIsInCircle() {
-            var pointX = jsConsole.readFloat("#pointX");
-            var pointY = jsConsole.readFloat("#pointY");
-            var circleRadius = jsConsole.readFloat("#radius");
+            var pointX = jsConsole.readFloat('#pointX');
+            var pointY = jsConsole.readFloat('#pointY');
+            var circleRadius = jsConsole.readFloat('#radius');
 
             var expression = (pointX * pointX) + (pointY * pointY) <= (circleRadius * circleRadius);
 
             if (expression) {
-                jsConsole.writeLine("The given point is within the circle.");
+                jsConsole.writeLine('The given point is within the circle.');
             } else {
-                jsConsole.writeLine("The given point is not within the circle.");
+                jsConsole.writeLine('The given point is not within the circle.');
             }
         }
     </script>

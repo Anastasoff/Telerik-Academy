@@ -19,8 +19,8 @@
     <script src="scripts/js-console.js"></script>
     <script>
         function onCheckPointLocation() {
-            var pointX = jsConsole.readFloat("#pointX");
-            var pointY = jsConsole.readFloat("#pointY");
+            var pointX = jsConsole.readFloat('#pointX');
+            var pointY = jsConsole.readFloat('#pointY');
 
             // within the circle K[{1, 1}, R = 3]
             var circleX = 1, circleY = 1, radius = 3;
@@ -33,7 +33,7 @@
 
             var endResult = InCircle && outOfRectangle;
 
-            jsConsole.writeLine("=> " + endResult);
+            jsConsole.writeLine('=> ' + endResult);
         }
     </script>
 </body>

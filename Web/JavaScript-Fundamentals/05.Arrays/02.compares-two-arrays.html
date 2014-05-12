@@ -33,29 +33,26 @@
     <!-- Solution -->
     <script>
         function onCompareArraysBtnClick() {
-            //var firstArray = jsConsole.read("#first-array").split(" ");
-            //var secondArray = jsConsole.read("#second-array").split(" ");
+            var firstArray = jsConsole.readArray('#first-array', ' ');
+            var secondArray = jsConsole.readArray('#second-array', ' ');
 
-            var firstArray = jsConsole.readArray("#first-array", " ");
-            var secondArray = jsConsole.readArray("#second-array", " ");
-
-            if (firstArray[0] == "" && secondArray[0] == "") {
-                jsConsole.writeLine("Arrays are empty!");
+            if (firstArray[0] == '' && secondArray[0] == '') {
+                jsConsole.writeLine('Arrays are empty!');
             } else if (firstArray.length != secondArray.length) {
-                jsConsole.writeLine("Arrays have different length!");
+                jsConsole.writeLine('Arrays have different length!');
 
             } else {
                 var areTheSame = true;
                 for (var i = 0; i < firstArray.length; i++) {
                     if (firstArray[i] != secondArray[i]) {
-                        jsConsole.writeLine("Element #" + i + " is different in one of the arrays!");
+                        jsConsole.writeLine('Element #' + i + ' is different in one of the arrays!');
                         areTheSame = false;
                         break;
                     }
                 }
 
                 if (areTheSame == true) {
-                    jsConsole.writeLine("Arrays are the same!");
+                    jsConsole.writeLine('Arrays are the same!');
                 }
             }
         }

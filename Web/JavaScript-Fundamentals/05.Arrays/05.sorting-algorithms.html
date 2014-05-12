@@ -46,7 +46,7 @@
     <script>
         // Selection sort
         function onSelectionSortBtnClick() {
-            var array = jsConsole.readNumbersArray("#array", " ");
+            var array = jsConsole.readNumbersArray('#array', ' ');
             // TODO: check if array is empty
 
             var length = array.length;
@@ -61,12 +61,12 @@
                 swap(array, i, min);
             }
 
-            printResult(array, "Selection sort");
+            printResult(array, 'Selection sort');
         }
 
         // Bubble sort
         function onBubbleSortBtnClick() {
-            var array = jsConsole.readNumbersArray("#array", " ");
+            var array = jsConsole.readNumbersArray('#array', ' ');
             // TODO: check if array is empty
 
             var length = array.length;
@@ -78,12 +78,12 @@
                 }
             }
 
-            printResult(array, "Bubble sort");
+            printResult(array, 'Bubble sort');
         }
 
         // Insertion sort
         function onInsertionSortBtnClick() {
-            var array = jsConsole.readNumbersArray("#array", " ");
+            var array = jsConsole.readNumbersArray('#array', ' ');
             // TODO: check if array is empty
 
             var length = array.length;
@@ -95,7 +95,7 @@
                 }
             }
 
-            printResult(array, "Insertion sort");
+            printResult(array, 'Insertion sort');
         }
 
         function swap(array, a, b) {
@@ -105,12 +105,12 @@
         }
 
         function printResult(array, sortName) {
-            var table = "<table id=\"result\"><tr>";
+            var table = '<table id=\'result\'><tr>';
             for (var i = 0; i < array.length; i++) {
-                table += "<td>" + array[i] + "</td>";
+                table += '<td>' + array[i] + '</td>';
             }
-            table += "</tr></table>";
-            jsConsole.writeLine(sortName + ": " + table);
+            table += '</tr></table>';
+            jsConsole.writeLine(sortName + ': ' + table);
         }
     </script>
 </body>

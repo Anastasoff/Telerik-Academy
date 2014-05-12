@@ -28,11 +28,11 @@
     <script src="scripts/js-console.js"></script>
     <script>
         function onCalculateEquation() {
-            var a = jsConsole.readFloat("#a");
-            var b = jsConsole.readFloat("#b");
-            var c = jsConsole.readFloat("#c");
+            var a = jsConsole.readFloat('#a');
+            var b = jsConsole.readFloat('#b');
+            var c = jsConsole.readFloat('#c');
 
-            jsConsole.writeLine(a + "x<sup>2</sup> + " + b + "x + " + c + " = 0");
+            jsConsole.writeLine(a + 'x<sup>2</sup> + ' + b + 'x + ' + c + ' = 0');
 
             var discriminant = (b * b) - (4 * a * c);
             var x, x1, x2;
@@ -40,15 +40,15 @@
             if (discriminant > 0) {
                 x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
                 x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
-                jsConsole.writeLine("Two real roots:");
-                jsConsole.writeLine("x<sup>1</sup> = " + x1);
-                jsConsole.writeLine("x<sup>2</sup> = " + x2);
+                jsConsole.writeLine('Two real roots:');
+                jsConsole.writeLine('x<sup>1</sup> = ' + x1);
+                jsConsole.writeLine('x<sup>2</sup> = ' + x2);
             } else if (discriminant < 0) {
-                jsConsole.writeLine("No real roots!");
+                jsConsole.writeLine('No real roots!');
             } else {
                 x = (-b + Math.Sqrt(discriminant)) / (2 * a);
-                jsConsole.writeLine("One real root:");
-                jsConsole.writeLine("x = " + x);
+                jsConsole.writeLine('One real root:');
+                jsConsole.writeLine('x = ' + x);
             }
         }
     </script>

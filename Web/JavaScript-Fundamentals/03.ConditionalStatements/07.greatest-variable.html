@@ -34,16 +34,16 @@
     <script src="scripts/js-console.js"></script>
     <script>
         function onFindGreatest() {
-			var greatest = jsConsole.readInteger("#var1");
+            var greatest = jsConsole.readInteger('#var1');
 
             for (var i = 2; i <= 5; i++) {
-                var temp = jsConsole.readInteger("#var" + i);
+                var temp = jsConsole.readInteger('#var' + i);
                 if (temp > greatest) {
                     greatest = temp;
                 }
             }
 
-            jsConsole.writeLine("The greatest variable is " + greatest);
+            jsConsole.writeLine('The greatest variable is ' + greatest);
         }
     </script>
 </body>

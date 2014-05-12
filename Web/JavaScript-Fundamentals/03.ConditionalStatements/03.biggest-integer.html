@@ -28,20 +28,20 @@
     <script src="scripts/js-console.js"></script>
     <script>
         function onFindBiggest() {
-            var first = jsConsole.readInteger("#first");
-            var second = jsConsole.readInteger("#second");
-            var third = jsConsole.readInteger("#third");
+            var first = jsConsole.readInteger('#first');
+            var second = jsConsole.readInteger('#second');
+            var third = jsConsole.readInteger('#third');
 
             if (first > second && first > third) {
-                jsConsole.writeLine("The biggest integer is " + first);
+                jsConsole.writeLine('The biggest integer is ' + first);
             } else {
                 if (second > first && second > third) {
-                    jsConsole.writeLine("The biggest integer is " + second);
+                    jsConsole.writeLine('The biggest integer is ' + second);
                 } else {
                     if (third > first && third > second) {
-                        jsConsole.writeLine("The biggest integer is " + third);
+                        jsConsole.writeLine('The biggest integer is ' + third);
                     } else {
-                        jsConsole.writeLine("Two or more integers are equal.");
+                        jsConsole.writeLine('Two or more integers are equal.');
                     }
                 }
             }

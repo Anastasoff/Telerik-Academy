@@ -28,14 +28,14 @@
     <script src="scripts/js-console.js"></script>
     <script>
         function onFindSign() {
-            var firstNumber = jsConsole.readFloat("#first");
-            var secondNumber = jsConsole.readFloat("#second");
-            var thirdNumber = jsConsole.readFloat("#third");
+            var firstNumber = jsConsole.readFloat('#first');
+            var secondNumber = jsConsole.readFloat('#second');
+            var thirdNumber = jsConsole.readFloat('#third');
 
             if ((firstNumber > 0) ^ (secondNumber > 0) ^ (thirdNumber > 0)) {
-                jsConsole.writeLine("The sign is: " + "<strong>+<strong>");
+                jsConsole.writeLine('The sign is: ' + '<strong>+<strong>');
             } else {
-                jsConsole.writeLine("The sign is: " + "<strong>-<strong>");
+                jsConsole.writeLine('The sign is: ' + '<strong>-<strong>');
             }
         }
     </script>

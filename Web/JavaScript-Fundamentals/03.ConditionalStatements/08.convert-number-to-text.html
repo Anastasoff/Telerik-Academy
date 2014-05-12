@@ -30,11 +30,11 @@
     <script src="scripts/js-console.js"></script>
     <script>
         function onNumberInText() {
-            var number = jsConsole.readInteger("#number");
-            var digits = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
-            var special = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
-            var dec = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
-            var text = "";
+            var number = jsConsole.readInteger('#number');
+            var digits = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+            var special = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+            var dec = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+            var text = '';
 
             if (number >= 0 && number < 1000) {
                 var digit = number % 10;
@@ -42,38 +42,38 @@
                 var hundred = Math.floor(number / 100) % 10;
 
                 if (hundred !== 0) {
-                    text = text.concat(digits[hundred] + " hundred ");
+                    text = text.concat(digits[hundred] + ' hundred ');
                     if (tens !== 0 && tens !== 1 && number >= 20) {
-                        text = text.concat("and " + dec[tens] + " ");
+                        text = text.concat('and ' + dec[tens] + ' ');
                         if (digit != 0) {
-                            text = text.concat(digits[digit] + " ");
+                            text = text.concat(digits[digit] + ' ');
                         }
                     } else if (tens === 1) {
-                        text = text.concat("and " + special[digit]);
+                        text = text.concat('and ' + special[digit]);
                     } else {
                         if (digit !== 0) {
-                            text = text.concat("and " + digits[digit] + " ");
+                            text = text.concat('and ' + digits[digit] + ' ');
                         }
                     }
                 } else {
                     if (tens !== 0 && tens !== 1 && number >= 20) {
-                        text = text.concat(dec[tens] + " ");
+                        text = text.concat(dec[tens] + ' ');
                         if (digit !== 0) {
-                            text = text.concat(digits[digit] + " ");
+                            text = text.concat(digits[digit] + ' ');
                         }
 
                     } else if (tens === 1) {
                         text = text.concat(special[digit]);
                     } else {
-                        text = text.concat(digits[digit] + " ");
+                        text = text.concat(digits[digit] + ' ');
                     }
                 }
 
                 text = text[0].toUpperCase().concat(text.substr(1)).trim();
                 jsConsole.writeLine(text);
             } else {
-                jsConsole.writeLine("The number is out of range [0 ... 999].");
-                jsConsole.writeLine("Please try again!");
+                jsConsole.writeLine('The number is out of range [0 ... 999].');
+                jsConsole.writeLine('Please try again!');
             }
         }
     </script>

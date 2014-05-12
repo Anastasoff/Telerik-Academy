@@ -19,14 +19,14 @@
     <script src="scripts/js-console.js"></script>
     <script>
         function onCheckBit() {
-            var number = jsConsole.readInteger("#number");
-            var bit = jsConsole.readInteger("#bit");
+            var number = jsConsole.readInteger('#number');
+            var bit = jsConsole.readInteger('#bit');
 
             var mask = 1 << bit;
             var numberAndMask = number & mask;
             numberAndMask >>= bit;
 
-            jsConsole.writeLine("Bit " + bit + " in " + number + " is " + numberAndMask);
+            jsConsole.writeLine('Bit ' + bit + ' in ' + number + ' is ' + numberAndMask);
 
         }
     </script>

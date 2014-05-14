@@ -1,10 +1,10 @@
-function onButtonClick() {
+function onCheckBrowserBtnClick() {
     var currentBrowser = window.navigator.appCodeName;
     var isMozilla = currentBrowser === 'Mozilla';
     if (isMozilla) {
-        console.log('Yes');
+        printInBrowser('This is Mozilla');
     } else {
-        console.log('No');
+        printInBrowser('This is not Mozilla');
     }
 }
 
@@ -30,6 +30,12 @@ function onDetectBrowserBtnClick() {
 function printInBrowser(args) {
     var result = document.getElementById('content');
     var p = document.createElement('p');
-    p.innerHTML = args.join(' ');
+
+    if (typeof (args) !== 'string') {
+        p.innerHTML = args.join(' ');
+    } else {
+        p.innerHTML = args;
+    }
+
     result.appendChild(p);
 }

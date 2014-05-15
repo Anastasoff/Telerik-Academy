@@ -34,22 +34,28 @@
         function onFindMaxSequenceBtnClick() {
             var array = jsConsole.readNumbersArray('#sequence', ', ');
 
-            var max = 1;
-            var temp = 1;
+            var maxSequence = 1,
+                tempSequence = 1,
+                begin = 0,
+                beginTemp = 0,
+                end = 0;
             for (var i = 1; i < array.length; i++) {
                 if (array[i] == array[i - 1]) {
-                    temp++;
+                    tempSequence++;
                 } else {
-                    temp = 1;
+                    tempSequence = 1;
+                    beginTemp = i;
                 }
 
-                if (max < temp) {
-                    max = temp;
+                if (maxSequence < tempSequence) {
+                    maxSequence = tempSequence;
+                    begin = beginTemp;
+                    end = i;
                 }
             }
 
-            // TODO: printResult() function
-            jsConsole.writeLine('Max: ' + max);
+            // TODO: function printResult()
+            jsConsole.writeLine('Max sequence: ' + maxSequence);
         }
     </script>
 </body>

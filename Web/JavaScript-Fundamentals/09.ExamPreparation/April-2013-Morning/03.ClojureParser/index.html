@@ -7,6 +7,12 @@
     <script src="solution.js"></script>
     <script>
         function TestSolution() {
+            var customTest = [
+                '(+ 10 2)',
+                '(+ 10 10 12 0 0 0)',
+                '(* 32 2)'
+            ];
+
             var zeroTest1 = [
                 '(def func 10)',
                 '(def newFunc (+ func 2))',
@@ -22,6 +28,8 @@
             ];
 
             console.log('break point');
+
+            //console.log(Solve(customTest));
 
             console.log(Solve(zeroTest1));
 

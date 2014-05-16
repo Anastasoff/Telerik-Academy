@@ -1,10 +1,22 @@
 ﻿function Solve(inputs) {
     function calculateExpression(expression) {
-        var result = 0;
-        var values = [];
-        var i = 2;
-        var operator = expression[i - 1];
-        for (i = 2; i < expression.length - 1; i++) {
+        var result = 0,
+            values = [],
+            i,
+            operator;
+
+        // find operator
+        if (expression.indexOf('+') > 0) {
+            operator = '+';
+        } else if (expression.indexOf('-') > 0) {
+            operator = '-';
+        } else if (expression.indexOf('*') > 0) {
+            operator = '*';
+        } else if (expression.indexOf('/') > 0) {
+            operator = '/';
+        }
+
+        for (i = expression.indexOf(operator) + 1; i < expression.length - 1; i++) {
             if (expression[i] !== ' ' && expression[i] !== ')') {
                 var tempStr = '';
 
@@ -42,6 +54,10 @@
             }
         } else if (operator === '/') {
             for (i = 1; i < values.length; i++) {
+                if (values[i] === 0) {
+                    hasZeroDivision = true;
+                    break;
+                }
                 result /= values[i];
             }
 
@@ -54,6 +70,8 @@
     var output,
         funcs = {};
     var tempOutput = 0;
+    var hasZeroDivision = false;
+    var lineNumber = 0;
     for (var j = 0; j < inputs.length; j++) {
         var command = inputs[j];
         var defIndex = command.indexOf('def');
@@ -96,10 +114,18 @@
         } else {
             tempOutput += calculateExpression(command);
         }
+
+        if (hasZeroDivision) {
+            lineNumber = j + 1;
+            break;
+        }
     }
 
     // !!!
     output = tempOutput;
-
-    return output;
+    if (hasZeroDivision === false) {
+        return output;
+    } else {
+        return 'Division by zero! At Line:' + lineNumber;
+    }
 }

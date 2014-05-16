@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body onload="TestSolution()">
+    <script src="solution.js"></script>
+    <script>
+        function TestSolution() {
+            var zeroTest1 = [
+                '(def func 10)',
+                '(def newFunc (+ func 2))',
+                '(def sumFunc (+ func func newFunc 0 0 0))',
+                '(* sumFunc 2)'
+            ];
+
+            var zeroTest2 = [
+                '(def func (+ 5 2))',
+                '(def func2 (/  func 5 2 1 0))',
+                '(def func3 (/ func 2))',
+                '(+ func3 func)'
+            ];
+
+            console.log('break point');
+
+            console.log(Solve(zeroTest1));
+
+            //console.log(Solve(zeroTest2));
+        }
+    </script>
+</body>
+</html>

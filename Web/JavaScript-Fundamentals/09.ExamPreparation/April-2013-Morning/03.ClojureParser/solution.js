@@ -28,7 +28,7 @@
                 var value = parseInt(tempStr);
                 if (isNaN(value)) {
                     for (var f in funcs) {
-                        if (tempStr == f) {
+                        if (tempStr === f) {
                             value = parseInt(funcs[f]);
                         }
                     }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30324.0
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "01.MaxSum", "http://localhost:36762", "{64D30610-E709-46C3-BA90-32863BA6FE2F}"
 	ProjectSection(WebsiteProperties) = preProject
@@ -24,6 +24,27 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "01.MaxSum", "http://localho
 		SlnRelativePath = "01.MaxSum\"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "02.LabyrinthEscape", "http://localhost:7901", "{A31D1B73-E843-488B-9BB0-0C75279CCA6C}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_7901"
+		Debug.AspNetCompiler.PhysicalPath = "02.LabyrinthEscape\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7901\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_7901"
+		Release.AspNetCompiler.PhysicalPath = "02.LabyrinthEscape\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7901\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "02.LabyrinthEscape\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +52,8 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{64D30610-E709-46C3-BA90-32863BA6FE2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{64D30610-E709-46C3-BA90-32863BA6FE2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A31D1B73-E843-488B-9BB0-0C75279CCA6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A31D1B73-E843-488B-9BB0-0C75279CCA6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

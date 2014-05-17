@@ -2,6 +2,7 @@ function Solve(args) {
     function CreateField(rows, cols) {
         var matrix = [],
             counter = 1;
+
         for (var row = 0; row < rows; row++) {
             matrix[row] = [];
             for (var col = 0; col < cols; col++) {
@@ -9,6 +10,7 @@ function Solve(args) {
                 counter++;
             }
         }
+
         return matrix;
     }
 
@@ -27,6 +29,7 @@ function Solve(args) {
         result = 0,
         sumOfNumbers = field[row][col],
         numberOfJumbs = 0;
+
     while (escaped !== true && caught !== true) {
         for (var i = 0; i < jumbs; i++) {
             var currentPosition = args[2 + i].split(' ');
@@ -52,6 +55,7 @@ function Solve(args) {
             field[row][col] = -1;
         }
     }
+
     if (escaped === true) {
         return 'escaped ' + result;
     } else {

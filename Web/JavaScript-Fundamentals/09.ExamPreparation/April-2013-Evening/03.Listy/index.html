@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Listy</title>
+    <script src="solution.js"></script>
+</head>
+<body onload="TestSolution()">
+    <script>
+        function TestSolution() {
+            var customTest = [
+                '  [ 34, -5, 0, 0,-43]',
+                ' sum [  -5,-5,  0 , 10  ]'
+            ];
+
+            var test1 = [
+                'def func sum[5, 3, 7, 2, 6, 3]',
+                'def func2 [5, 3, 7, 2, 6, 3]',
+                'def func3 min[func2]',
+                'def func4 max[5, 3, 7, 2, 6, 3]',
+                'def func5 avg[5, 3, 7, 2, 6, 3]',
+                'def func6 sum[func2, func3, func4 ]',
+                'sum[func6, func4]'
+            ];
+
+            var test2 = [
+                'def func sum[1, 2, 3, -6]',
+                'def newList [func, 10, 1]',
+                'def newFunc sum[func, 100, newList]',
+                '[newFunc]'
+            ];
+
+            console.log('break point');
+
+            console.log(Solve(customTest));
+
+            //console.log(Solve(test1));
+
+            //console.log(Solve(test2));
+        }
+    </script>
+</body>
+</html>

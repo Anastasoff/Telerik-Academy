@@ -45,6 +45,27 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "02.LabyrinthEscape", "http:
 		SlnRelativePath = "02.LabyrinthEscape\"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "03.Listy", "http://localhost:46353", "{1F66AC18-0D74-4766-BEA1-5DB63CA33594}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_46353"
+		Debug.AspNetCompiler.PhysicalPath = "03.Listy\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_46353\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_46353"
+		Release.AspNetCompiler.PhysicalPath = "03.Listy\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_46353\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "03.Listy\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,6 +75,8 @@ Global
 		{64D30610-E709-46C3-BA90-32863BA6FE2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A31D1B73-E843-488B-9BB0-0C75279CCA6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A31D1B73-E843-488B-9BB0-0C75279CCA6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F66AC18-0D74-4766-BEA1-5DB63CA33594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F66AC18-0D74-4766-BEA1-5DB63CA33594}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

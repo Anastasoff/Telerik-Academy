@@ -40,45 +40,39 @@
         }
 
         result = values[0];
-        if (operator === '+') {
-            for (i = 1; i < values.length; i++) {
+        for (i = 1; i < values.length; i++) {
+            if (operator === '+') {
                 result += values[i];
-            }
-        } else if (operator === '-') {
-            for (i = 1; i < values.length; i++) {
+            } else if (operator === '-') {
                 result -= values[i];
-            }
-        } else if (operator === '*') {
-            for (i = 1; i < values.length; i++) {
+            } else if (operator === '*') {
                 result *= values[i];
-            }
-        } else if (operator === '/') {
-            for (i = 1; i < values.length; i++) {
+            } else if (operator === '/') {
                 if (values[i] === 0) {
                     hasZeroDivision = true;
                     break;
                 }
                 result /= values[i];
+                result = Math.floor(result);
             }
-
-            result = Math.floor(result);
         }
 
         return result;
     }
 
     var output,
-        funcs = {};
-    var tempOutput = 0;
-    var hasZeroDivision = false;
-    var lineNumber = 0;
+        funcs = {},
+        tempOutput = 0,
+        hasZeroDivision = false,
+        lineNumber = 0;
+
     for (var j = 0; j < inputs.length; j++) {
         var command = inputs[j];
         var defIndex = command.indexOf('def');
         if (defIndex > 0) {
+            var index = defIndex + 3;
             var funcName = '';
             var funcValue = 0;
-            var index = defIndex + 3;
 
             // get function name
             while (true) {
@@ -89,6 +83,7 @@
                         break;
                     }
                 }
+
                 index++;
             }
 
@@ -121,7 +116,6 @@
         }
     }
 
-    // !!!
     output = tempOutput;
     if (hasZeroDivision === false) {
         return output;

@@ -7,12 +7,6 @@
     <script src="solution.js"></script>
     <script>
         function TestSolution() {
-            var customTest = [
-                '(+ 10 2)',
-                '(+ 10 10 12 0 0 0)',
-                '(* 32 2)'
-            ];
-
             var zeroTest1 = [
                 '(def   func   10)',
                 '(def newFunc  (+ func 2))',
@@ -27,22 +21,9 @@
                 '(+ func3 func)'
             ];
 
-            var test002 = [
-                '(def     go6o    (/ -7 1 1 1 1) )',
-                '(def asd (/ 0 5))',
-                '(def func2 asd  )',
-                '(           +        4          2      func2)'
-            ];
-
-            console.log('break point');
-
-            //console.log(Solve(customTest));
-
             console.log(Solve(zeroTest1));
 
             console.log(Solve(zeroTest2));
-
-            console.log(Solve(test002));
         }
     </script>
 </body>

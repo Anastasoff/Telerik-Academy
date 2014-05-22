@@ -1,5 +1,5 @@
 ﻿function Solve(args) {
-    var s = parseInt(args[0]); // 40 => 11
+    var s = parseInt(args[0]);
     var count = 0;
 
     for (var i = 0; i < s; i++) {

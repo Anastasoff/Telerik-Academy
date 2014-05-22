@@ -62,6 +62,14 @@
   <ItemGroup>
     <Content Include="index-4.html" />
     <Content Include="solution-4.js" />
+    <Content Include="solution-4.min.js">
+      <DependentUpon>solution-4.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="solution-4.min.js.map">
+      <DependentUpon>solution-4.min.js</DependentUpon>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

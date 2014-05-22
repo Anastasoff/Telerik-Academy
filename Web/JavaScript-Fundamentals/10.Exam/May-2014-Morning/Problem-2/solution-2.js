@@ -45,15 +45,13 @@
                 return 'failed at (' + row + ', ' + col + ')';
             }
 
-            if (cmd === 'dr') { // down-right                
+            if (cmd === 'dr') { // down-right
                 totalSum += matrix[row++][col++];
             } else if (cmd === 'ur') { // up-right
                 totalSum += matrix[row--][col++];
-            }
-            else if (cmd === 'ul') { // up-left
+            } else if (cmd === 'ul') { // up-left
                 totalSum += matrix[row--][col--];
-            }
-            else if (cmd === 'dl') { // down-left
+            } else if (cmd === 'dl') { // down-left
                 totalSum += matrix[row++][col--];
             }
 
@@ -64,10 +62,9 @@
             }
         }
     }
-
 }
 
-args1 = [
+var args1 = [
   '3 5',
   'dr dl dr ur ul',
   'dr dr ul ur ur',
@@ -76,7 +73,7 @@ args1 = [
 
 console.log(Solve(args1));
 
-args2 = [
+var args2 = [
   '3 5',
   'dr dl dl ur ul',
   'dr dr ul ul ur',

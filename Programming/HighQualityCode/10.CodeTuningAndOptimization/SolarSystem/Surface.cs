@@ -13,7 +13,7 @@ namespace Surfaces
         }
 
         public static PropertyHolder<Material, Surface> MaterialProperty =
-            new PropertyHolder<Material,Surface>("Material", null, OnMaterialChanged);
+            new PropertyHolder<Material, Surface>("Material", null, OnMaterialChanged);
 
         public static PropertyHolder<Material, Surface> BackMaterialProperty =
             new PropertyHolder<Material, Surface>("BackMaterial", null, OnBackMaterialChanged);

@@ -3,17 +3,17 @@ using System.Collections;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Media;
 using System.Windows.Markup; // IAddChild, ContentPropertyAttribute
+using System.Windows.Media;
 
 namespace Microsoft._3DTools
 {
     /// <summary>
-    /// This class enables a Viewport3D to be enhanced by allowing UIElements to be placed 
-    /// behind and in front of the Viewport3D.  These can then be used for various enhancements.  
+    /// This class enables a Viewport3D to be enhanced by allowing UIElements to be placed
+    /// behind and in front of the Viewport3D.  These can then be used for various enhancements.
     /// For examples see the Trackball, or InteractiveViewport3D.
     /// </summary>
-    [ContentProperty("Content")]    
+    [ContentProperty("Content")]
     public abstract class Viewport3DDecorator : FrameworkElement, IAddChild
     {
         /// <summary>
@@ -24,10 +24,10 @@ namespace Microsoft._3DTools
             // create the two lists of children
             _preViewportChildren = new UIElementCollection(this, this);
             _postViewportChildren = new UIElementCollection(this, this);
-                    
+
             // no content yet
             _content = null;
-        }           
+        }
 
         /// <summary>
         /// The content/child of the Viewport3DDecorator.  A Viewport3DDecorator only has one
@@ -42,22 +42,22 @@ namespace Microsoft._3DTools
 
             set
             {
-                // check to make sure it is a Viewport3D or a Viewport3DDecorator                
+                // check to make sure it is a Viewport3D or a Viewport3DDecorator
                 if (!(value is Viewport3D || value is Viewport3DDecorator))
                 {
                     throw new ArgumentException("Not a valid child type", "value");
-                }            
-                
+                }
+
                 // check to make sure we're attempting to set something new
                 if (_content != value)
                 {
                     UIElement oldContent = _content;
-                    UIElement newContent = value;                    
-                    
+                    UIElement newContent = value;
+
                     // remove the previous child
                     RemoveVisualChild(oldContent);
                     RemoveLogicalChild(oldContent);
-                    
+
                     // set the private variable
                     _content = value;
 
@@ -72,7 +72,7 @@ namespace Microsoft._3DTools
                     // as the Viewport3D being enhanced
                     // create the bindings now for use later
                     BindToContentsWidthHeight(newContent);
-                                      
+
                     // Invalidate measure to indicate a layout update may be necessary
                     InvalidateMeasure();
                 }
@@ -99,7 +99,6 @@ namespace Microsoft._3DTools
             BindingOperations.SetBinding(this, WidthProperty, _widthBinding);
             BindingOperations.SetBinding(this, HeightProperty, _heightBinding);
 
-            
             // bind to max width and max height
             Binding _maxWidthBinding = new Binding("MaxWidth");
             _maxWidthBinding.Mode = BindingMode.OneWay;
@@ -112,7 +111,6 @@ namespace Microsoft._3DTools
             BindingOperations.SetBinding(this, MaxWidthProperty, _maxWidthBinding);
             BindingOperations.SetBinding(this, MaxHeightProperty, _maxHeightBinding);
 
-            
             // bind to min width and min height
             Binding _minWidthBinding = new Binding("MinWidth");
             _minWidthBinding.Mode = BindingMode.OneWay;
@@ -123,7 +121,7 @@ namespace Microsoft._3DTools
             _minHeightBinding.Source = newContent;
 
             BindingOperations.SetBinding(this, MinWidthProperty, _minWidthBinding);
-            BindingOperations.SetBinding(this, MinHeightProperty, _minHeightBinding);            
+            BindingOperations.SetBinding(this, MinHeightProperty, _minHeightBinding);
         }
 
         /// <summary>
@@ -164,12 +162,12 @@ namespace Microsoft._3DTools
                     else
                     {
                         currEnhancer = (Viewport3DDecorator)currContent;
-                    }                    
+                    }
                 }
 
                 return viewport3D;
             }
-        }        
+        }
 
         /// <summary>
         /// The UIElements that occur before the Viewport3D
@@ -192,19 +190,19 @@ namespace Microsoft._3DTools
                 return _postViewportChildren;
             }
         }
-       
+
         /// <summary>
         /// Returns the number of Visual children this element has.
         /// </summary>
         protected override int VisualChildrenCount
         {
-            get 
+            get
             {
                 int contentCount = (Content == null ? 0 : 1);
 
                 return PreViewportChildren.Count +
-                       PostViewportChildren.Count + 
-                       contentCount; 
+                       PostViewportChildren.Count +
+                       contentCount;
             }
         }
 
@@ -239,7 +237,7 @@ namespace Microsoft._3DTools
             throw new ArgumentOutOfRangeException("index", orginalIndex, "Out of range visual requested");
         }
 
-        /// <summary> 
+        /// <summary>
         /// Returns an enumertor to this element's logical children
         /// </summary>
         protected override IEnumerator LogicalChildren
@@ -265,7 +263,7 @@ namespace Microsoft._3DTools
         /// <returns>The desired size of the Viewport3DDecorator</returns>
         protected override Size MeasureOverride(Size constraint)
         {
-            Size finalSize = new Size();    
+            Size finalSize = new Size();
 
             MeasurePreViewportChildren(constraint);
 
@@ -316,7 +314,7 @@ namespace Microsoft._3DTools
                 uiElem.Measure(constraint);
             }
         }
-        
+
         /// <summary>
         /// Arranges the Pre and Post Viewport children, and arranges itself
         /// </summary>
@@ -407,13 +405,13 @@ namespace Microsoft._3DTools
         }
 
         //---------------------------------------------------------
-        // 
+        //
         //  Private data
         //
-        //---------------------------------------------------------        
+        //---------------------------------------------------------
         private UIElementCollection _preViewportChildren;
+
         private UIElementCollection _postViewportChildren;
         private UIElement _content;
     }
 }
-

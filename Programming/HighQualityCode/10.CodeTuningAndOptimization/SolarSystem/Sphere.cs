@@ -1,45 +1,56 @@
-using System;
-using System.Windows;
-using System.Windows.Media;
-using System.Windows.Media.Media3D;
-
 namespace Surfaces
 {
+    using System;
+    using System.Windows;
+    using System.Windows.Media;
+    using System.Windows.Media.Media3D;
+
     public sealed class Sphere : Surface
     {
-        private static PropertyHolder<double, Sphere> RadiusProperty =
-            new PropertyHolder<double, Sphere>("Radius", 1.0, OnGeometryChanged);
+        private static PropertyHolder<double, Sphere> RadiusProperty = new PropertyHolder<double, Sphere>("Radius", 1.0, OnGeometryChanged);
+        private static PropertyHolder<Point3D, Sphere> PositionProperty = new PropertyHolder<Point3D, Sphere>("Position", new Point3D(0, 0, 0), OnGeometryChanged);
+
+        private double radius;
+        private Point3D position;
 
         public double Radius
         {
-            get { return RadiusProperty.Get(this); }
-            set { RadiusProperty.Set(this, value); }
-        }
+            get
+            {
+                return RadiusProperty.Get(this);
+            }
 
-        private static PropertyHolder<Point3D, Sphere> PositionProperty =
-            new PropertyHolder<Point3D, Sphere>("Position", new Point3D(0,0,0), OnGeometryChanged);
+            set
+            {
+                RadiusProperty.Set(this, value);
+            }
+        }
 
         public Point3D Position
         {
-            get { return PositionProperty.Get(this); }
-            set { PositionProperty.Set(this, value); }
-        }
+            get
+            {
+                return PositionProperty.Get(this);
+            }
 
-        private double _radius;
-        private Point3D _position;
+            set
+            {
+                PositionProperty.Set(this, value);
+            }
+        }
 
         private Point3D GetPosition(double angle, double y)
         {
-            double r = _radius * Math.Sqrt(1 - y * y);
+            double r = radius * Math.Sqrt(1 - y * y);
             double x = r * Math.Cos(angle);
             double z = r * Math.Sin(angle);
 
-            return new Point3D(_position.X + x, _position.Y + _radius*y, _position.Z + z);
+            return new Point3D(position.X + x, position.Y + radius * y, position.Z + z);
         }
 
         private Vector3D GetNormal(double angle, double y)
         {
-            return (Vector3D) GetPosition(angle, y);
+            return (Vector3D)GetPosition(angle, y);
         }
 
         private Point GetTextureCoordinate(double angle, double y)
@@ -55,13 +66,13 @@ namespace Surfaces
 
         protected override Geometry3D CreateMesh()
         {
-            _radius = Radius;
-            _position = Position;
+            radius = Radius;
+            position = Position;
 
             const int angleSteps = 32;
             const double minAngle = 0;
             const double maxAngle = 2 * Math.PI;
-            const double dAngle = (maxAngle-minAngle) / angleSteps;
+            const double dAngle = (maxAngle - minAngle) / angleSteps;
 
             const int ySteps = 32;
             const double minY = -1.0;

@@ -1,10 +1,9 @@
 using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Media3D;
-using System.Windows.Input;
- // IAddChild, ContentPropertyAttribute
 
 namespace Microsoft._3DTools
 {
@@ -21,7 +20,7 @@ namespace Microsoft._3DTools
             // the viewport3D
             _eventSource = new Border();
             _eventSource.Background = Brushes.Transparent;
-            
+
             PreViewportChildren.Add(_eventSource);
         }
 
@@ -114,7 +113,7 @@ namespace Microsoft._3DTools
 
             // quaterion will throw if this happens - sometimes we can get 3D positions that
             // are very similar, so we avoid the throw by doing this check and just ignoring
-            // the event 
+            // the event
             if (axis.Length == 0) return;
 
             Quaternion delta = new Quaternion(axis, -angle);
@@ -150,7 +149,7 @@ namespace Microsoft._3DTools
         private void Zoom(Point currentPosition)
         {
             double yDelta = currentPosition.Y - _previousPosition2D.Y;
-            
+
             double scale = Math.Exp(yDelta / 100);    // e^(yDelta/100) is fairly arbitrary.
 
             _scale.ScaleX *= scale;
@@ -171,6 +170,6 @@ namespace Microsoft._3DTools
         private ScaleTransform3D _scale = new ScaleTransform3D();
         private AxisAngleRotation3D _rotation = new AxisAngleRotation3D();
 
-        private Border _eventSource;        
+        private Border _eventSource;
     }
 }

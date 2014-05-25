@@ -9,37 +9,37 @@ namespace Microsoft._3DTools
     ///     Trackball is a utility class which observes the mouse events
     ///     on a specified FrameworkElement and produces a Transform3D
     ///     with the resultant rotation and scale.
-    /// 
+    ///
     ///     Example Usage:
-    /// 
+    ///
     ///         Trackball trackball = new Trackball();
     ///         trackball.EventSource = myElement;
     ///         myViewport3D.Camera.Transform = trackball.Transform;
-    /// 
+    ///
     ///     Because Viewport3Ds only raise events when the mouse is over the
     ///     rendered 3D geometry (as opposed to not when the mouse is within
-    ///     the layout bounds) you usually want to use another element as 
+    ///     the layout bounds) you usually want to use another element as
     ///     your EventSource.  For example, a transparent border placed on
     ///     top of your Viewport3D works well:
-    ///     
+    ///
     ///         <Grid>
     ///           <ColumnDefinition />
     ///           <RowDefinition />
     ///           <Viewport3D Name="myViewport" ClipToBounds="True" Grid.Row="0" Grid.Column="0" />
     ///           <Border Name="myElement" Background="Transparent" Grid.Row="0" Grid.Column="0" />
     ///         </Grid>
-    ///     
+    ///
     ///     NOTE: The Transform property may be shared by multiple Cameras
     ///           if you want to have auxilary views following the trackball.
-    /// 
+    ///
     ///           It can also be useful to share the Transform property with
     ///           models in the scene that you want to move with the camera.
     ///           (For example, the Trackport3D's headlight is implemented
     ///           this way.)
-    /// 
+    ///
     ///           You may also use a Transform3DGroup to combine the
     ///           Transform property with additional Transforms.
-    /// </summary> 
+    /// </summary>
     public class Trackball
     {
         private FrameworkElement _eventSource;
@@ -73,8 +73,11 @@ namespace Microsoft._3DTools
         /// </summary>
         public FrameworkElement EventSource
         {
-            get { return _eventSource; }
-            
+            get
+            {
+                return _eventSource;
+            }
+
             set
             {
                 if (_eventSource != null)
@@ -166,7 +169,7 @@ namespace Microsoft._3DTools
         private void Zoom(Point currentPosition)
         {
             double yDelta = currentPosition.Y - _previousPosition2D.Y;
-            
+
             double scale = Math.Exp(yDelta / 100);    // e^(yDelta/100) is fairly arbitrary.
 
             _scale.ScaleX *= scale;

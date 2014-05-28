@@ -34,7 +34,7 @@
 
             set
             {
-                ChechStringInput(value, "FirstName");
+                this.ChechStringInput(value, "FirstName");
 
                 this.firstName = value;
             }
@@ -49,13 +49,13 @@
 
             set
             {
-                ChechStringInput(value, "LastName");
+                this.ChechStringInput(value, "LastName");
 
                 this.lastName = value;
             }
         }
 
-        // TODO: implement DateOfBorn
+        //// TODO: implement DateOfBorn
 
         public int Age
         {
@@ -86,7 +86,7 @@
 
             set
             {
-                ChechStringInput(value, "Occupation");
+                this.ChechStringInput(value, "Occupation");
 
                 this.occupation = value;
             }

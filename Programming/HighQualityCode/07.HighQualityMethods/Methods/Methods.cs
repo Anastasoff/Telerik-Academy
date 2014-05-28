@@ -59,30 +59,53 @@
             return max;
         }
 
-        public static void PrintAsNumber(object number, string format)
+        public static void PrintNumber(double value, int decimals)
         {
-            if (format == "f")
-            {
-                Console.WriteLine("{0:f2}", number);
-            }
-            if (format == "%")
-            {
-                Console.WriteLine("{0:p0}", number);
-            }
-            if (format == "r")
-            {
-                Console.WriteLine("{0,8}", number);
-            }
+            string format = "{0:F" + decimals + "}";
+            Console.WriteLine(format, value);
         }
 
-        public static double CalcDistance(double x1, double y1, double x2, double y2,
-            out bool isHorizontal, out bool isVertical)
+        public static void PrintPercent(double value, int decimals)
         {
-            isHorizontal = (y1 == y2);
-            isVertical = (x1 == x2);
+            string format = "{0:P" + decimals + "}";
+            Console.WriteLine(format, value);
+        }
 
-            double distance = Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+        public static void PrintAligned(object value, int totalWidth)
+        {
+            string format = "{0," + totalWidth + "}";
+            Console.WriteLine(format, value);
+        }
+
+        public static double CalcDistance(double x1, double y1, double x2, double y2)
+        {
+            double distance = Math.Sqrt(((x1 - x2) * (x1 - x2)) + ((y1 - y2) * (y1 - y2)));
+
             return distance;
+        }
+
+        public static bool IsLineHorizontal(double x1, double y1, double x2, double y2)
+        {
+            if (x1 == x2 && y1 == y2)
+            {
+                throw new ArgumentException("The points shouldn't coincide. A single point cannot define a line.");
+            }
+
+            bool isHorizontal = y1 == y2;
+
+            return isHorizontal;
+        }
+
+        public static bool IsLineVertical(double x1, double y1, double x2, double y2)
+        {
+            if (x1 == x2 && y1 == y2)
+            {
+                throw new ArgumentException("The points shouldn't coincide. A single point cannot define a line.");
+            }
+
+            bool isVertical = x1 == x2;
+
+            return isVertical;
         }
 
         private static void PrintSeparator(char separator, int separatorLength)
@@ -102,16 +125,16 @@
             Console.WriteLine(FindMaxElement('z', 't', 'a', 'a', 'b'));
             PrintSeparator('-', 10);
 
-            PrintAsNumber(1.3, "f");
-            PrintAsNumber(0.75, "%");
-            PrintAsNumber(2.30, "r");
+            PrintNumber(1.3, 2);
+            PrintPercent(0.75, 0);
+            PrintAligned(2.30, 8);
             PrintSeparator('-', 10);
 
-            bool horizontal = false;
-            bool vertical = false; ;
-            Console.WriteLine(CalcDistance(3, -1, 3, 2.5, out horizontal, out vertical));
-            Console.WriteLine("Horizontal? " + horizontal);
-            Console.WriteLine("Vertical? " + vertical);
+            bool isHorizontal = IsLineHorizontal(3, -1, 3, 2.5);
+            bool isVertical = IsLineVertical(3, -1, 3, 2.5);
+            Console.WriteLine(CalcDistance(3, -1, 3, 2.5));
+            Console.WriteLine("Horizontal? " + isHorizontal);
+            Console.WriteLine("Vertical? " + isVertical);
             PrintSeparator('-', 20);
 
             Student peter = new Student() { FirstName = "Peter", LastName = "Ivanov" };

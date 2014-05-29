@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cohesion-and-Coupling", "Cohesion-and-Coupling\Cohesion-and-Coupling.csproj", "{268AEC63-DABA-4607-8E60-997E09EB5F2C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance-and-Polymorphism", "Inheritance-and-Polymorphism\Inheritance-and-Polymorphism.csproj", "{CC40B053-CC90-4956-8591-01AC016C3188}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-2.Figures", "Figures\01-2.Figures.csproj", "{65016E88-BE2B-4E62-A13B-402B21A1E3BF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-2.FiguresDemo", "FiguresDemo\01-2.FiguresDemo.csproj", "{3D32F1DB-C8F6-40F3-A1C9-B5409497759F}"
@@ -15,20 +11,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Utils", "Utils\03.Utils.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.UtilsDemo", "UtilsDemo\03.UtilsDemo.csproj", "{2F9B2221-AB74-45FE-A2F4-72E88C6814BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Courses", "Courses\04.Courses.csproj", "{DE17A5B0-6F5D-4388-9D37-06DDB3EEA7EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.CoursesDemo", "CoursesDemo\04.CoursesDemo.csproj", "{8EE2BD23-931C-4E59-A796-21F71CF8799A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{268AEC63-DABA-4607-8E60-997E09EB5F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{268AEC63-DABA-4607-8E60-997E09EB5F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{268AEC63-DABA-4607-8E60-997E09EB5F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{268AEC63-DABA-4607-8E60-997E09EB5F2C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CC40B053-CC90-4956-8591-01AC016C3188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CC40B053-CC90-4956-8591-01AC016C3188}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CC40B053-CC90-4956-8591-01AC016C3188}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CC40B053-CC90-4956-8591-01AC016C3188}.Release|Any CPU.Build.0 = Release|Any CPU
 		{65016E88-BE2B-4E62-A13B-402B21A1E3BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{65016E88-BE2B-4E62-A13B-402B21A1E3BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65016E88-BE2B-4E62-A13B-402B21A1E3BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +37,14 @@ Global
 		{2F9B2221-AB74-45FE-A2F4-72E88C6814BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F9B2221-AB74-45FE-A2F4-72E88C6814BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F9B2221-AB74-45FE-A2F4-72E88C6814BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE17A5B0-6F5D-4388-9D37-06DDB3EEA7EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE17A5B0-6F5D-4388-9D37-06DDB3EEA7EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE17A5B0-6F5D-4388-9D37-06DDB3EEA7EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE17A5B0-6F5D-4388-9D37-06DDB3EEA7EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EE2BD23-931C-4E59-A796-21F71CF8799A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EE2BD23-931C-4E59-A796-21F71CF8799A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EE2BD23-931C-4E59-A796-21F71CF8799A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EE2BD23-931C-4E59-A796-21F71CF8799A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

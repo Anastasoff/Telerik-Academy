@@ -1,6 +1,13 @@
-﻿using System;
-
-public abstract class Exam
+﻿// ********************************
+// <copyright file="Exam.cs" company="Telerik Academy">
+// Copyright (c) 2014 Telerik Academy. All rights reserved.
+// </copyright>
+//
+// ********************************
+namespace Exceptions
 {
-    public abstract ExamResult Check();
+    public abstract class Exam
+    {
+        public abstract ExamResult Check();
+    }
 }

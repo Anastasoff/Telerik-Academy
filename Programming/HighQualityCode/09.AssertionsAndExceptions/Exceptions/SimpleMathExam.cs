@@ -1,38 +1,62 @@
-﻿using System;
-
-public class SimpleMathExam : Exam
+﻿// ********************************
+// <copyright file="SimpleMathExam.cs" company="Telerik Academy">
+// Copyright (c) 2014 Telerik Academy. All rights reserved.
+// </copyright>
+//
+// ********************************
+namespace Exceptions
 {
-    public int ProblemsSolved { get; private set; }
+    using System;
 
-    public SimpleMathExam(int problemsSolved)
+    public class SimpleMathExam : Exam
     {
-        if (problemsSolved < 0)
+        private const int TotalProblems = 2;
+        private int problemsSolved;
+
+        public SimpleMathExam(int problemsSolved)
         {
-            problemsSolved = 0;
-        }
-        if (problemsSolved > 10)
-        {
-            problemsSolved = 10;
+            this.ProblemsSolved = problemsSolved;
         }
 
-        this.ProblemsSolved = problemsSolved;
-    }
+        public int ProblemsSolved
+        {
+            get
+            {
+                return this.problemsSolved;
+            }
 
-    public override ExamResult Check()
-    {
-        if (ProblemsSolved == 0)
-        {
-            return new ExamResult(2, 2, 6, "Bad result: nothing done.");
-        }
-        else if (ProblemsSolved == 1)
-        {
-            return new ExamResult(4, 2, 6, "Average result: nothing done.");
-        }
-        else if (ProblemsSolved == 2)
-        {
-            return new ExamResult(6, 2, 6, "Average result: nothing done.");
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentOutOfRangeException("problemsSolved", "problemsSolved cannot be a negative number!");
+                }
+
+                if (value > TotalProblems)
+                {
+                    throw new ArgumentOutOfRangeException(
+                        "problemsSolved", string.Format("problemsSolved must be less than {0}!", TotalProblems));
+                }
+
+                this.problemsSolved = value;
+            }
         }
 
-        return new ExamResult(0, 0, 0, "Invalid number of problems solved!");
+        public override ExamResult Check()
+        {
+            if (this.ProblemsSolved == 0)
+            {
+                return new ExamResult(2, 2, 6, "Bad result: nothing done.");
+            }
+            else if (this.ProblemsSolved == 1)
+            {
+                return new ExamResult(4, 2, 6, "Average result: one problem solved.");
+            }
+            else
+            {
+                // All problems solved
+                return new ExamResult(6, 2, 6, "Excellent result: all problems solved.");
+            }
+        }
     }
 }

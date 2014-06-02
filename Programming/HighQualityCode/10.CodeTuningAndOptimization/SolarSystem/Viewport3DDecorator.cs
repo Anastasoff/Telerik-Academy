@@ -1,13 +1,13 @@
-using System;
-using System.Collections;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Markup; // IAddChild, ContentPropertyAttribute
-using System.Windows.Media;
-
 namespace Microsoft._3DTools
 {
+    using System;
+    using System.Collections;
+    using System.Windows;
+    using System.Windows.Controls;
+    using System.Windows.Data;
+    using System.Windows.Markup; // IAddChild, ContentPropertyAttribute
+    using System.Windows.Media;
+
     /// <summary>
     /// This class enables a Viewport3D to be enhanced by allowing UIElements to be placed
     /// behind and in front of the Viewport3D.  These can then be used for various enhancements.
@@ -22,11 +22,11 @@ namespace Microsoft._3DTools
         public Viewport3DDecorator()
         {
             // create the two lists of children
-            _preViewportChildren = new UIElementCollection(this, this);
-            _postViewportChildren = new UIElementCollection(this, this);
+            preViewportChildren = new UIElementCollection(this, this);
+            postViewportChildren = new UIElementCollection(this, this);
 
             // no content yet
-            _content = null;
+            content = null;
         }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace Microsoft._3DTools
         {
             get
             {
-                return _content;
+                return content;
             }
 
             set
@@ -49,9 +49,9 @@ namespace Microsoft._3DTools
                 }
 
                 // check to make sure we're attempting to set something new
-                if (_content != value)
+                if (content != value)
                 {
-                    UIElement oldContent = _content;
+                    UIElement oldContent = content;
                     UIElement newContent = value;
 
                     // remove the previous child
@@ -59,7 +59,7 @@ namespace Microsoft._3DTools
                     RemoveLogicalChild(oldContent);
 
                     // set the private variable
-                    _content = value;
+                    content = value;
 
                     // link in the new child
                     AddLogicalChild(newContent);
@@ -88,40 +88,40 @@ namespace Microsoft._3DTools
         private void BindToContentsWidthHeight(UIElement newContent)
         {
             // bind to width height
-            Binding _widthBinding = new Binding("Width");
-            _widthBinding.Mode = BindingMode.OneWay;
-            Binding _heightBinding = new Binding("Height");
-            _heightBinding.Mode = BindingMode.OneWay;
+            Binding widthBinding = new Binding("Width");
+            widthBinding.Mode = BindingMode.OneWay;
+            Binding heightBinding = new Binding("Height");
+            heightBinding.Mode = BindingMode.OneWay;
 
-            _widthBinding.Source = newContent;
-            _heightBinding.Source = newContent;
+            widthBinding.Source = newContent;
+            heightBinding.Source = newContent;
 
-            BindingOperations.SetBinding(this, WidthProperty, _widthBinding);
-            BindingOperations.SetBinding(this, HeightProperty, _heightBinding);
+            BindingOperations.SetBinding(this, WidthProperty, widthBinding);
+            BindingOperations.SetBinding(this, HeightProperty, heightBinding);
 
             // bind to max width and max height
-            Binding _maxWidthBinding = new Binding("MaxWidth");
-            _maxWidthBinding.Mode = BindingMode.OneWay;
-            Binding _maxHeightBinding = new Binding("MaxHeight");
-            _maxHeightBinding.Mode = BindingMode.OneWay;
+            Binding maxWidthBinding = new Binding("MaxWidth");
+            maxWidthBinding.Mode = BindingMode.OneWay;
+            Binding maxHeightBinding = new Binding("MaxHeight");
+            maxHeightBinding.Mode = BindingMode.OneWay;
 
-            _maxWidthBinding.Source = newContent;
-            _maxHeightBinding.Source = newContent;
+            maxWidthBinding.Source = newContent;
+            maxHeightBinding.Source = newContent;
 
-            BindingOperations.SetBinding(this, MaxWidthProperty, _maxWidthBinding);
-            BindingOperations.SetBinding(this, MaxHeightProperty, _maxHeightBinding);
+            BindingOperations.SetBinding(this, MaxWidthProperty, maxWidthBinding);
+            BindingOperations.SetBinding(this, MaxHeightProperty, maxHeightBinding);
 
             // bind to min width and min height
-            Binding _minWidthBinding = new Binding("MinWidth");
-            _minWidthBinding.Mode = BindingMode.OneWay;
-            Binding _minHeightBinding = new Binding("MinHeight");
-            _minHeightBinding.Mode = BindingMode.OneWay;
+            Binding minWidthBinding = new Binding("MinWidth");
+            minWidthBinding.Mode = BindingMode.OneWay;
+            Binding minHeightBinding = new Binding("MinHeight");
+            minHeightBinding.Mode = BindingMode.OneWay;
 
-            _minWidthBinding.Source = newContent;
-            _minHeightBinding.Source = newContent;
+            minWidthBinding.Source = newContent;
+            minHeightBinding.Source = newContent;
 
-            BindingOperations.SetBinding(this, MinWidthProperty, _minWidthBinding);
-            BindingOperations.SetBinding(this, MinHeightProperty, _minHeightBinding);
+            BindingOperations.SetBinding(this, MinWidthProperty, minWidthBinding);
+            BindingOperations.SetBinding(this, MinHeightProperty, minHeightBinding);
         }
 
         /// <summary>
@@ -176,7 +176,7 @@ namespace Microsoft._3DTools
         {
             get
             {
-                return _preViewportChildren;
+                return preViewportChildren;
             }
         }
 
@@ -187,7 +187,7 @@ namespace Microsoft._3DTools
         {
             get
             {
-                return _postViewportChildren;
+                return postViewportChildren;
             }
         }
 
@@ -409,9 +409,9 @@ namespace Microsoft._3DTools
         //  Private data
         //
         //---------------------------------------------------------
-        private UIElementCollection _preViewportChildren;
+        private UIElementCollection preViewportChildren;
 
-        private UIElementCollection _postViewportChildren;
-        private UIElement _content;
+        private UIElementCollection postViewportChildren;
+        private UIElement content;
     }
 }

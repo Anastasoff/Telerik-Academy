@@ -63,7 +63,7 @@
     <Content Include="01.div-nodes.html" />
     <Content Include="02.get-text-from-input.html" />
     <Content Include="03.get-color-from-input.html" />
-    <Content Include="04.task.html" />
+    <Content Include="scripts\div-nodes.js" />
     <Content Include="scripts\get-color-from-input.js" />
     <Content Include="scripts\get-text-from-input.js" />
   </ItemGroup>

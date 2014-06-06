@@ -1,8 +1,7 @@
 (function() {
-    function onBodyLoaded() {
-        var button = document.getElementById('btn-create-divs');
-        button.style.backgroundColor = '#000';
-    }
+    'use strict';
+    var button = document.getElementById('btn-create-divs');
+    button.style.backgroundColor = '#ccc';
 
     function randomGenerator() {
         return (Math.random() * 100) | 0;

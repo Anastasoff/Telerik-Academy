@@ -1,14 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-    </head>
-    <body>
-        <div id="wrapper">
-            <button id="btn-create-divs">Button</button>
-            <div id="container"></div>
-        </div>
-        <script src="scripts/random-divs.js"></script>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <title>Random Divs</title>
+    <style>
+        #container {
+            width: 1300px;
+            height: 600px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <input id="input" type="text" />
+        <a href="#" id="input-btn">Generate</a>
+        <a href="#" id="clear-btn">Clear</a>
+        <div id="container"></div>
+    </div>
+    <script src="scripts/random-divs.js"></script>
+</body>
 </html>

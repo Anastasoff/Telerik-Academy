@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Before or after another element</title>
+    <style>
+        #wrapper {
+            padding: 5px;
+            width: 130px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        #container > div {
+            margin: 0 auto;
+            margin-top: 5px;
+            width: 100px;
+            height: 25px;
+            border: 5px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <button id="btn-before">Before</button>
+        <button id="btn-after">After</button>
+        <div id="container"></div>
+    </div>
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+    <script src="Scripts/before-or-after-element.js"></script>
+</body>
+</html>

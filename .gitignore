@@ -106,7 +106,8 @@ $tf/
 [Bb]in
 [Oo]bj
 sql
-TestResults
+TestResults/
+[Tt]est[Rr]esults/
 [Tt]est[Rr]esult*
 *.Cache
 ClientBin

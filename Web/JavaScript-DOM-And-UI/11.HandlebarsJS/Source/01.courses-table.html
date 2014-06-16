@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Courses table</title>
+    <style>
+        table, th, td {
+            padding: 10px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th {
+            color: #fff;
+            background-color: #808080;
+        }
+
+        tr:nth-child(2n) {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="table-container"></div>
+    <script id="table-template" type="text/x-handelbars-template">
+        <table>
+            <thead>
+                <tr>
+                    <th>N:</th>
+                    {{#each header.fields}}
+                    <th>{{name}}</th>
+                    {{/each}}
+                </tr>
+            </thead>
+            <tbody>
+                {{#each rows}}
+                <tr>
+                    <td>{{@index}}</td>
+                    {{#each fields}}
+                    <td>{{content}}</td>
+                    {{/each}}
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </script>
+    <script src="Scripts/handlebars.js"></script>
+    <script src="Scripts/jquery-2.1.1.js"></script>
+    <script src="Scripts/courses-table.js"></script>
+</body>
+</html>

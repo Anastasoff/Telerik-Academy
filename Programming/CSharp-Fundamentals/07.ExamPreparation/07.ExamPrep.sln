@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 2 – The Secrets of Numbers", "Problem 2 – The Secrets of Numbers\Problem 2 – The Secrets of Numbers.csproj", "{DFB519C6-7AF1-4E5D-BBDF-D0B1D9034E3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 3 – Card Wars Batka", "Problem 3 – Card Wars Batka\Problem 3 – Card Wars Batka.csproj", "{D7C546EF-19F4-433A-8553-DFB524FE4B30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 5 – Bittris", "Problem 5 – Bittris\Problem 5 – Bittris.csproj", "{7D2C5036-ED31-4A46-9E76-94C3D3F45542}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 5 – Neuron Mapping", "Problem 5 – Neuron Mapping\Problem 5 – Neuron Mapping.csproj", "{310DD7CA-F96F-4207-B27F-704DC0C1D809}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 4 - Fire", "Problem 4 - Fire\Problem 4 - Fire.csproj", "{BF3C87A9-F084-45FE-91C0-D978CBBAB006}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 1 – Garden", "Problem 1 – Garden\Problem 1 – Garden.csproj", "{B9C361D4-D972-4891-A22C-C5DB299FED1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem 4 – Bat Goiko Tower", "Problem 4 – Bat Goiko Tower\Problem 4 – Bat Goiko Tower.csproj", "{27CEB0E5-94C8-41CE-B612-E7F1C78A9617}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFB519C6-7AF1-4E5D-BBDF-D0B1D9034E3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFB519C6-7AF1-4E5D-BBDF-D0B1D9034E3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFB519C6-7AF1-4E5D-BBDF-D0B1D9034E3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFB519C6-7AF1-4E5D-BBDF-D0B1D9034E3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7C546EF-19F4-433A-8553-DFB524FE4B30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7C546EF-19F4-433A-8553-DFB524FE4B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7C546EF-19F4-433A-8553-DFB524FE4B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7C546EF-19F4-433A-8553-DFB524FE4B30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D2C5036-ED31-4A46-9E76-94C3D3F45542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D2C5036-ED31-4A46-9E76-94C3D3F45542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D2C5036-ED31-4A46-9E76-94C3D3F45542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D2C5036-ED31-4A46-9E76-94C3D3F45542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{310DD7CA-F96F-4207-B27F-704DC0C1D809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{310DD7CA-F96F-4207-B27F-704DC0C1D809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{310DD7CA-F96F-4207-B27F-704DC0C1D809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{310DD7CA-F96F-4207-B27F-704DC0C1D809}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF3C87A9-F084-45FE-91C0-D978CBBAB006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF3C87A9-F084-45FE-91C0-D978CBBAB006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF3C87A9-F084-45FE-91C0-D978CBBAB006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF3C87A9-F084-45FE-91C0-D978CBBAB006}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9C361D4-D972-4891-A22C-C5DB299FED1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9C361D4-D972-4891-A22C-C5DB299FED1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9C361D4-D972-4891-A22C-C5DB299FED1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9C361D4-D972-4891-A22C-C5DB299FED1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27CEB0E5-94C8-41CE-B612-E7F1C78A9617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27CEB0E5-94C8-41CE-B612-E7F1C78A9617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27CEB0E5-94C8-41CE-B612-E7F1C78A9617}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27CEB0E5-94C8-41CE-B612-E7F1C78A9617}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

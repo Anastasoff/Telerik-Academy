@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<model>
+  <class name="Person">
+    <property  name="FirstName" type="string" />
+    <property  name="LastName" type="string" />
+    <property  name="Age" type="int" />
+    <property  name="Address" type="string" />
+  </class>
+</model>

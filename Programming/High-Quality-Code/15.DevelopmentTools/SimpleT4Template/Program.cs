@@ -1,15 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleT4Template
+﻿namespace SimpleT4Template
 {
-    class Program
+    using System;
+
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
+            Person person = new Person();
+            person.FirstName = "Pesho";
+            person.LastName = "Peshev";
+            person.Age = 99;
+            person.Address = "Dolno nagornishte";
+
+            Console.WriteLine(
+                "{0} {1} is {2} years old from '{3}'.",
+                person.FirstName,
+                person.LastName,
+                person.Age,
+                person.Address);
         }
     }
 }

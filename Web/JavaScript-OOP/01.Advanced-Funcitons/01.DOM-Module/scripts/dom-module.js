@@ -1,47 +1,74 @@
-(function () {
+var MAX_BUFFER_SIZE = 100,
+    buffer = [];
+
+var domModule = (function () {
     'use strict';
-    var domModule = function () {
+    function appendChild(element, selector) {
+        checkInputSelector(selector);
+        var parentElement;
 
-        function appendChild(element, selector) {
-            var parentElement = document.querySelector(selector);
-            parentElement.appendChild(element);
+        parentElement = document.querySelector(selector);
+        parentElement.appendChild(element);
+    }
+
+    function removeChild(element, selector) {
+        checkInputSelector.call(null, element, selector);
+        var parentElement,
+            removeElement;
+
+        parentElement = document.querySelector(element);
+        removeElement = parentElement.querySelector(selector);
+        parentElement.removeChild(removeElement);
+    }
+
+    function addHandler(selector, event, listener) {
+        checkInputSelector(selector);
+        var allElements,
+            i,
+            len;
+
+        allElements = document.querySelectorAll(selector);
+
+        for (i = 0, len = allElements.length; i < len; i += 1) {
+            allElements[i].addEventListener(event, listener);
         }
+    }
 
-        function removeChild(element, selector) {
-            var parentElement = document.querySelector(element);
-            var removeElement = parentElement.querySelector(selector);
-            parentElement.removeChild(removeElement);
+    function appendToBuffer(selector, element) {
+        checkInputSelector(selector);
+        if (buffer[selector]) {
+            buffer[selector].push(element);
+            if (buffer[selector].length >= MAX_BUFFER_SIZE) {
+                var parent,
+                    container,
+                    i,
+                    len;
+
+                parent = document.querySelector(selector);
+                container = document.createDocumentFragment();
+                for (i = 0, len = buffer[selector].length; i < len; i += 1) {
+                    container.appendChild(buffer[selector][i]);
+                }
+
+                parent.appendChild(container);
+                buffer[selector] = [];
+            }
+        } else {
+            buffer[selector] = [];
+            buffer[selector].push(element);
         }
+    }
 
-        function addHandler() {
-
+    function checkInputSelector(selector) {
+        if (!document.querySelector(selector)) {
+            throw 'The input selector "' + selector + '" is not valid.';
         }
+    }
 
-        function appendToBuffer() {
-
-        }
-
-        return {
-            appendChild: appendChild,
-            removeChild: removeChild,
-            addHandler: addHandler,
-            appendToBuffer: appendToBuffer
-
-        };
-    }();
-
-    var div = document.createElement("div");
-
-    //appends div to #wrapper
-    domModule.appendChild(div, "#wrapper");
-
-    //removes li:first-child from ul
-    domModule.removeChild("ul", "li:first-child");
-
-    //add handler to each a element with class button
-    domModule.addHandler("a.button", 'click', function () {
-        alert("Clicked");
-    });
-    domModule.appendToBuffer("container", div.cloneNode(true));
-    domModule.appendToBuffer("#main-navul", navItem);
-}());
+    return {
+        appendChild: appendChild,
+        removeChild: removeChild,
+        addHandler: addHandler,
+        appendToBuffer: appendToBuffer
+    };
+})();

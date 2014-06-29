@@ -113,6 +113,3 @@ var movingShapes = (function () {
         add: add
     };
 }());
-
-
-

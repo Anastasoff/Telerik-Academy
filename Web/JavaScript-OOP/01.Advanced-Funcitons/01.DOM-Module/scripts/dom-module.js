@@ -1,8 +1,9 @@
-var MAX_BUFFER_SIZE = 100,
-    buffer = [];
-
 var domModule = (function () {
     'use strict';
+
+    var MAX_BUFFER_SIZE = 100,
+        buffer = [];
+
     function appendChild(element, selector) {
         checkInputSelector(selector);
         var parentElement;

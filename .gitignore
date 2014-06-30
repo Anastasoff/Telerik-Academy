@@ -92,6 +92,7 @@ csx
 AppPackages/
 
 # Others
+.idea/
 Thumbs.db
 *.StyleCop
 $tf/

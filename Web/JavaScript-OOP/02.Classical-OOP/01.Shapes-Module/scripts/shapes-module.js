@@ -1,4 +1,4 @@
-var Shapes = (function () {
+var shapes = (function () {
     'use strict';
 
     var Shape = (function () {
@@ -105,5 +105,4 @@ var Shapes = (function () {
         Circle: Circle,
         Line: Line
     };
-
 }());

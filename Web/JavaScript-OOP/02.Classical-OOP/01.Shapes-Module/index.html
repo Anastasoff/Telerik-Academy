@@ -1,30 +1,29 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Shapes Module</title>
 </head>
 <body>
-<div id="container">
-    <canvas id="canvas" width="1000" height="600"></canvas>
-</div>
-<script src="scripts/shapes-module.js"></script>
-<script src="scripts/drawer.js"></script>
-<script>
-    var rect = new Shapes.Rect(15, 70, 100, 50);
-    console.log(rect.toString());
-    var circle = new Shapes.Circle(100, 100, 50);
-    console.log(circle.toString());
-    var line = new Shapes.Line(60, 80, 120, 150);
-    console.log(line.toString());
+    <div id="container">
+        <canvas id="canvas" width="1000" height="600"></canvas>
+    </div>
+    <script src="scripts/shapes-module.js"></script>
+    <script src="scripts/drawer.js"></script>
+    <script>
+        var rect = new shapes.Rect(15, 70, 100, 50);
+        console.log(rect.toString());
+        var circle = new shapes.Circle(100, 100, 50);
+        console.log(circle.toString());
+        var line = new shapes.Line(60, 80, 120, 150);
+        console.log(line.toString());
 
-    var drawer = new Drawer('canvas');
-    console.log(drawer);
+        var drawer = new Drawer('canvas');
+        console.log(drawer);
 
-    drawer.drawShape(rect);
-    drawer.drawShape(circle);
-    drawer.drawShape(line);
-
-</script>
+        drawer.drawShape(rect);
+        drawer.drawShape(circle);
+        drawer.drawShape(line);
+    </script>
 </body>
 </html>

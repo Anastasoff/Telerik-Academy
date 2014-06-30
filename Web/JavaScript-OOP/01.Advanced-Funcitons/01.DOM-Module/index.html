@@ -1,54 +1,54 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
     <title>DOM Module</title>
 </head>
 <body>
-<div id="wrapper">
-    <nav id="main-nav">
-        <ul>
-            <li>Item-1</li>
-            <li>Item-2</li>
-            <li>Item-3</li>
-            <li>Item-4</li>
-            <li>Item-5</li>
-        </ul>
-    </nav>
-    <a href="#" class="button">Click me!</a>
-    <br/>
-    <a href="#" class="button">Click me too!</a>
-    <br/>
+    <div id="wrapper">
+        <nav id="main-nav">
+            <ul>
+                <li>Item-1</li>
+                <li>Item-2</li>
+                <li>Item-3</li>
+                <li>Item-4</li>
+                <li>Item-5</li>
+            </ul>
+        </nav>
+        <a href="#" class="button">Click me!</a>
+        <br />
+        <a href="#" class="button">Click me too!</a>
+        <br />
 
-    <div id="container"></div>
-</div>
-<script src="scripts/dom-module.js"></script>
-<script>
-    // Demo
-    var div = document.createElement("div");
-    div.innerHTML = 'Test div';
+        <div id="container"></div>
+    </div>
+    <script src="scripts/dom-module.js"></script>
+    <script>
+        // Demo
+        var div = document.createElement("div");
+        div.innerHTML = 'Test div';
 
-    //appends div to #wrapper
-    domModule.appendChild(div, "#wrapper");
+        //appends div to #wrapper
+        domModule.appendChild(div, "#wrapper");
 
-    //removes li:first-child from ul
-    domModule.removeChild("ul", "li:first-child");
+        //removes li:first-child from ul
+        domModule.removeChild("ul", "li:first-child");
 
-    //add handler to each a element with class button
-    domModule.addHandler("a.button", 'click', function () {
-        window.alert("Clicked");
-    });
+        //add handler to each a element with class button
+        domModule.addHandler("a.button", 'click', function () {
+            window.alert("Clicked");
+        });
 
-    var count = 120;
-    for (var i = 0; i < count; i += 1) {
-        domModule.appendToBuffer("#container", div.cloneNode(true));
-    }
+        var count = 120;
+        for (var i = 0; i < count; i += 1) {
+            domModule.appendToBuffer("#container", div.cloneNode(true));
+        }
 
-    var navItem = document.createElement('li');
-    navItem.innerHTML = 'Test buffer';
-    for (i = 0; i < count; i += 1) {
-        domModule.appendToBuffer("#main-nav ul", navItem);
-    }
-</script>
+        var navItem = document.createElement('li');
+        navItem.innerHTML = 'Test buffer';
+        for (i = 0; i < count; i += 1) {
+            domModule.appendToBuffer("#main-nav ul", navItem);
+        }
+    </script>
 </body>
 </html>

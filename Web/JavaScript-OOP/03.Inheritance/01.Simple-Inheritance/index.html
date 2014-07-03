@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Inheritance</title>
+</head>
+<body>
+<div id="wrapper"></div>
+<script src="scripts/simple-inheritance.js"></script>
+<script>
+    var someAnimal = new Animals.Mammal('Mr. Biggles');
+    console.log('someAnimal is ' + someAnimal.toString());
+    var myPet = new Animals.Cat('Felix');
+    console.log('myPet is ' + myPet.toString());
+    myPet.haveABaby();
+    console.log('Number of the offspring: ' + myPet.getOffspring().length);
+    console.log(myPet.getOffspring()[0].toString());
+</script>
+</body>
+</html>

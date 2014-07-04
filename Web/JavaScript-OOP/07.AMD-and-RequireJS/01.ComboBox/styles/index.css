@@ -1,0 +1,21 @@
+.person-item {
+    margin: 10px;
+    padding: 5px;
+    width: 150px;
+    border: 1px solid black;
+    text-align: center;
+    display: none;
+}
+
+.person-item:hover {
+    background-color: #dddddd;
+}
+
+.person-name {
+    font-family: Calibri;
+}
+
+.person-age {
+    margin: 0;
+    padding: 0;
+}

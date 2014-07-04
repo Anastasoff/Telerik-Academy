@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AMD and RequireJS</title>
+    <link rel="stylesheet" href="styles/index.css" type="text/css"/>
+</head>
+<body>
+<div id="comboBox-container"></div>
+
+<script id="template-container" type="text/x-handlebars-template">
+    <div class="person-item" id="person-item-{{id}}">
+        <strong class="person-name">{{name}}</strong>
+        <p class="person-age">age {{age}}</p>
+        <img src="{{avatarUrl}}" width="100px"/>
+    </div>
+</script>
+<script src="scripts/libs/bower_components/requirejs/require.js" data-main="scripts/app"></script>
+</body>
+</html>

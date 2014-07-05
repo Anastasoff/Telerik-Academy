@@ -6,7 +6,7 @@
         }
     });
 
-    require(['jquery', 'sudoku'], function ($, Sudoku) {
+    require(['jquery', './sudoku'], function ($, Sudoku) {
         var game = Sudoku.getInstance();
         $('#container').append(game.getGameBoard());
 

@@ -3,27 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Sudoku</title>
-    <script src="scripts/bower_components/jquery/dist/jquery.js"></script>
-    <script src="scripts/sudoku.js"></script>
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-<script type="text/javascript">
-    $(document).ready(function () {
-        var game = Sudoku.getInstance();
-        $('#container').append(game.getGameBoard());
-
-        $('#solve').click(function () {
-            game.solve();
-        });
-        $('#validate').click(function () {
-            game.validate();
-        });
-        $('#reset').click(function () {
-            game.reset();
-        });
-    });
-</script>
 <h1>Sudoku</h1>
 
 <div id="container"></div>
@@ -32,5 +14,7 @@
     <button id="validate">Validate Board</button>
     <button id="reset">Reset</button>
 </div>
+
+<script data-main="scripts/app" src="scripts/bower_components/requirejs/require.js"></script>
 </body>
 </html>

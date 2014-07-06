@@ -6,15 +6,16 @@
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-<h1>Sudoku</h1>
+<div id="wrapper">
+    <h1>Sudoku</h1>
 
-<div id="container"></div>
-<div id="menu" class="sudoku-menu">
-    <button id="solve">Solve</button>
-    <button id="validate">Validate Board</button>
-    <button id="reset">Reset</button>
+    <div id="container"></div>
+    <div id="menu" class="sudoku-menu">
+        <button id="solve">Solve</button>
+        <button id="validate">Validate Board</button>
+        <button id="reset">Reset</button>
+    </div>
+    <script data-main="scripts/app" src="scripts/bower_components/requirejs/require.js"></script>
 </div>
-
-<script data-main="scripts/app" src="scripts/bower_components/requirejs/require.js"></script>
 </body>
 </html>

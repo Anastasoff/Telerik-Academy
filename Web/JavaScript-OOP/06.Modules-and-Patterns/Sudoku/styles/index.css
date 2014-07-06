@@ -1,4 +1,4 @@
-body {
+#wrapper {
     margin: 0;
     padding: 0;
 }
@@ -17,9 +17,16 @@ button, h1 {
 }
 
 .sudoku-menu button {
-    font-size: 24px;
-    margin: 10px;
-    padding: 5px;
+    border: none;
+    font-size: 26px;
+    margin: 10px 5px;
+    padding: 5px 15px;
+}
+
+.sudoku-menu button:hover{
+    background: #919191;
+    color: #fff;
+    border: none;
 }
 
 .sudoku-container {
@@ -43,11 +50,15 @@ button, h1 {
 }
 
 .sudoku-container .sudoku-input-error {
-    background: #ffc9d7;
+    background: #E8CF2A;
 }
 
 .sudoku-container.valid-matrix {
     border: 5px solid #7edb37;
+}
+
+.sudoku-container.invalid-matrix {
+    border: 5px solid #DB0000;
 }
 
 .sudoku-section-one {

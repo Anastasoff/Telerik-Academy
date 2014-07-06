@@ -24,7 +24,8 @@ define(['jquery'], function ($) {
 
                     for (var j = 0; j < 9; j++) {
                         this.$cellMatrix[i][j] = $('<input>')
-                            .attr('maxLength', 1)
+                            .attr('maxlength', 1)
+                            .attr('pattern', '\\d+')
                             .data('row', i)
                             .data('col', j)
                             .on('keyup', $.proxy(this.onKeyUp, this));
@@ -82,8 +83,12 @@ define(['jquery'], function ($) {
                     }
                 }
 
-                $('.sudoku-container input').removeAttr('disabled');
-                $('.sudoku-container').removeClass('valid-matrix');
+                $('.sudoku-container input')
+                    .removeAttr('disabled')
+                    .removeClass('sudoku-input-error');
+                $('.sudoku-container')
+                    .removeClass('valid-matrix')
+                    .removeClass('invalid-matrix');
             },
 
             resetValidationMatrices: function () {
@@ -199,7 +204,6 @@ define(['jquery'], function ($) {
                         if (this.solveGame(sqRow, sqCol)) {
                             return true;
                         } else {
-                            this.backtrackCounter++;
                             this.$cellMatrix[sqRow][sqCol].val('');
                             this.matrix.row[sqRow][sqCol] = '';
                             this.matrix.col[sqCol][sqRow] = '';

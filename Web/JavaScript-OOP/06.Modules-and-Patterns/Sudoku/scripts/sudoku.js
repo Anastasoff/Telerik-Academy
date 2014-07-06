@@ -24,43 +24,26 @@ define(['jquery', './gameEngine'], function ($, Game) {
 
                 validate: function () {
                     var isValid;
-
                     isValid = _game.validateMatrix();
-                    $('.sudoku-container').toggleClass('valid-matrix', isValid);
+                    if (isValid) {
+                        $('.sudoku-container').toggleClass('valid-matrix');
+                    } else {
+                        $('.sudoku-container').toggleClass('invalid-matrix');
+                    }
                 },
 
                 solve: function () {
-                    var isValid,
-                        startTime,
-                        endTime,
-                        elapsed;
+                    var isValid;
 
                     if (!_game.validateMatrix()) {
                         return false;
                     }
 
-                    _game.recursionCounter = 0;
-                    _game.backtrackCounter = 0;
-
-                    startTime = Date.now();
-
                     isValid = _game.solveGame(0, 0);
-
-                    endTime = Date.now();
 
                     $('.sudoku-container').toggleClass('valid-matrix', isValid);
                     if (isValid) {
                         $('.valid-matrix input').attr('disabled', 'disabled');
-                    }
-
-                    if (_game.config.show_solver_timer) {
-                        elapsed = endTime - startTime;
-                        window.console.log('Solver elapsed time: ' + elapsed + 'ms');
-                    }
-
-                    if (_game.config.show_recursion_counter) {
-                        window.console.log('Solver recursions: ' + _game.recursionCounter);
-                        window.console.log('Solver backtracks: ' + _game.backtrackCounter);
                     }
                 }
             };

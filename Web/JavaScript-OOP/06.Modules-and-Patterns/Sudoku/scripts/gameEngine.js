@@ -1,14 +1,14 @@
 define(['jquery'], function ($) {
-    var Game = (function () {
-        function Game(config) {
-            this.config = config;
-            this.recursionCounter = 0;
-            this.$cellMatrix = {};
-            this.matrix = {};
-            this.validation = {};
-            this.resetValidationMatrices();
+    'use strict';
+    var Game;
 
-            return this;
+    Game = (function () {
+        function Game(config) {
+            this._config = config;
+            this._$cellMatrix = {};
+            this._matrix = {};
+            this._validation = {};
+            this.resetValidationMatrices();
         }
 
         Game.prototype = {
@@ -20,17 +20,17 @@ define(['jquery'], function ($) {
 
                 for (var i = 0; i < 9; i++) {
                     $tr = $('<tr>');
-                    this.$cellMatrix[i] = {};
+                    this._$cellMatrix[i] = {};
 
                     for (var j = 0; j < 9; j++) {
-                        this.$cellMatrix[i][j] = $('<input>')
+                        this._$cellMatrix[i][j] = $('<input>')
                             .attr('maxlength', 1)
                             .attr('pattern', '\\d+')
                             .data('row', i)
                             .data('col', j)
                             .on('keyup', $.proxy(this.onKeyUp, this));
 
-                        $td = $('<td>').append(this.$cellMatrix[i][j]);
+                        $td = $('<td>').append(this._$cellMatrix[i][j]);
 
                         var sectIDi = Math.floor(i / 3);
                         var sectIDj = Math.floor(j / 3);
@@ -49,7 +49,6 @@ define(['jquery'], function ($) {
 
                 return $table;
             },
-
             onKeyUp: function (event) {
                 var sectRow,
                     sectCol,
@@ -61,8 +60,8 @@ define(['jquery'], function ($) {
 
                 $('.sudoku-container').removeClass('valid-matrix');
 
-                if (this.config.validate_on_insert) {
-                    isValid = this.validateNumber(val, row, col, this.matrix.row[row][col]);
+                if (this._config.validate_on_insert) {
+                    isValid = this.validateNumber(val, row, col, this._matrix.row[row][col]);
                     $(event.currentTarget).toggleClass('sudoku-input-error', !isValid);
                 }
 
@@ -70,16 +69,15 @@ define(['jquery'], function ($) {
                 sectCol = Math.floor(col / 3);
                 secIndex = ( row % 3 ) * 3 + ( col % 3 );
 
-                this.matrix.row[row][col] = val;
-                this.matrix.col[col][row] = val;
-                this.matrix.sect[sectRow][sectCol][secIndex] = val;
+                this._matrix.row[row][col] = val;
+                this._matrix.col[col][row] = val;
+                this._matrix.sect[sectRow][sectCol][secIndex] = val;
             },
-
             resetGame: function () {
                 this.resetValidationMatrices();
                 for (var row = 0; row < 9; row++) {
                     for (var col = 0; col < 9; col++) {
-                        this.$cellMatrix[row][col].val('');
+                        this._$cellMatrix[row][col].val('');
                     }
                 }
 
@@ -90,28 +88,26 @@ define(['jquery'], function ($) {
                     .removeClass('valid-matrix')
                     .removeClass('invalid-matrix');
             },
-
             resetValidationMatrices: function () {
-                this.matrix = { 'row': {}, 'col': {}, 'sect': {} };
-                this.validation = { 'row': {}, 'col': {}, 'sect': {} };
+                this._matrix = { 'row': {}, 'col': {}, 'sect': {} };
+                this._validation = { 'row': {}, 'col': {}, 'sect': {} };
 
                 for (var i = 0; i < 9; i++) {
-                    this.matrix.row[i] = [ '', '', '', '', '', '', '', '', '' ];
-                    this.matrix.col[i] = [ '', '', '', '', '', '', '', '', '' ];
-                    this.validation.row[i] = [];
-                    this.validation.col[i] = [];
+                    this._matrix.row[i] = [ '', '', '', '', '', '', '', '', '' ];
+                    this._matrix.col[i] = [ '', '', '', '', '', '', '', '', '' ];
+                    this._validation.row[i] = [];
+                    this._validation.col[i] = [];
                 }
 
                 for (var row = 0; row < 3; row++) {
-                    this.matrix.sect[row] = [];
-                    this.validation.sect[row] = {};
+                    this._matrix.sect[row] = [];
+                    this._validation.sect[row] = {};
                     for (var col = 0; col < 3; col++) {
-                        this.matrix.sect[row][col] = [ '', '', '', '', '', '', '', '', '' ];
-                        this.validation.sect[row][col] = [];
+                        this._matrix.sect[row][col] = [ '', '', '', '', '', '', '', '', '' ];
+                        this._validation.sect[row][col] = [];
                     }
                 }
             },
-
             validateNumber: function (num, rowID, colID, oldNum) {
                 var isValid = true,
                     sectRow = Math.floor(rowID / 3),
@@ -119,19 +115,19 @@ define(['jquery'], function ($) {
 
                 oldNum = oldNum || '';
 
-                if (this.validation.row[rowID].indexOf(oldNum) > -1) {
-                    this.validation.row[rowID].splice(
-                        this.validation.row[rowID].indexOf(oldNum), 1
+                if (this._validation.row[rowID].indexOf(oldNum) > -1) {
+                    this._validation.row[rowID].splice(
+                        this._validation.row[rowID].indexOf(oldNum), 1
                     );
                 }
-                if (this.validation.col[colID].indexOf(oldNum) > -1) {
-                    this.validation.col[colID].splice(
-                        this.validation.col[colID].indexOf(oldNum), 1
+                if (this._validation.col[colID].indexOf(oldNum) > -1) {
+                    this._validation.col[colID].splice(
+                        this._validation.col[colID].indexOf(oldNum), 1
                     );
                 }
-                if (this.validation.sect[sectRow][sectCol].indexOf(oldNum) > -1) {
-                    this.validation.sect[sectRow][sectCol].splice(
-                        this.validation.sect[sectRow][sectCol].indexOf(oldNum), 1
+                if (this._validation.sect[sectRow][sectCol].indexOf(oldNum) > -1) {
+                    this._validation.sect[sectRow][sectCol].splice(
+                        this._validation.sect[sectRow][sectCol].indexOf(oldNum), 1
                     );
                 }
 
@@ -139,20 +135,19 @@ define(['jquery'], function ($) {
 
                     if ($.isNumeric(num) && Number(num) > 0 && Number(num) <= 9) {
                         isValid = !(
-                            $.inArray(num, this.validation.row[rowID]) > -1 ||
-                            $.inArray(num, this.validation.col[colID]) > -1 ||
-                            $.inArray(num, this.validation.sect[sectRow][sectCol]) > -1
+                            $.inArray(num, this._validation.row[rowID]) > -1 ||
+                            $.inArray(num, this._validation.col[colID]) > -1 ||
+                            $.inArray(num, this._validation.sect[sectRow][sectCol]) > -1
                             );
                     }
 
-                    this.validation.row[rowID].push(num);
-                    this.validation.col[colID].push(num);
-                    this.validation.sect[sectRow][sectCol].push(num);
+                    this._validation.row[rowID].push(num);
+                    this._validation.col[colID].push(num);
+                    this._validation.sect[sectRow][sectCol].push(num);
                 }
 
                 return isValid;
             },
-
             validateMatrix: function () {
                 var isValid,
                     value,
@@ -160,9 +155,9 @@ define(['jquery'], function ($) {
 
                 for (var row = 0; row < 9; row++) {
                     for (var col = 0; col < 9; col++) {
-                        value = this.matrix.row[row][col];
+                        value = this._matrix.row[row][col];
                         isValid = this.validateNumber(value, row, col, value);
-                        this.$cellMatrix[row][col].toggleClass('sudoku-input-error', !isValid);
+                        this._$cellMatrix[row][col].toggleClass('sudoku-input-error', !isValid);
                         if (!isValid) {
                             hasError = true;
                         }
@@ -170,7 +165,6 @@ define(['jquery'], function ($) {
                 }
                 return !hasError;
             },
-
             solveGame: function (row, col) {
                 var currentValue,
                     sqRow,
@@ -181,7 +175,6 @@ define(['jquery'], function ($) {
                     sectCol,
                     secIndex;
 
-                this.recursionCounter++;
                 $nextSquare = this.findClosestEmptySquare(row, col);
                 if (!$nextSquare) {
                     return true;
@@ -197,36 +190,34 @@ define(['jquery'], function ($) {
                     for (var i = 0; i < legalValues.length; i++) {
                         currentValue = legalValues[i];
                         $nextSquare.val(currentValue);
-                        this.matrix.row[sqRow][sqCol] = currentValue;
-                        this.matrix.col[sqCol][sqRow] = currentValue;
-                        this.matrix.sect[sectRow][sectCol][secIndex] = currentValue;
+                        this._matrix.row[sqRow][sqCol] = currentValue;
+                        this._matrix.col[sqCol][sqRow] = currentValue;
+                        this._matrix.sect[sectRow][sectCol][secIndex] = currentValue;
 
                         if (this.solveGame(sqRow, sqCol)) {
                             return true;
                         } else {
-                            this.$cellMatrix[sqRow][sqCol].val('');
-                            this.matrix.row[sqRow][sqCol] = '';
-                            this.matrix.col[sqCol][sqRow] = '';
-                            this.matrix.sect[sectRow][sectCol][secIndex] = '';
+                            this._$cellMatrix[sqRow][sqCol].val('');
+                            this._matrix.row[sqRow][sqCol] = '';
+                            this._matrix.col[sqCol][sqRow] = '';
+                            this._matrix.sect[sectRow][sectCol][secIndex] = '';
                         }
                     }
 
                     return false;
                 }
             },
-
             findClosestEmptySquare: function (row, col) {
                 var walkingRow, walkingCol, found = false;
                 for (var i = ( col + 9 * row ); i < 81; i++) {
                     walkingRow = Math.floor(i / 9);
                     walkingCol = i % 9;
-                    if (this.matrix.row[walkingRow][walkingCol] === '') {
+                    if (this._matrix.row[walkingRow][walkingCol] === '') {
                         found = true;
-                        return this.$cellMatrix[walkingRow][walkingCol];
+                        return this._$cellMatrix[walkingRow][walkingCol];
                     }
                 }
             },
-
             findLegalValuesForSquare: function (row, col) {
                 var legalNumbers,
                     val,
@@ -237,7 +228,7 @@ define(['jquery'], function ($) {
                 legalNumbers = [ 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
                 for (i = 0; i < 9; i++) {
-                    val = Number(this.matrix.col[col][i]);
+                    val = Number(this._matrix.col[col][i]);
                     if (val > 0) {
                         if (legalNumbers.indexOf(val) > -1) {
                             legalNumbers.splice(legalNumbers.indexOf(val), 1);
@@ -246,7 +237,7 @@ define(['jquery'], function ($) {
                 }
 
                 for (i = 0; i < 9; i++) {
-                    val = Number(this.matrix.row[row][i]);
+                    val = Number(this._matrix.row[row][i]);
                     if (val > 0) {
                         if (legalNumbers.indexOf(val) > -1) {
                             legalNumbers.splice(legalNumbers.indexOf(val), 1);
@@ -257,7 +248,7 @@ define(['jquery'], function ($) {
                 sectRow = Math.floor(row / 3);
                 sectCol = Math.floor(col / 3);
                 for (i = 0; i < 9; i++) {
-                    val = Number(this.matrix.sect[sectRow][sectCol][i]);
+                    val = Number(this._matrix.sect[sectRow][sectCol][i]);
                     if (val > 0) {
                         if (legalNumbers.indexOf(val) > -1) {
                             legalNumbers.splice(legalNumbers.indexOf(val), 1);
@@ -265,7 +256,7 @@ define(['jquery'], function ($) {
                     }
                 }
 
-                if (this.config.solver_shuffle_numbers) {
+                if (this._config.solver_shuffle_numbers) {
                     for (i = legalNumbers.length - 1; i > 0; i--) {
                         var rand = getRandomInt(0, i);
                         var temp = legalNumbers[i];

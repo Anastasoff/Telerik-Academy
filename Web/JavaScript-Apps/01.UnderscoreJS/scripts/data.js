@@ -1,4 +1,4 @@
-define(['chance', 'student', 'animal', 'book', 'person'], function (Chance, Student, Animal, Book, Person) {
+define(['./factory'], function (factory) {
     'use strict';
 
     var chance,
@@ -7,7 +7,7 @@ define(['chance', 'student', 'animal', 'book', 'person'], function (Chance, Stud
         books,
         people;
 
-    chance = new Chance();
+    chance = factory.getChanceJS();
 
     // Generate random marks
     function marks() {
@@ -30,7 +30,7 @@ define(['chance', 'student', 'animal', 'book', 'person'], function (Chance, Stud
             currentStudent;
 
         for (i = 0; i < STUDENTS_COUNT; i++) {
-            currentStudent = new Student(chance.first(), chance.last(), chance.age('adult'), marks());
+            currentStudent = factory.getStudent(chance.first(), chance.last(), chance.age('adult'), marks());
             randomStudents.push(currentStudent);
         }
 
@@ -39,42 +39,42 @@ define(['chance', 'student', 'animal', 'book', 'person'], function (Chance, Stud
 
     // Array of animals
     animals = [
-        new Animal('Wolf', 'Mammal', 4),
-        new Animal('Gorilla', 'Mammal', 2),
-        new Animal('Spider', 'Insect', 8),
-        new Animal('Bear', 'Mammal', 4),
-        new Animal('Shark', 'Fish', 0),
-        new Animal('Mosquito', 'Insect', 6),
-        new Animal('Skumriq', 'Fish', 0),
-        new Animal('Crocodile', 'Reptile', 4),
-        new Animal('Eagle', 'Bird', 2),
-        new Animal('Human', 'Mammal', 2),
-        new Animal('Caterpillar', 'Insect', 100)
+        factory.getAnimal('Wolf', 'Mammal', 4),
+        factory.getAnimal('Gorilla', 'Mammal', 2),
+        factory.getAnimal('Spider', 'Insect', 8),
+        factory.getAnimal('Bear', 'Mammal', 4),
+        factory.getAnimal('Shark', 'Fish', 0),
+        factory.getAnimal('Mosquito', 'Insect', 6),
+        factory.getAnimal('Skumriq', 'Fish', 0),
+        factory.getAnimal('Crocodile', 'Reptile', 4),
+        factory.getAnimal('Eagle', 'Bird', 2),
+        factory.getAnimal('Human', 'Mammal', 2),
+        factory.getAnimal('Caterpillar', 'Insect', 100)
 
     ];
 
     // Array of books
     books = [
-        new Book("The Da Vinci Code", "Dan Brown"),
-        new Book("Harry Potter and the Order of the Phoenix ", "J. K. Rowling"),
-        new Book("Harry Potter and the Goblet of Fire", "J. K. Rowling"),
-        new Book("Harry Potter and the Deathly Hallows", "J. K. Rowling"),
-        new Book("The Hobbit, or There and Back Again", "J. R. R. Tolkien"),
-        new Book("Harry Potter and the Sorcerer's Stone", "J. K. Rowling"),
-        new Book("Harry Potter and the Half-Blood Prince", "J. K. Rowling"),
-        new Book("Harry Potter and the Chamber of Secrets", "J. K. Rowling"),
-        new Book("Harry Potter and the Prisoner of Azkaban", "J. K. Rowling"),
-        new Book("Nineteen Eighty-Four", "George Orwell")
+        factory.getBook("The Da Vinci Code", "Dan Brown"),
+        factory.getBook("Harry Potter and the Order of the Phoenix ", "J. K. Rowling"),
+        factory.getBook("Harry Potter and the Goblet of Fire", "J. K. Rowling"),
+        factory.getBook("Harry Potter and the Deathly Hallows", "J. K. Rowling"),
+        factory.getBook("The Hobbit, or There and Back Again", "J. R. R. Tolkien"),
+        factory.getBook("Harry Potter and the Sorcerer's Stone", "J. K. Rowling"),
+        factory.getBook("Harry Potter and the Half-Blood Prince", "J. K. Rowling"),
+        factory.getBook("Harry Potter and the Chamber of Secrets", "J. K. Rowling"),
+        factory.getBook("Harry Potter and the Prisoner of Azkaban", "J. K. Rowling"),
+        factory.getBook("Nineteen Eighty-Four", "George Orwell")
     ];
 
     // Array of people
     people = [
-        new Person('Ivan', 'Ivanov', 18),
-        new Person('Pesho', 'Peshev', 22),
-        new Person('Pesho', 'Ivanov', 34),
-        new Person('Gosho', 'Georgiev', 66),
-        new Person('Gosho', 'Peshev', 45),
-        new Person('Pesho', 'Peshev', 100),
+        factory.getPerson('Ivan', 'Ivanov', 18),
+        factory.getPerson('Pesho', 'Peshev', 22),
+        factory.getPerson('Pesho', 'Ivanov', 34),
+        factory.getPerson('Gosho', 'Georgiev', 66),
+        factory.getPerson('Gosho', 'Peshev', 45),
+        factory.getPerson('Pesho', 'Peshev', 100)
     ];
 
     return {
@@ -83,5 +83,4 @@ define(['chance', 'student', 'animal', 'book', 'person'], function (Chance, Stud
         books: books,
         people: people
     };
-
 });

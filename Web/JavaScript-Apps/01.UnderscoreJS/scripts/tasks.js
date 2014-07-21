@@ -1,5 +1,6 @@
 define(['underscore'], function (_) {
     'use strict';
+
     var findStudentsByName = function (students) {
         return _.chain(students)
             .filter(function (student) {
@@ -71,18 +72,18 @@ define(['underscore'], function (_) {
         function findMostCommonProperty(items, prop) {
             return _.chain(items)
                 .groupBy(function (item) {
-                    return item[prop];
+                    return item[prop]();
                 })
                 .max(function (group) {
                     return group.length;
                 })
                 .first()
-                .value()[prop];
+                .value()[prop]();
         }
 
-        var firstName = findMostCommonProperty(people, '_firstName'); // TODO: cannot find a way to use the getter 'getFirstName()'
+        var firstName = findMostCommonProperty(people, 'getFirstName');
 
-        var lastName = findMostCommonProperty(people, '_lastName'); // TODO: cannot find a way to use the getter 'getLastName()'
+        var lastName = findMostCommonProperty(people, 'getLastName');
 
         return {
             firstName: firstName,
@@ -99,5 +100,4 @@ define(['underscore'], function (_) {
         findMostPopularAuthor: findMostPopularAuthor,
         findMostCommonNames: findMostCommonNames
     };
-
 });

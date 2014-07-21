@@ -21,3 +21,4 @@ Telerik Academy
  3. <b>[JavaScript Fundamentals] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/JavaScript-Fundamentals)</b>
  4. <b>[JavaScript DOM and UI] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/JavaScript-DOM-And-UI)</b>
  5. <b>[JavaScript OOP] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/JavaScript-OOP)</b>
+ 6. <b>[JavaScript Apps] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/JavaScript-Apps)</b>

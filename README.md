@@ -5,10 +5,10 @@ Telerik Academy
 ##### Homeworks and projects
 
 #### Team Projects
-  1. <b>[Table tennis] (https://github.com/Anastasoff/Telerik-Academy/tree/master/TeamProjects/01.TableTennis)</b>
-  2. <b>[Football Stats] (https://github.com/Anastasoff/Telerik-Academy/tree/master/TeamProjects/02.FootballStats)</b>
-  3. <b>[Popcorn] (https://github.com/nzhul/Popcorn-Kintaro)</b>
-  4. <b>[Minesweeper] (https://github.com/Anastasoff/Minesweeper)</b>
+  1. <b>[Table tennis - C# Fundamentals] (https://github.com/Anastasoff/Telerik-Academy/tree/master/TeamProjects/01.TableTennis)</b>
+  2. <b>[Football Stats - C# OOP] (https://github.com/Anastasoff/Telerik-Academy/tree/master/TeamProjects/02.FootballStats)</b>
+  3. <b>[Popcorn - JavaScript UI] (https://github.com/nzhul/Popcorn-Kintaro)</b>
+  4. <b>[Minesweeper - High-Quality Code] (https://github.com/Anastasoff/Minesweeper)</b>
 
 #### Programming
  1.  <b>[C# Fundamentals] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharp-Fundamentals)</b>

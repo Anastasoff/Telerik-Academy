@@ -1,0 +1,25 @@
+{
+  "name": "test-app",
+  "version": "1",
+  "homepage": "https://github.com/Anastasoff/Telerik-Academy",
+  "authors": [
+    "Martin Anastasov <m4rt00@gmail.com>"
+  ],
+  "description": "test",
+  "main": "main.js",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}

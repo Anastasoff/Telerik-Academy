@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTTP Requester</title>
+    <script src="scripts/libs/requirejs/require.js" data-main="scripts/main"></script>
+</head>
+<body>
+<div id="wrapper">
+    <label for="tb-name">Name: </label>
+    <input id="tb-name" name="tb-name" type="text"/>
+    <br/>
+    <label for="tb-grade">Grade: </label>
+    <input id="tb-grade" name="tb-grade" type="number" min='1' max='12'/>
+    <br/>
+    <button id='btn-add-student'>Add new</button>
+    <br/>
+    <button id="btn-get-students">Get students (in console)</button>
+    <p class='info'>This web page should be run on a server (localhost or in WWW).</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "01.HttpRequester",
+  "description": "homework project",
+  "main": "main.js",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./scripts/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.14",
+    "q": "~2.0.0",
+    "jquery": "~2.1.1"
+  }
+}

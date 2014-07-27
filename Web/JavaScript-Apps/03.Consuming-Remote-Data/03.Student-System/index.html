@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student System</title>
+    <style>
+        #students-container table, tr, th, td {
+            border: 1px solid black;
+        }
+    </style>
+    <script src="scripts/libs/requirejs/require.js" data-main="scripts/main"></script>
+</head>
+<body>
+<div id="wrapper">
+    <button id="btn-add-student">Add</button>
+    <button id="btn-getAll-students">Get All Students</button>
+    <button id="btn-remove-student">Remove</button>
+    <br/>
+    <label for="tb-name">Name: </label>
+    <input id="tb-name" name="tb-name" type="text"/>
+    <br/>
+    <label for="tb-grade">Grade: </label>
+    <input id="tb-grade" name="tb-grade" type="number" min='1' max='12'/>
+    <br/>
+    <label for="tb-id">id:</label>
+    <input id="tb-id" name="tb-id" type="number"/>
+    <br/>
+
+    <div id="students-container"></div>
+</div>
+</body>
+</html>

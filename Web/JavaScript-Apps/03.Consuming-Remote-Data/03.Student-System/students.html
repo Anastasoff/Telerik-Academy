@@ -1,0 +1,17 @@
+<p>All students:</p>
+<script id="students-template" type="text/x-handlebars-template">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Grade</th>
+        </tr>
+        {{#rows}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{name}}</td>
+            <td>{{grade}}</td>
+        </tr>
+        {{/rows}}
+    </table>
+</script>

@@ -59,7 +59,7 @@ define(['jquery'], function ($) {
                 data,
                 deferred;
 
-            deferred = $.Deferred();
+            deferred = $.Deferred(); // TODO: implement it with Q version 1.0.1
 
             httpRequest = getHttpRequest();
 

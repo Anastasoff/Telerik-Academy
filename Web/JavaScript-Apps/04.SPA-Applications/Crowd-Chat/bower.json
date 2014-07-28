@@ -1,0 +1,24 @@
+{
+  "name": "Crowd-Chat",
+  "version": "0.0.1",
+  "description": "Simple chat",
+  "main": "main.js",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "scripts/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "requirejs": "~2.1.14",
+    "sammy": "~0.7.5",
+    "handlebars": "~1.3.0"
+  }
+}

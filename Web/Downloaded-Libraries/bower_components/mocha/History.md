@@ -1,3 +1,9 @@
+1.22.1-3 / 2014-07-27
+==================
+
+  * fix: local uis and reporters
+  * fix: building 1.21.0's changes in the browser
+
 1.21.0 / 2014-07-23
 ==================
 

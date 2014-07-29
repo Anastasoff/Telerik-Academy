@@ -1,0 +1,36 @@
+#wrapper {
+    text-align: center;
+}
+
+header, footer, #container {
+    width: 400px;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    border: 1px solid #000000;
+    display: inline-block;
+}
+
+header nav ul li a {
+    font-size: 20px;
+    padding: 5px;
+}
+
+header {
+    background-color: gray;
+}
+
+footer {
+    background-color: gray;
+}
+
+#container .post-item {
+    padding: 5px;
+    text-align: left;
+    margin: 5px;
+    border: 1px solid gray;
+}

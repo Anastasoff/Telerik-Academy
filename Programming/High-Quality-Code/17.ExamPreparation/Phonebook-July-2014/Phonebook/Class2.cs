@@ -67,7 +67,7 @@
 
         private static void ExecuteCommand(string cmd, string[] strings)
         {
-            if (cmd == "List")
+            if (cmd == "AddPhone")
             {
                 // first command
                 string str0 = strings[0];

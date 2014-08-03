@@ -48,9 +48,9 @@
                 {
                     ExecuteCommand("AddPhone", strings);
                 }
-                else if ((k == "ChangeРhone") && (strings.Length == 2))
+                else if ((k == "ChangePhone") && (strings.Length == 2))
                 {
-                    ExecuteCommand("ChangeРhone", strings);
+                    ExecuteCommand("ChangePhone", strings);
                 }
                 else if ((k == "List") && (strings.Length == 2))
                 {
@@ -58,7 +58,7 @@
                 }
                 else
                 {
-                    throw new StackOverflowException();
+                    throw new ArgumentException("The input command is invalid!");
                 }
             }
 
@@ -88,7 +88,7 @@
                     Print("Phone entry merged");
                 }
             }
-            else if (cmd == "ChangeРhone")
+            else if (cmd == "ChangePhone")
             {
                 // second command
                 Print(string.Empty + data.ChangePhone(Conv(strings[0]), Conv(strings[1])) + " numbers changed");

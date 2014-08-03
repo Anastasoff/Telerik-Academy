@@ -67,13 +67,14 @@
 
         private static void Cmd(string cmd, string[] strings)
         {
-            if (cmd == "Cmd1") // first command
+            if (cmd == "Cmd1")
             {
+                // first command
                 string str0 = strings[0];
                 var str1 = strings.Skip(1).ToList();
                 for (int i = 0; i < str1.Count; i++)
                 {
-                    str1[i] = conv(str1[i]);
+                    str1[i] = Conv(str1[i]);
                 }
 
                 bool flag = data.AddPhone(str0, str1);
@@ -87,12 +88,14 @@
                     Print("Phone entry merged");
                 }
             }
-            else if (cmd == "Cmd2") // second command
+            else if (cmd == "Cmd2")
             {
-                Print("" + data.ChangePhone(conv(strings[0]), conv(strings[1])) + " numbers changed");
+                // second command
+                Print(string.Empty + data.ChangePhone(Conv(strings[0]), Conv(strings[1])) + " numbers changed");
             }
-            else // third command
+            else
             {
+                // third command
                 try
                 {
                     IEnumerable<Class1> entries = data.ListEntries(int.Parse(strings[0]), int.Parse(strings[1]));
@@ -108,7 +111,7 @@
             }
         }
 
-        private static string conv(string num)
+        private static string Conv(string num)
         {
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i <= input.Length; i++)

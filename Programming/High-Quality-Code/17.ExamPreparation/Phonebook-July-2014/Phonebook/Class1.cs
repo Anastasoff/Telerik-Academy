@@ -7,7 +7,7 @@
     public class Class1 : IComparable<Class1>
     {
         private string name;
-        private string name2;
+        private SortedSet<string> strings;
 
         public string Name
         {
@@ -18,18 +18,28 @@
 
             set
             {
-                this.name = value;
-
-                this.name2 = value.ToLowerInvariant();
+                this.name = value.ToLowerInvariant();
             }
         }
 
-        public SortedSet<string> Strings;
+        public SortedSet<string> Strings
+        {
+            get
+            {
+                return this.strings;
+            }
+
+            set
+            {
+                this.strings = value;
+            }
+        }
 
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder(); sb.Clear(); sb.Append('[');
-
+            StringBuilder sb = new StringBuilder();
+            sb.Clear();
+            sb.Append('[');
             sb.Append(this.Name);
             bool flag = true;
             foreach (var phone in this.Strings)
@@ -53,7 +63,7 @@
 
         public int CompareTo(Class1 other)
         {
-            return this.name2.CompareTo(other.name2);
+            return this.Name.CompareTo(other.Name);
         }
     }
 }

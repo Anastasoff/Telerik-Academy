@@ -11,7 +11,7 @@
 
         private static IPhonebookRepository data = new REPNew(); // this works!
 
-        private static StringBuilder input = new StringBuilder();
+        private static StringBuilder output = new StringBuilder();
 
         public static void Main()
         {
@@ -46,15 +46,15 @@
 
                 if (k.StartsWith("AddPhone") && (strings.Length >= 2))
                 {
-                    Cmd("Cmd3", strings);
+                    ExecuteCommand("AddPhone", strings);
                 }
                 else if ((k == "ChangeРhone") && (strings.Length == 2))
                 {
-                    Cmd("Cmd2", strings);
+                    ExecuteCommand("ChangeРhone", strings);
                 }
                 else if ((k == "List") && (strings.Length == 2))
                 {
-                    Cmd("Cmd1", strings);
+                    ExecuteCommand("List", strings);
                 }
                 else
                 {
@@ -62,12 +62,12 @@
                 }
             }
 
-            Console.Write(input);
+            Console.Write(output);
         }
 
-        private static void Cmd(string cmd, string[] strings)
+        private static void ExecuteCommand(string cmd, string[] strings)
         {
-            if (cmd == "Cmd1")
+            if (cmd == "List")
             {
                 // first command
                 string str0 = strings[0];
@@ -88,7 +88,7 @@
                     Print("Phone entry merged");
                 }
             }
-            else if (cmd == "Cmd2")
+            else if (cmd == "ChangeРhone")
             {
                 // second command
                 Print(string.Empty + data.ChangePhone(Conv(strings[0]), Conv(strings[1])) + " numbers changed");
@@ -111,10 +111,15 @@
             }
         }
 
+        private static void Print(string text)
+        {
+            output.AppendLine(text);
+        }
+
         private static string Conv(string num)
         {
             StringBuilder sb = new StringBuilder();
-            for (int i = 0; i <= input.Length; i++)
+            for (int i = 0; i <= output.Length; i++)
             {
                 sb.Clear();
                 foreach (char ch in num)
@@ -195,11 +200,6 @@
             }
 
             return sb.ToString();
-        }
-
-        private static void Print(string text)
-        {
-            input.AppendLine(text);
         }
     }
 }

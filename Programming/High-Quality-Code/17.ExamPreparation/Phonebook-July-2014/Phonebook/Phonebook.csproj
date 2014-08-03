@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Class2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

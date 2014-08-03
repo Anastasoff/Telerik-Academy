@@ -26,6 +26,12 @@
             this.carsData = carsDataMock.CarsData;
         }
 
+        [TestMethod]
+        public void CreateCarsControllerWithoutParameter()
+        {
+            new CarsController();
+        }
+
         [TestInitialize]
         public void CreateController()
         {
@@ -94,6 +100,41 @@
             Assert.AreEqual("Audi", model.Make);
             Assert.AreEqual("A4", model.Model);
             Assert.AreEqual(2005, model.Year);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void GettingCarShouldThrowArgumentNullExceptionIfCarIdIsNotFound()
+        {
+            this.controller.Details(-1);
+        }
+
+        [TestMethod]
+        public void SearchShouldReturnValidResult()
+        {
+            var cars = (ICollection<Car>)(this.controller.Search(null).Model);
+            Assert.AreEqual(2, cars.Count);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void SortShouldThrowWithInvalidParameter()
+        {
+            this.controller.Sort("by-non-existing");
+        }
+
+        [TestMethod]
+        public void SortShouldReturnSortedCollectionByYear()
+        {
+            var allCars = (ICollection<Car>)(this.controller.Sort("year").Model);
+            Assert.AreEqual(4, allCars.Count);
+        }
+
+        [TestMethod]
+        public void SortShouldReturnSortedCollectionByMake()
+        {
+            var allCars = (ICollection<Car>)(this.controller.Sort("make").Model);
+            Assert.AreEqual(4, allCars.Count);
         }
 
         private object GetModel(Func<IView> funcView)

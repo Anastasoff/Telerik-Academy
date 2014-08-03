@@ -5,7 +5,7 @@
     using System.Linq;
     using System.Text;
 
-    public class Class2
+    public class Phonebook
     {
         private const string Code = "+359";
 
@@ -58,7 +58,7 @@
                 }
                 else
                 {
-                    throw new ArgumentException("The input command is invalid!");
+                    throw new ArgumentException("The input command is invalid - " + k);
                 }
             }
 
@@ -119,84 +119,81 @@
         private static string Conv(string num)
         {
             StringBuilder sb = new StringBuilder();
-            for (int i = 0; i <= output.Length; i++)
+            sb.Clear();
+            foreach (char ch in num)
             {
-                sb.Clear();
-                foreach (char ch in num)
+                if (char.IsDigit(ch) || (ch == '+'))
                 {
-                    if (char.IsDigit(ch) || (ch == '+'))
-                    {
-                        sb.Append(ch);
-                    }
+                    sb.Append(ch);
                 }
+            }
 
-                if (sb.Length >= 2 && sb[0] == '0' && sb[1] == '0')
+            if (sb.Length >= 2 && sb[0] == '0' && sb[1] == '0')
+            {
+                sb.Remove(0, 1);
+                sb[0] = '+';
+            }
+
+            while (sb.Length > 0 && sb[0] == '0')
+            {
+                sb.Remove(0, 1);
+            }
+
+            if (sb.Length > 0 && sb[0] != '+')
+            {
+                sb.Insert(0, Code);
+            }
+
+            sb.Clear();
+
+            foreach (char ch in num)
+            {
+                if (char.IsDigit(ch) || (ch == '+'))
                 {
-                    sb.Remove(0, 1);
-                    sb[0] = '+';
+                    sb.Append(ch);
                 }
+            }
 
-                while (sb.Length > 0 && sb[0] == '0')
+            if (sb.Length >= 2 && sb[0] == '0' && sb[1] == '0')
+            {
+                sb.Remove(0, 1);
+                sb[0] = '+';
+            }
+
+            while (sb.Length > 0 && sb[0] == '0')
+            {
+                sb.Remove(0, 1);
+            }
+
+            if (sb.Length > 0 && sb[0] != '+')
+            {
+                sb.Insert(0, Code);
+            }
+
+            sb.Clear();
+
+            foreach (char ch in num)
+            {
+                if (char.IsDigit(ch) || (ch == '+'))
                 {
-                    sb.Remove(0, 1);
+                    sb.Append(ch);
                 }
+            }
 
-                if (sb.Length > 0 && sb[0] != '+')
-                {
-                    sb.Insert(0, Code);
-                }
+            if (sb.Length >= 2 && sb[0] == '0' && sb[1] == '0')
+            {
+                sb.Remove(0, 1);
+                sb[0] = '+';
+            }
 
-                sb.Clear();
+            while (sb.Length > 0 && sb[0] == '0')
+            {
+                sb.Remove(0, 1);
+            }
 
-                foreach (char ch in num)
-                {
-                    if (char.IsDigit(ch) || (ch == '+'))
-                    {
-                        sb.Append(ch);
-                    }
-                }
-
-                if (sb.Length >= 2 && sb[0] == '0' && sb[1] == '0')
-                {
-                    sb.Remove(0, 1);
-                    sb[0] = '+';
-                }
-
-                while (sb.Length > 0 && sb[0] == '0')
-                {
-                    sb.Remove(0, 1);
-                }
-
-                if (sb.Length > 0 && sb[0] != '+')
-                {
-                    sb.Insert(0, Code);
-                }
-
-                sb.Clear();
-
-                foreach (char ch in num)
-                {
-                    if (char.IsDigit(ch) || (ch == '+'))
-                    {
-                        sb.Append(ch);
-                    }
-                }
-
-                if (sb.Length >= 2 && sb[0] == '0' && sb[1] == '0')
-                {
-                    sb.Remove(0, 1);
-                    sb[0] = '+';
-                }
-
-                while (sb.Length > 0 && sb[0] == '0')
-                {
-                    sb.Remove(0, 1);
-                }
-
-                if (sb.Length > 0 && sb[0] != '+')
-                {
-                    sb.Insert(0, Code);
-                }
+            if (sb.Length > 0 && sb[0] != '+')
+            {
+                sb.Insert(0, Code);
             }
 
             return sb.ToString();

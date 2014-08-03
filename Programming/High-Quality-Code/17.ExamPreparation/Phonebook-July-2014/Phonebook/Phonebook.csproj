@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Class2.cs" />
+    <Compile Include="Phonebook.cs" />
     <Compile Include="IPhonebookRepository.cs" />
     <Compile Include="REP.cs" />
     <Compile Include="REPNew.cs" />

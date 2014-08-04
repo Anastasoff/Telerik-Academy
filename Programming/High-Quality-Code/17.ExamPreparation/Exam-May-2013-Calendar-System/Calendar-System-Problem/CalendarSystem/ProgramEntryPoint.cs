@@ -1,6 +1,7 @@
 ﻿namespace CalendarSystem
 {
     using System;
+    using Contracts;
 
     public class ProgramEntryPoint
     {
@@ -20,7 +21,8 @@
                 try
                 {
                     // The sequence of commands is finished
-                    Command parsedCommand = Command.Parse(inputCommand);
+                    ICommandParser newCommand = new CommandParser(inputCommand);
+                    Command parsedCommand = newCommand.Parse();
                     string processedCommand = processor.ProcessCommand(parsedCommand);
                     Console.WriteLine(processedCommand);
                 }

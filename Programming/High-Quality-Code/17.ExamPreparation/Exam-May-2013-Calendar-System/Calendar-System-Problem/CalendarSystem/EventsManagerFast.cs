@@ -5,6 +5,7 @@
     using System.Linq;
     using Wintellect.PowerCollections;
     using MD = Wintellect.PowerCollections.MultiDictionary<string, CalendarSystem.Event>;
+    using Contracts;
 
     public class EventsManagerFast : IEventsManager
     {

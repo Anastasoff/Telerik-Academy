@@ -4,6 +4,7 @@
     using System.Globalization;
     using System.Linq;
     using System.Text;
+    using Contracts;
 
     public class Niki
     {

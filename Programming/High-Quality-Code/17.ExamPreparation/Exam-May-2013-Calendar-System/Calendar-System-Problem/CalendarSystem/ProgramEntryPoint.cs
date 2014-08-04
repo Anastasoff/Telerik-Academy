@@ -2,13 +2,14 @@
 {
     using Contracts;
     using System;
+    using CommandPattern;
 
     public class ProgramEntryPoint
     {
         public static void Main()
         {
             var newEventManager = new EventsManager();
-            var processor = new Niki(newEventManager);
+            var processor = new CommandProcessor(newEventManager);
 
             while (true)
             {

@@ -1,16 +1,16 @@
-﻿namespace CalendarSystem
+﻿namespace CalendarSystem.CommandPattern
 {
+    using Contracts;
     using System;
     using System.Globalization;
     using System.Linq;
     using System.Text;
-    using Contracts;
 
-    public class Niki
+    public class CommandProcessor : CommandPattern
     {
         private readonly IEventsManager em;
 
-        public Niki(IEventsManager em)
+        public CommandProcessor(IEventsManager em)
         {
             this.em = em;
         }
@@ -23,16 +23,16 @@
             }
         }
 
-        public string ProcessCommand(Command com)
+        public override string ProcessCommand(Command command)
         {
             // First command
-            if ((com.Name == "AddEvent") && (com.Arguments.Length == 2))
+            if ((command.Name == "AddEvent") && (command.Arguments.Length == 2))
             {
-                var date = DateTime.ParseExact(com.Arguments[0], "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture);
+                var date = DateTime.ParseExact(command.Arguments[0], "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture);
                 var e = new Event
                 {
                     Date = date,
-                    Title = com.Arguments[1],
+                    Title = command.Arguments[1],
                     Location = null,
                 };
 
@@ -41,14 +41,14 @@
                 return "Event added";
             }
 
-            if ((com.Name == "AddEvent") && (com.Arguments.Length == 3))
+            if ((command.Name == "AddEvent") && (command.Arguments.Length == 3))
             {
-                var date = DateTime.ParseExact(com.Arguments[0], "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture);
+                var date = DateTime.ParseExact(command.Arguments[0], "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture);
                 var e = new Event
                 {
                     Date = date,
-                    Title = com.Arguments[1],
-                    Location = com.Arguments[2],
+                    Title = command.Arguments[1],
+                    Location = command.Arguments[2],
                 };
 
                 this.em.AddEvent(e);
@@ -57,9 +57,9 @@
             }
 
             // Second command
-            if ((com.Name == "DeleteEvents") && (com.Arguments.Length == 1))
+            if ((command.Name == "DeleteEvents") && (command.Arguments.Length == 1))
             {
-                int c = this.em.DeleteEventsByTitle(com.Arguments[0]);
+                int c = this.em.DeleteEventsByTitle(command.Arguments[0]);
 
                 if (c == 0)
                 {
@@ -70,10 +70,10 @@
             }
 
             // Third command
-            if ((com.Name == "ListEvents") && (com.Arguments.Length == 2))
+            if ((command.Name == "ListEvents") && (command.Arguments.Length == 2))
             {
-                var d = DateTime.ParseExact(com.Arguments[0], "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture);
-                var c = int.Parse(com.Arguments[1]);
+                var d = DateTime.ParseExact(command.Arguments[0], "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture);
+                var c = int.Parse(command.Arguments[1]);
                 var events = this.em.ListEvents(d, c).ToList();
                 var sb = new StringBuilder();
 
@@ -90,7 +90,7 @@
                 return sb.ToString().Trim();
             }
 
-            throw new Exception("WTF " + com.Name + " is?");
+            throw new Exception("WTF " + command.Name + " is?");
         }
     }
 }

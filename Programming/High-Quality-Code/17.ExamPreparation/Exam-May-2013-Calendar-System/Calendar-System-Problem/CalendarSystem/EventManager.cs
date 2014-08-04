@@ -4,13 +4,13 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    public class EM : IEventsManager
+    public class EventManager : IEventsManager
     {
-        private readonly List<Ev> list = new List<Ev>();
+        private readonly List<Event> list = new List<Event>();
 
-        public void AddEvent(Ev e)
+        public void AddEvent(Event newEvent)
         {
-            this.list.Add(e);
+            this.list.Add(newEvent);
         }
 
         public int DeleteEventsByTitle(string t)
@@ -19,7 +19,7 @@
                 e => e.Title.ToLowerInvariant() == t.ToLowerInvariant());
         }
 
-        public IEnumerable<Ev> ListEvents(DateTime d, int c)
+        public IEnumerable<Event> ListEvents(DateTime d, int c)
         {
             return (from e in this.list
                     where e.D >= d

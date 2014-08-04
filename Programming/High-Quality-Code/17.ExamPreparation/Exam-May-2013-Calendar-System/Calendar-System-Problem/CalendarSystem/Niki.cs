@@ -28,7 +28,7 @@
             if ((com.CommandName == "AddEvent") && (com.Paramms.Length == 2))
             {
                 var date = DateTime.ParseExact(com.Paramms[0], "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture);
-                var e = new Ev
+                var e = new Event
                 {
                     D = date,
                     Title = com.Paramms[1],
@@ -43,7 +43,7 @@
             if ((com.CommandName == "AddEvent") && (com.Paramms.Length == 3))
             {
                 var date = DateTime.ParseExact(com.Paramms[0], "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture);
-                var e = new Ev
+                var e = new Event
                 {
                     D = date,
                     Title = com.Paramms[1],

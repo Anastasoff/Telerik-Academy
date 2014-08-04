@@ -5,10 +5,10 @@
 
     public interface IEventsManager
     {
-        void AddEvent(Ev a);
+        void AddEvent(Event a);
 
         int DeleteEventsByTitle(string b);
 
-        IEnumerable<Ev> ListEvents(DateTime c, int d);
+        IEnumerable<Event> ListEvents(DateTime c, int d);
     }
 }

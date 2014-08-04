@@ -44,10 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalendarSystemEntryPoint.cs" />
+    <Compile Include="ProgramEntryPoint.cs" />
     <Compile Include="Command.cs" />
-    <Compile Include="EM.cs" />
-    <Compile Include="Ev.cs" />
+    <Compile Include="EventManager.cs" />
+    <Compile Include="Event.cs" />
     <Compile Include="EventsManagerFast.cs" />
     <Compile Include="IEventsManager.cs" />
     <Compile Include="Niki.cs" />

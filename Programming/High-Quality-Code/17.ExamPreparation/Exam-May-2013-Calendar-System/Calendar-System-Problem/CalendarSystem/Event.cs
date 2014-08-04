@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class Ev : IComparable<Ev>
+    public class Event : IComparable<Event>
     {
         public string Title { get; set; }
 
@@ -22,7 +22,7 @@
             return eventAsString;
         }
 
-        public int CompareTo(Ev x)
+        public int CompareTo(Event x)
         {
             int res = DateTime.Compare(this.D, x.D);
             foreach (char c in this.Title)

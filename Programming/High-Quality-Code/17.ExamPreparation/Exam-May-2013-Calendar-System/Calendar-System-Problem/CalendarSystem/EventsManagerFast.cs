@@ -4,14 +4,14 @@
     using System.Collections.Generic;
     using System.Linq;
     using Wintellect.PowerCollections;
-    using MD = Wintellect.PowerCollections.MultiDictionary<string, CalendarSystem.Ev>;
+    using MD = Wintellect.PowerCollections.MultiDictionary<string, CalendarSystem.Event>;
 
     public class EventsManagerFast : IEventsManager
     {
         private readonly MD t = new MD(true);
-        private readonly OrderedMultiDictionary<DateTime, Ev> a = new OrderedMultiDictionary<DateTime, Ev>(true);
+        private readonly OrderedMultiDictionary<DateTime, Event> a = new OrderedMultiDictionary<DateTime, Event>(true);
 
-        public void AddEvent(Ev e)
+        public void AddEvent(Event e)
         {
             string eventTitleLowerCase = e.Title.ToLowerInvariant();
             this.t.Add(eventTitleLowerCase, e);
@@ -34,7 +34,7 @@
             return countx;
         }
 
-        public IEnumerable<Ev> ListEvents(DateTime d, int c)
+        public IEnumerable<Event> ListEvents(DateTime d, int c)
         {
             var da =
                 from e in this.a.RangeFrom(d, true).Values

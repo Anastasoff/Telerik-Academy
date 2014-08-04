@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="CommandParser.cs" />
     <Compile Include="Contracts\ICommandParser.cs" />
+    <Compile Include="Contracts\IEvent.cs" />
     <Compile Include="ProgramEntryPoint.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="EventManager.cs" />

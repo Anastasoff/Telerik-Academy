@@ -1,44 +1,47 @@
 ﻿namespace CalendarSystem
 {
+    using Contracts;
     using System;
 
-    public class Event : IComparable<Event>
+    // TODO: if I don't need the commented code, I can delete it.
+    public class Event : IEvent // IComparable<Event>
     {
+        public DateTime Date { get; set; }
+
         public string Title { get; set; }
 
         public string Location { get; set; }
 
-        public DateTime D { get; set; }
-
         public override string ToString()
         {
-            string form = "{0:yyyy-MM-ddTH:mm:ss} | {1}";
+            string dateFormat = "{0:yyyy-MM-ddTH:mm:ss} | {1}";
             if (this.Location != null)
             {
-                form += " | {2}";
+                dateFormat += " | {2}";
             }
 
-            string eventAsString = string.Format(form, this.D, this.Title, this.Location);
-            return eventAsString;
+            string formatedEvent = string.Format(dateFormat, this.Date, this.Title, this.Location);
+
+            return formatedEvent;
         }
 
-        public int CompareTo(Event x)
-        {
-            int res = DateTime.Compare(this.D, x.D);
-            foreach (char c in this.Title)
-            {
-                if (res == 0)
-                {
-                    res = string.Compare(this.Title, x.Title, StringComparison.Ordinal);
-                }
+        //public int CompareTo(Event x)
+        //{
+        //    int res = DateTime.Compare(this.Date, x.Date);
+        //    foreach (char ch in this.Title)
+        //    {
+        //        if (res == 0)
+        //        {
+        //            res = string.Compare(this.Title, x.Title, StringComparison.Ordinal);
+        //        }
 
-                if (res == 0)
-                {
-                    res = string.Compare(this.Location, x.Location, StringComparison.Ordinal);
-                }
-            }
+        //        if (res == 0)
+        //        {
+        //            res = string.Compare(this.Location, x.Location, StringComparison.Ordinal);
+        //        }
+        //    }
 
-            return res;
-        }
+        //    return res;
+        //}
     }
 }

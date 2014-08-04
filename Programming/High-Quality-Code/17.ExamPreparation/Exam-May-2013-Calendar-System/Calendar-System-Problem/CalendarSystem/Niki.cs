@@ -26,13 +26,13 @@
         public string ProcessCommand(Command com)
         {
             // First command
-            if ((com.CommandName == "AddEvent") && (com.Paramms.Length == 2))
+            if ((com.Name == "AddEvent") && (com.Arguments.Length == 2))
             {
-                var date = DateTime.ParseExact(com.Paramms[0], "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture);
+                var date = DateTime.ParseExact(com.Arguments[0], "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture);
                 var e = new Event
                 {
-                    D = date,
-                    Title = com.Paramms[1],
+                    Date = date,
+                    Title = com.Arguments[1],
                     Location = null,
                 };
 
@@ -41,14 +41,14 @@
                 return "Event added";
             }
 
-            if ((com.CommandName == "AddEvent") && (com.Paramms.Length == 3))
+            if ((com.Name == "AddEvent") && (com.Arguments.Length == 3))
             {
-                var date = DateTime.ParseExact(com.Paramms[0], "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture);
+                var date = DateTime.ParseExact(com.Arguments[0], "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture);
                 var e = new Event
                 {
-                    D = date,
-                    Title = com.Paramms[1],
-                    Location = com.Paramms[2],
+                    Date = date,
+                    Title = com.Arguments[1],
+                    Location = com.Arguments[2],
                 };
 
                 this.em.AddEvent(e);
@@ -57,23 +57,23 @@
             }
 
             // Second command
-            if ((com.CommandName == "DeleteEvents") && (com.Paramms.Length == 1))
+            if ((com.Name == "DeleteEvents") && (com.Arguments.Length == 1))
             {
-                int c = this.em.DeleteEventsByTitle(com.Paramms[0]);
+                int c = this.em.DeleteEventsByTitle(com.Arguments[0]);
 
                 if (c == 0)
                 {
-                    return "No events found.";
+                    return "No events found";
                 }
 
                 return c + " events deleted";
             }
 
             // Third command
-            if ((com.CommandName == "ListEvents") && (com.Paramms.Length == 2))
+            if ((com.Name == "ListEvents") && (com.Arguments.Length == 2))
             {
-                var d = DateTime.ParseExact(com.Paramms[0], "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture);
-                var c = int.Parse(com.Paramms[1]);
+                var d = DateTime.ParseExact(com.Arguments[0], "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture);
+                var c = int.Parse(com.Arguments[1]);
                 var events = this.em.ListEvents(d, c).ToList();
                 var sb = new StringBuilder();
 
@@ -90,7 +90,7 @@
                 return sb.ToString().Trim();
             }
 
-            throw new Exception("WTF " + com.CommandName + " is?");
+            throw new Exception("WTF " + com.Name + " is?");
         }
     }
 }

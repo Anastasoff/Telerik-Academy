@@ -1,22 +1,18 @@
-﻿
-namespace CalendarSystem
+﻿namespace CalendarSystem
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using Contracts;
+    using System;
 
     public class CommandParser : ICommandParser
     {
         private string inputCommand;
+
         public CommandParser(string inputCommand)
         {
             this.inputCommand = inputCommand;
         }
 
-        public  Command Parse()
+        public Command Parse()
         {
             int firstWhiteSpace = this.inputCommand.IndexOf(' ');
             if (firstWhiteSpace == -1)
@@ -34,7 +30,7 @@ namespace CalendarSystem
                 commandArguments[i] = currentArgument.Trim();
             }
 
-            Command command = new Command { CommandName = commandName, Paramms = commandArguments };
+            Command command = new Command(commandName, commandArguments);
 
             return command;
         }

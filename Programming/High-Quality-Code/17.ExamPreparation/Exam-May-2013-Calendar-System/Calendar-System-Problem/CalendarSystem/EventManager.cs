@@ -23,8 +23,8 @@
         public IEnumerable<Event> ListEvents(DateTime d, int c)
         {
             return (from e in this.list
-                    where e.D >= d
-                    orderby e.D, e.Title, e.Location
+                    where e.Date >= d
+                    orderby e.Date, e.Title, e.Location
                     select e).Take(c);
         }
     }

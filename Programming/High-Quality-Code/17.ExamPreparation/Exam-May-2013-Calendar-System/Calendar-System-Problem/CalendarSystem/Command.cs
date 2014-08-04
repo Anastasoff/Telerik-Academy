@@ -1,11 +1,42 @@
 ﻿namespace CalendarSystem
 {
-    using System;
-
-    public struct Command
+    public class Command
     {
-        public string CommandName { get; set; }
+        private string name;
+        private string[] arguments;
 
-        public string[] Paramms { get; set; }
+        public Command(string name, string[] arguments)
+        {
+            this.Name = name;
+            this.Arguments = arguments;
+        }
+
+        public string Name
+        {
+            get
+            {
+                return this.name;
+            }
+
+            set
+            {
+                // TODO: validation
+                this.name = value;
+            }
+        }
+
+        public string[] Arguments
+        {
+            get
+            {
+                return this.arguments;
+            }
+
+            set
+            {
+                // TODO: validation
+                this.arguments = value;
+            }
+        }
     }
 }

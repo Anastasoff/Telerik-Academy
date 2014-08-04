@@ -16,7 +16,7 @@
         {
             string eventTitleLowerCase = e.Title.ToLowerInvariant();
             this.t.Add(eventTitleLowerCase, e);
-            this.a.Add(e.D, e);
+            this.a.Add(e.Date, e);
         }
 
         public int DeleteEventsByTitle(string t)
@@ -27,7 +27,7 @@
 
             foreach (var e in del)
             {
-                this.a.Remove(e.D, e);
+                this.a.Remove(e.Date, e);
             }
 
             this.t.Remove(lc);

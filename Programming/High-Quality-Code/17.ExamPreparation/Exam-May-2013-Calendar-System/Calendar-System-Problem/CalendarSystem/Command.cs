@@ -1,6 +1,7 @@
 ﻿namespace CalendarSystem
 {
-    public class Command
+    using Contracts;
+    public class Command : ICommand
     {
         private string name;
         private string[] arguments;

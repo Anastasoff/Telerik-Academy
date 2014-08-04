@@ -1,13 +1,13 @@
 ﻿namespace CalendarSystem
 {
-    using System;
     using Contracts;
+    using System;
 
     public class ProgramEntryPoint
     {
         public static void Main()
         {
-            var newEventManager = new EventManager();
+            var newEventManager = new EventsManager();
             var processor = new Niki(newEventManager);
 
             while (true)

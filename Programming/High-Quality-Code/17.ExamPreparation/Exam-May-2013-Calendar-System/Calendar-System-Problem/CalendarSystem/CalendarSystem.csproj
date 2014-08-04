@@ -45,13 +45,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommandParser.cs" />
+    <Compile Include="Contracts\ICommand.cs" />
     <Compile Include="Contracts\ICommandParser.cs" />
     <Compile Include="Contracts\IEvent.cs" />
     <Compile Include="ProgramEntryPoint.cs" />
     <Compile Include="Command.cs" />
-    <Compile Include="EventManager.cs" />
     <Compile Include="Event.cs" />
-    <Compile Include="EventsManagerFast.cs" />
+    <Compile Include="EventsManager.cs" />
     <Compile Include="Contracts\IEventsManager.cs" />
     <Compile Include="Niki.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

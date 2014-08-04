@@ -24,24 +24,5 @@
 
             return formatedEvent;
         }
-
-        //public int CompareTo(Event x)
-        //{
-        //    int res = DateTime.Compare(this.Date, x.Date);
-        //    foreach (char ch in this.Title)
-        //    {
-        //        if (res == 0)
-        //        {
-        //            res = string.Compare(this.Title, x.Title, StringComparison.Ordinal);
-        //        }
-
-        //        if (res == 0)
-        //        {
-        //            res = string.Compare(this.Location, x.Location, StringComparison.Ordinal);
-        //        }
-        //    }
-
-        //    return res;
-        //}
     }
 }

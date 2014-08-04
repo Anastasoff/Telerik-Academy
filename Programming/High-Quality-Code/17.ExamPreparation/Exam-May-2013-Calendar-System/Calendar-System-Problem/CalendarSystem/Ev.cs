@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CalendarSystem
+﻿namespace CalendarSystem
 {
+    using System;
+
     public class Ev : IComparable<Ev>
     {
-        public DateTime d { get; set; }
+        public string Title { get; set; }
 
-        public string Title;
+        public string Location { get; set; }
 
-        public string Location;
+        public DateTime D { get; set; }
 
         public override string ToString()
         {
@@ -21,13 +17,14 @@ namespace CalendarSystem
             {
                 form += " | {2}";
             }
-            string eventAsString = string.Format(form, this.d, this.Title, this.Location);
+
+            string eventAsString = string.Format(form, this.D, this.Title, this.Location);
             return eventAsString;
         }
 
         public int CompareTo(Ev x)
         {
-            int res = DateTime.Compare(this.d, x.d);
+            int res = DateTime.Compare(this.D, x.D);
             foreach (char c in this.Title)
             {
                 if (res == 0)

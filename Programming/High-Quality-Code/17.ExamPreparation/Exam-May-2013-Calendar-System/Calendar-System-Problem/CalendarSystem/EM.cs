@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CalendarSystem
+﻿namespace CalendarSystem
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     public class EM : IEventsManager
     {
         private readonly List<Ev> list = new List<Ev>();
@@ -24,8 +22,8 @@ namespace CalendarSystem
         public IEnumerable<Ev> ListEvents(DateTime d, int c)
         {
             return (from e in this.list
-                    where e.d >= d
-                    orderby e.d, e.Title, e.Location
+                    where e.D >= d
+                    orderby e.D, e.Title, e.Location
                     select e).Take(c);
         }
     }

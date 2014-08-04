@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Wintellect.PowerCollections;
-using MD = Wintellect.PowerCollections.MultiDictionary<string, CalendarSystem.Ev>;
-
-namespace CalendarSystem
+﻿namespace CalendarSystem
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Wintellect.PowerCollections;
+    using MD = Wintellect.PowerCollections.MultiDictionary<string, CalendarSystem.Ev>;
+
     public class EventsManagerFast : IEventsManager
     {
         private readonly MD t = new MD(true);
@@ -17,7 +15,7 @@ namespace CalendarSystem
         {
             string eventTitleLowerCase = e.Title.ToLowerInvariant();
             this.t.Add(eventTitleLowerCase, e);
-            this.a.Add(e.d, e);
+            this.a.Add(e.D, e);
         }
 
         public int DeleteEventsByTitle(string t)
@@ -28,7 +26,7 @@ namespace CalendarSystem
 
             foreach (var e in del)
             {
-                this.a.Remove(e.d, e);
+                this.a.Remove(e.D, e);
             }
 
             this.t.Remove(lc);

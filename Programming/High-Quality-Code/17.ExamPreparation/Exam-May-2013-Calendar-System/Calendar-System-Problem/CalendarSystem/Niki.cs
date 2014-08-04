@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CalendarSystem
+﻿namespace CalendarSystem
 {
+    using System;
+    using System.Globalization;
+    using System.Linq;
+    using System.Text;
+
     public class Niki
     {
         private readonly IEventsManager em;
@@ -32,7 +30,7 @@ namespace CalendarSystem
                 var date = DateTime.ParseExact(com.Paramms[0], "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture);
                 var e = new Ev
                 {
-                    d = date,
+                    D = date,
                     Title = com.Paramms[1],
                     Location = null,
                 };
@@ -41,12 +39,13 @@ namespace CalendarSystem
 
                 return "Event added";
             }
+
             if ((com.CommandName == "AddEvent") && (com.Paramms.Length == 3))
             {
                 var date = DateTime.ParseExact(com.Paramms[0], "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture);
                 var e = new Ev
                 {
-                    d = date,
+                    D = date,
                     Title = com.Paramms[1],
                     Location = com.Paramms[2],
                 };
@@ -55,6 +54,7 @@ namespace CalendarSystem
 
                 return "Event added";
             }
+
             // Second command
             if ((com.CommandName == "DeleteEvents") && (com.Paramms.Length == 1))
             {
@@ -67,6 +67,7 @@ namespace CalendarSystem
 
                 return c + " events deleted";
             }
+
             // Third command
             if ((com.CommandName == "ListEvents") && (com.Paramms.Length == 2))
             {
@@ -87,6 +88,7 @@ namespace CalendarSystem
 
                 return sb.ToString().Trim();
             }
+
             throw new Exception("WTF " + com.CommandName + " is?");
         }
     }

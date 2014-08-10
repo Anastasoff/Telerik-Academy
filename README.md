@@ -14,6 +14,7 @@ Telerik Academy
  1.  <b>[C# Fundamentals] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharp-Fundamentals)</b>
  2.  <b>[C# OOP] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharp-OOP)</b>
  3.  <b>[High-Quality Code] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/High-Quality-Code)</b>
+ 4.  <b>[Data Structures and Algorithms] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/Data-Structures-and-Algorithms)</b>
 
 #### Web Design and UI Technologies
  1. <b>[HTML] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/HTML)</b>

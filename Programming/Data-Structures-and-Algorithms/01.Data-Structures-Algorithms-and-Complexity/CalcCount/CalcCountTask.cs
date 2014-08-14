@@ -1,4 +1,5 @@
-﻿namespace CalcCount
+﻿// 2. What is the expected running time of the following C# code? Explain why.
+namespace CalcCount
 {
     using System;
     public class CalcCountTask

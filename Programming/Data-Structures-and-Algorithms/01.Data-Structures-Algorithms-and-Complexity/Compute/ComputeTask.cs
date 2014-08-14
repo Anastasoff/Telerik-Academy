@@ -1,4 +1,5 @@
-﻿namespace Compute
+﻿// 1. What is the expected running time of the following C# code? Explain why. Assume the array's size is n.
+namespace Compute
 {
     using System;
 
@@ -22,8 +23,6 @@
                     {
                         end--;
                     }
-
-                    Console.WriteLine(count);
                 }
             }
 

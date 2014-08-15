@@ -6,7 +6,7 @@ namespace OccurrencesInArray
 
     internal class OccurrencesInArray
     {
-        public static SortedDictionary<int, int> FindOccurrences(int[] array)
+        public static IDictionary<int, int> FindOccurrences(int[] array)
         {
             var occurrences = new SortedDictionary<int, int>();
 
@@ -30,10 +30,12 @@ namespace OccurrencesInArray
         {
             int[] array = { 3, 4, 4, 2, 3, 3, 4, 3, 2 };
 
+            Console.WriteLine(string.Join(", ", array));
+
             var occurrences = FindOccurrences(array);
             foreach (var item in occurrences)
             {
-                Console.WriteLine(item.Key + " -> " + item.Value + " times");
+                Console.WriteLine("{0} -> {1} times", item.Key, item.Value);
             }
         }
     }

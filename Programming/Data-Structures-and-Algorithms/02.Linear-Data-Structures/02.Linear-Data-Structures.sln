@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.ReverseInputIntegers", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.SortSequence", "SortSequence\03.SortSequence.csproj", "{BE0565C0-D467-470B-B9D2-B77F91D3702A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.LongestSubsequence", "LongestSubsequence\04.LongestSubsequence.csproj", "{4DC32EC6-A615-4D1A-9DCA-CE8DC51A908F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BE0565C0-D467-470B-B9D2-B77F91D3702A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE0565C0-D467-470B-B9D2-B77F91D3702A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE0565C0-D467-470B-B9D2-B77F91D3702A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DC32EC6-A615-4D1A-9DCA-CE8DC51A908F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DC32EC6-A615-4D1A-9DCA-CE8DC51A908F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DC32EC6-A615-4D1A-9DCA-CE8DC51A908F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DC32EC6-A615-4D1A-9DCA-CE8DC51A908F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

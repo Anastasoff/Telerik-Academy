@@ -1,15 +1,11 @@
-﻿namespace RemoveNegativeNumbers
+﻿// 5. Write a program that removes from given sequence all negative numbers.
+namespace RemoveNegativeNumbers
 {
     using System;
     using System.Collections.Generic;
 
     internal class RemoveNegativeNumbers
     {
-        public static void FindAndRemoveNegativeNumbers<T>(LinkedList<T> sequence) where T : IComparable<T>
-        {
-            sequence.RemoveAll(n => n.CompareTo((T)Convert.ChangeType(0, typeof(T))) < 0);
-        }
-
         private static void Main(string[] args)
         {
             var sequence = new LinkedList<int>();
@@ -24,7 +20,7 @@
 
             Console.WriteLine(string.Join(", ", sequence));
 
-            FindAndRemoveNegativeNumbers(sequence);
+            sequence.RemoveAll(x => x < 0);
 
             Console.WriteLine(string.Join(", ", sequence));
         }

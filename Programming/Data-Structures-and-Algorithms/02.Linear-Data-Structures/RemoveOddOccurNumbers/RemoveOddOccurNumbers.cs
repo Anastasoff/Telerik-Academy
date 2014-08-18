@@ -6,10 +6,10 @@ namespace RemoveOddOccurNumbers
 
     internal class RemoveOddOccurNumbers
     {
-        public static List<int> FindAndRemoveOddOccurNumbers(List<int> sequence)
+        public static IList<int> FindAndRemoveOddOccurNumbers(IList<int> sequence)
         {
-            Dictionary<int, int> numbers = new Dictionary<int, int>();
-            List<int> result = new List<int>();
+            IDictionary<int, int> numbers = new Dictionary<int, int>();
+            IList<int> result = new List<int>();
 
             for (int i = 0; i < sequence.Count; i++)
             {
@@ -27,7 +27,7 @@ namespace RemoveOddOccurNumbers
             for (int i = 0; i < sequence.Count; i++)
             {
                 int currentNumber = sequence[i];
-                if (numbers.ContainsKey(currentNumber) && numbers[currentNumber] % 2 == 0)
+                if (numbers.ContainsKey(currentNumber) && (numbers[currentNumber] % 2 == 0))
                 {
                     result.Add(sequence[i]);
                 }
@@ -38,10 +38,10 @@ namespace RemoveOddOccurNumbers
 
         private static void Main(string[] args)
         {
-            List<int> sequence = new List<int>() { 4, 2, 2, 5, 2, 3, 2, 3, 1, 5, 2 };
+            IList<int> sequence = new List<int>() { 4, 2, 2, 5, 2, 3, 2, 3, 1, 5, 2 };
             Console.WriteLine(string.Join(", ", sequence));
 
-            List<int> result = FindAndRemoveOddOccurNumbers(sequence);
+            IList<int> result = FindAndRemoveOddOccurNumbers(sequence);
             Console.WriteLine(string.Join(", ", result));
         }
     }

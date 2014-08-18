@@ -8,7 +8,7 @@ namespace OccurrencesInArray
     {
         public static IDictionary<int, int> FindOccurrences(int[] array)
         {
-            var occurrences = new SortedDictionary<int, int>();
+            IDictionary<int, int> occurrences = new SortedDictionary<int, int>();
 
             for (int i = 0; i < array.Length; i++)
             {
@@ -29,7 +29,6 @@ namespace OccurrencesInArray
         private static void Main(string[] args)
         {
             int[] array = { 3, 4, 4, 2, 3, 3, 4, 3, 2 };
-
             Console.WriteLine(string.Join(", ", array));
 
             var occurrences = FindOccurrences(array);

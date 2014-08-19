@@ -31,7 +31,7 @@ namespace Compute
 
         public static void Main()
         {
-            // Expected running time: O(n^2)
+            // Algorithm complexity: O(n^2)
             int[] arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             long computed = Compute(arr);
             Console.WriteLine("Result: " + computed);

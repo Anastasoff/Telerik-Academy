@@ -43,10 +43,11 @@ namespace CalcCount
 
         public static void Main()
         {
-            // Expected running time: O(n*m)
+            // Algorithm complexity: O(n*m)
             int n = 10;
             int m = 5;
             int[,] matrix = GenerateRandomMatrix(n, m);
+            Console.WriteLine("Count: " + CalcCount(matrix));
         }
     }
 }

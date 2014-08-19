@@ -40,10 +40,12 @@ namespace CalcSum
 
         public static void Main()
         {
-            // Expected running time: O(n^2*m)
-            int n = 10;
+            // Algorithm complexity: O(n*m)
+            int n = 5;
             int m = 5;
+            int row = 0;
             int[,] matrix = GenerateRandomMatrix(n, m);
+            Console.WriteLine(CalcSum(matrix, row));
         }
     }
 }

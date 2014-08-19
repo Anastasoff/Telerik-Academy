@@ -1,4 +1,5 @@
-﻿namespace CalcSum
+﻿// 3. * What is the expected running time of the following C# code? Explain why.
+namespace CalcSum
 {
     using System;
 
@@ -39,10 +40,10 @@
 
         public static void Main()
         {
+            // Expected running time: O(n^2*m)
             int n = 10;
             int m = 5;
             int[,] matrix = GenerateRandomMatrix(n, m);
-            Console.WriteLine(CalcSum(matrix, 0));
         }
     }
 }

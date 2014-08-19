@@ -6,6 +6,7 @@ namespace Majorant
 
     internal class Majorant
     {
+        // TODO: generic method
         public static int FindMajorant(IDictionary<int, int> occurrences, int count)
         {
             int majorant = 0;
@@ -27,20 +28,20 @@ namespace Majorant
             return majorant;
         }
 
-        public static IDictionary<int, int> FindOccurrences(int[] array)
+        public static IDictionary<T, int> FindOccurrences<T>(T[] array)
         {
-            var occurrences = new Dictionary<int, int>();
+            var occurrences = new Dictionary<T, int>();
 
             for (int i = 0; i < array.Length; i++)
             {
-                int currentInteger = array[i];
-                if (occurrences.ContainsKey(currentInteger))
+                T currentValue = array[i];
+                if (occurrences.ContainsKey(currentValue))
                 {
-                    occurrences[currentInteger]++;
+                    occurrences[currentValue]++;
                 }
                 else
                 {
-                    occurrences[currentInteger] = 1;
+                    occurrences[currentValue] = 1;
                 }
             }
 
@@ -54,7 +55,7 @@ namespace Majorant
 
             var occurrences = FindOccurrences(array);
             int majorant = FindMajorant(occurrences, array.Length);
-            Console.WriteLine(majorant);
+            Console.WriteLine("Majorant: " + majorant);
         }
     }
 }

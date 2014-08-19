@@ -6,20 +6,20 @@ namespace OccurrencesInArray
 
     internal class OccurrencesInArray
     {
-        public static IDictionary<int, int> FindOccurrences(int[] array)
+        public static IDictionary<T, int> FindOccurrences<T>(T[] array)
         {
-            IDictionary<int, int> occurrences = new SortedDictionary<int, int>();
+            var occurrences = new SortedDictionary<T, int>();
 
             for (int i = 0; i < array.Length; i++)
             {
-                int currentInteger = array[i];
-                if (occurrences.ContainsKey(currentInteger))
+                T currentValue = array[i];
+                if (occurrences.ContainsKey(currentValue))
                 {
-                    occurrences[currentInteger]++;
+                    occurrences[currentValue]++;
                 }
                 else
                 {
-                    occurrences[currentInteger] = 1;
+                    occurrences[currentValue] = 1;
                 }
             }
 

@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.OccurrencesInArray", "Oc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.Majorant", "Majorant\08.Majorant.csproj", "{48BE0AA3-B1AA-41A0-92BA-7A281D62B279}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.FancySequence", "FancySequence\09.FancySequence.csproj", "{AFC5A559-2CF5-48FC-BC29-E37CB395877B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{48BE0AA3-B1AA-41A0-92BA-7A281D62B279}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48BE0AA3-B1AA-41A0-92BA-7A281D62B279}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48BE0AA3-B1AA-41A0-92BA-7A281D62B279}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFC5A559-2CF5-48FC-BC29-E37CB395877B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFC5A559-2CF5-48FC-BC29-E37CB395877B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFC5A559-2CF5-48FC-BC29-E37CB395877B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFC5A559-2CF5-48FC-BC29-E37CB395877B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

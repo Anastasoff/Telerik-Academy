@@ -20,8 +20,8 @@ namespace FancySequence
     {
         public static IList<int> CalculateSequence(int n, int membersCount)
         {
-            IList<int> result = new List<int>();
             Queue<int> numbers = new Queue<int>();
+            IList<int> result = new List<int>();
 
             numbers.Enqueue(n);
             for (int i = 0; i <= membersCount; i++)

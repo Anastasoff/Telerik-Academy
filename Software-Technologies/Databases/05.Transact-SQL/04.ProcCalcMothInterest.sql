@@ -18,3 +18,4 @@ AS
 GO
 
 EXEC usp_CalculateMonthInterest 2, 20
+GO

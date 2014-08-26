@@ -17,3 +17,4 @@ AS
 GO
 
 EXEC usp_SelectPersonsWithBalanceMoreThan 500
+GO

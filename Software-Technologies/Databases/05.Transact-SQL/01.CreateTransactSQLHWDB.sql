@@ -26,7 +26,7 @@ VALUES
 	('Pesho', 'Peshev', '123123123'),
 	('Gosho', 'Goshov', '234234234'),
 	('Stamat', 'Stamat', '345345345')
-
+GO
 
 CREATE TABLE Accounts(
 	AccountID int IDENTITY,
@@ -41,11 +41,13 @@ VALUES
 	(1, 0.0),
 	(2, 1000),
 	(3, 5000)
+GO
 
 -- Add foreign key
 ALTER TABLE Accounts
 ADD CONSTRAINT FK_Accounts_Persons FOREIGN KEY (PersonID)
 REFERENCES Persons(PersonID)
+GO
 
 -- Stored procedure
 CREATE PROC usp_SelectPersonsFullName
@@ -56,3 +58,4 @@ AS
 GO
 
 EXEC usp_SelectPersonsFullName
+GO

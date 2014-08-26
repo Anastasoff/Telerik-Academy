@@ -23,6 +23,7 @@ AS
 GO
 
 EXEC usp_WithdrawMoney 3, 555
+GO
 
 SELECT
 	p.FirstName,
@@ -49,6 +50,7 @@ AS
 GO
 
 EXEC usp_DepositMoney 3, 333
+GO
 
 SELECT
 	p.FirstName,

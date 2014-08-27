@@ -1,30 +1,20 @@
-﻿
-namespace LinkedList
+﻿namespace LinkedList
 {
     using System;
+    using System.Collections;
+    using System.Collections.Generic;
 
-    public class LinkedList<T>
+    public class LinkedList<T> : IEnumerable<T> where T : IComparable<T>
     {
-        private class Node
-        {
-            public Node(T value)
-            {
-                this.Value = value;
-            }
-            public T Value { get; set; }
-
-            public Node Next { get; set; }
-        }
-
-        private Node head;
-        private Node last;
+        private LinkedListNode<T> head;
+        private LinkedListNode<T> current;
         private int size;
 
         public LinkedList()
         {
-            this.size = 0;
             this.head = null;
-            this.last = null;
+            this.current = null;
+            this.size = 0;
         }
 
         public int Count
@@ -37,47 +27,83 @@ namespace LinkedList
 
         public void Add(T value)
         {
-            Node newNode = new Node(value);
+            this.size++;
+            var node = new LinkedListNode<T>();
+            node.Value = value;
 
-            if (this.size == 0)
+            if (this.head == null)
             {
-                this.head = newNode;
-                this.last = newNode;
+                this.head = node;
             }
             else
             {
-                this.head.Next = newNode;
-                this.last = newNode;
+                current.Next = node;
             }
 
-            this.size++;
+            current = node;
         }
 
-        public void Clear()
+        public void Remove(T value)
         {
-            if (this.size != 0)
+            LinkedListNode<T> previousNode = null;
+            LinkedListNode<T> currentNode = this.head;
+
+            while (currentNode.CompareTo(value) != 0)
             {
-                this.head = null;
-                this.last = null;
+                previousNode = currentNode;
+                currentNode = currentNode.Next;
+
+                if (currentNode == null)
+                {
+                    throw new ArgumentException("No such element in the list!");
+                }
+
+                if (previousNode.CompareTo(value) == 0)
+                {
+                    previousNode = previousNode.Next;
+                    currentNode = currentNode.Next;
+                    this.size--;
+                    break;
+                }
             }
         }
 
-        // TODO: implement
-        public Node Find(T value)
+        public LinkedListNode<T> Find(T value)
         {
-            return new Node();
+            LinkedListNode<T> currentNode = this.head;
+            LinkedListNode<T> result = null;
+
+            while (currentNode.CompareTo(value) != 0)
+            {
+                currentNode = currentNode.Next;
+
+                if (currentNode == null)
+                {
+                    throw new ArgumentException("Cannot find such element in the list!");
+                }
+
+                if (currentNode.CompareTo(value) == 0)
+                {
+                    result = currentNode;
+                }
+            }
+
+            return result;
         }
 
-        // TODO: implement
-        public bool Remove(T value)
+        public IEnumerator<T> GetEnumerator()
         {
-            return true;
+            var currentNode = this.head;
+            while (currentNode != null)
+            {
+                yield return currentNode.Value;
+                currentNode = currentNode.Next;
+            }
         }
-        
-        // TODO: implement
-        public bool Contains(T value)
+
+        IEnumerator IEnumerable.GetEnumerator()
         {
-            return true;
+            return this.GetEnumerator();
         }
     }
 }

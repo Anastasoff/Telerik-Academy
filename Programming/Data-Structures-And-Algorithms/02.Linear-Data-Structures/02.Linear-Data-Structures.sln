@@ -25,7 +25,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.FindTheShortestSequence"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.LinkedList", "LinkedList\11.LinkedList.csproj", "{B88A2C47-9852-4507-B51D-CE88925626A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack", "Stack\Stack.csproj", "{1D2902B6-58AA-4647-AD15-C0EBDEE38BFB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.Stack", "Stack\12.Stack.csproj", "{1D2902B6-58AA-4647-AD15-C0EBDEE38BFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.Queue", "Queue\13.Queue.csproj", "{A0872602-92DE-4CB1-A30D-8C307220C4A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{1D2902B6-58AA-4647-AD15-C0EBDEE38BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D2902B6-58AA-4647-AD15-C0EBDEE38BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D2902B6-58AA-4647-AD15-C0EBDEE38BFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0872602-92DE-4CB1-A30D-8C307220C4A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0872602-92DE-4CB1-A30D-8C307220C4A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0872602-92DE-4CB1-A30D-8C307220C4A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0872602-92DE-4CB1-A30D-8C307220C4A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

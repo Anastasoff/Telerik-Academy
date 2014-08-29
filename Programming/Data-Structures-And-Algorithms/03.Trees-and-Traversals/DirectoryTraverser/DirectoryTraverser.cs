@@ -18,22 +18,31 @@
             {
                 Console.WriteLine(ex.Message);
             }
+
+            Console.ReadLine();
         }
 
         public static void TraverseDir(string directory, string mask)
         {
-            string[] files = Directory.GetFiles(directory, mask);
-            foreach (var file in files)
+            try
             {
-                int index = file.LastIndexOf('\\') + 1;
-                string fileName = file.Substring(index, file.Length - index);
-                Console.WriteLine(fileName);
-            }
+                string[] files = Directory.GetFiles(directory, mask);
+                foreach (var file in files)
+                {
+                    int index = file.LastIndexOf('\\') + 1;
+                    string fileName = file.Substring(index, file.Length - index);
+                    Console.WriteLine(fileName);
+                }
 
-            string[] dirs = Directory.GetDirectories(directory);
-            foreach (var dir in dirs)
+                string[] dirs = Directory.GetDirectories(directory);
+                foreach (var dir in dirs)
+                {
+                    TraverseDir(dir, mask);
+                }
+            }
+            catch (Exception ex)
             {
-                TraverseDir(dir, mask);
+                Console.WriteLine(ex.Message);
             }
         }
     }

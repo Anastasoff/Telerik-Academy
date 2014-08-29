@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.DirectoryTraverser", "Di
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.CalculateDirSizes", "CalculateDirSizes\03.CalculateDirSizes.csproj", "{02143FA3-A711-4157-AAC7-AD4B3A7F39DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.TreeOperations", "TreeOperations\01.TreeOperations.csproj", "{176FAD7D-BE66-44BC-BA26-07483E821199}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{02143FA3-A711-4157-AAC7-AD4B3A7F39DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02143FA3-A711-4157-AAC7-AD4B3A7F39DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02143FA3-A711-4157-AAC7-AD4B3A7F39DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{176FAD7D-BE66-44BC-BA26-07483E821199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{176FAD7D-BE66-44BC-BA26-07483E821199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{176FAD7D-BE66-44BC-BA26-07483E821199}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{176FAD7D-BE66-44BC-BA26-07483E821199}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

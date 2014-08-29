@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.NumbersOfCategories", "NumbersOfCategories\01.NumbersOfCategories.csproj", "{53AA30A4-4048-4326-9ADD-2B3097CC75B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.CategoriesNameAndDescription", "CategoriesNameAndDescription\02.CategoriesNameAndDescription.csproj", "{B12F8864-AE8D-4B6E-8B55-F0D59BD8AABF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.CategoriesAndProducts", "CategoriesAndProducts\03.CategoriesAndProducts.csproj", "{31F3C491-C877-4CA3-AB79-28C5AFF5040F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.InsertNewProducts", "InsertNewProducts\04.InsertNewProducts.csproj", "{5EB88269-C076-4532-BD63-0E95DE4348E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.RetrieveAndStoreImages", "RetrieveAndStoreImages\05.RetrieveAndStoreImages.csproj", "{7935EB58-E498-4E78-86DA-C9DE8F0AA7FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.ReadFromExcelFile", "ReadFromExcelFile\06.ReadFromExcelFile.csproj", "{D3187690-1C65-473C-A923-711B35D6011D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.FindProducts", "FindProducts\08.FindProducts.csproj", "{902E0D71-9D22-42A5-B2C8-39198F7A226E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53AA30A4-4048-4326-9ADD-2B3097CC75B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53AA30A4-4048-4326-9ADD-2B3097CC75B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53AA30A4-4048-4326-9ADD-2B3097CC75B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53AA30A4-4048-4326-9ADD-2B3097CC75B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B12F8864-AE8D-4B6E-8B55-F0D59BD8AABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B12F8864-AE8D-4B6E-8B55-F0D59BD8AABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B12F8864-AE8D-4B6E-8B55-F0D59BD8AABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B12F8864-AE8D-4B6E-8B55-F0D59BD8AABF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31F3C491-C877-4CA3-AB79-28C5AFF5040F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31F3C491-C877-4CA3-AB79-28C5AFF5040F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31F3C491-C877-4CA3-AB79-28C5AFF5040F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31F3C491-C877-4CA3-AB79-28C5AFF5040F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EB88269-C076-4532-BD63-0E95DE4348E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EB88269-C076-4532-BD63-0E95DE4348E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EB88269-C076-4532-BD63-0E95DE4348E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EB88269-C076-4532-BD63-0E95DE4348E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7935EB58-E498-4E78-86DA-C9DE8F0AA7FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7935EB58-E498-4E78-86DA-C9DE8F0AA7FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7935EB58-E498-4E78-86DA-C9DE8F0AA7FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7935EB58-E498-4E78-86DA-C9DE8F0AA7FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3187690-1C65-473C-A923-711B35D6011D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3187690-1C65-473C-A923-711B35D6011D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3187690-1C65-473C-A923-711B35D6011D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3187690-1C65-473C-A923-711B35D6011D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{902E0D71-9D22-42A5-B2C8-39198F7A226E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{902E0D71-9D22-42A5-B2C8-39198F7A226E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{902E0D71-9D22-42A5-B2C8-39198F7A226E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{902E0D71-9D22-42A5-B2C8-39198F7A226E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

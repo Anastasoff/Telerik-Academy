@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.FindProducts", "FindProd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.SQLite", "SQLite\10.SQLite.csproj", "{D6D8B63E-3814-40BB-8DBF-9D49D8C37236}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.AddIntoExcelFile", "AddIntoExcelFile\07.AddIntoExcelFile.csproj", "{F089F938-8D0E-48A0-992E-B6E63439AB04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{D6D8B63E-3814-40BB-8DBF-9D49D8C37236}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6D8B63E-3814-40BB-8DBF-9D49D8C37236}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6D8B63E-3814-40BB-8DBF-9D49D8C37236}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F089F938-8D0E-48A0-992E-B6E63439AB04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F089F938-8D0E-48A0-992E-B6E63439AB04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F089F938-8D0E-48A0-992E-B6E63439AB04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F089F938-8D0E-48A0-992E-B6E63439AB04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

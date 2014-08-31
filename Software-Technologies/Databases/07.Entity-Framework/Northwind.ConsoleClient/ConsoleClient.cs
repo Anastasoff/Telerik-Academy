@@ -42,7 +42,7 @@
             // Created new partial class Employees in Northwind.Models.Partials
 
             //// Task 9.
-            InsertNewOrder();
+            // InsertNewOrder();
 
             Console.WriteLine("\nOperations executed successfully.");
         }

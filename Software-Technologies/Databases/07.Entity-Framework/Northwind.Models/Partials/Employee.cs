@@ -1,10 +1,10 @@
-﻿namespace Northwind.Models.Partials
+﻿namespace Northwind.Models
 {
     using System.Data.Linq;
 
     public partial class Employee
     {
-        public EntitySet<Territory> Territories
+        public EntitySet<Territory> TerritoriesSet
         {
             get
             {

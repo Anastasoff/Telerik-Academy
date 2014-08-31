@@ -35,7 +35,7 @@
 
             if (modifiedCustomer != null)
             {
-                // TODO: find out proper way to do it
+                // TODO: find out proper way to do it with reflection
 
                 //modifiedCustomer.CompanyName = customer.CompanyName;
                 //modifiedCustomer.ContactName = customer.ContactName;

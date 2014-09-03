@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.ImplementPriorityQueue", "ImplementPriorityQueue\01.ImplementPriorityQueue.csproj", "{7F71E851-62DC-497D-A95D-2F575FEA48CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.UsingOrderedBag", "UsingOrderedBag\02.UsingOrderedBag.csproj", "{8293DB87-75DF-4D94-887F-1FF9D766CB38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.UsingTrie", "UsingTrie\03.UsingTrie.csproj", "{142F314E-8792-4D7F-9A08-D8329BF4236A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F71E851-62DC-497D-A95D-2F575FEA48CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F71E851-62DC-497D-A95D-2F575FEA48CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F71E851-62DC-497D-A95D-2F575FEA48CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F71E851-62DC-497D-A95D-2F575FEA48CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8293DB87-75DF-4D94-887F-1FF9D766CB38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8293DB87-75DF-4D94-887F-1FF9D766CB38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8293DB87-75DF-4D94-887F-1FF9D766CB38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8293DB87-75DF-4D94-887F-1FF9D766CB38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{142F314E-8792-4D7F-9A08-D8329BF4236A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{142F314E-8792-4D7F-9A08-D8329BF4236A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{142F314E-8792-4D7F-9A08-D8329BF4236A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{142F314E-8792-4D7F-9A08-D8329BF4236A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

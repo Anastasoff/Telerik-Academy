@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelerikAcademy.Models", "TelerikAcademy.Models\TelerikAcademy.Models.csproj", "{10F9E22F-57D7-4463-B1D1-856868F2FD7B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00.TelerikAcademy.Models", "TelerikAcademy.Models\00.TelerikAcademy.Models.csproj", "{10F9E22F-57D7-4463-B1D1-856868F2FD7B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Nplus1Problem", "Nplus1Problem\01.Nplus1Problem.csproj", "{C02E78E1-2246-4D51-828D-22EA6C980FD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.ToListProblem", "ToListProblem\02.ToListProblem.csproj", "{FEFD00AE-091F-4A50-BFBE-28B3F88F0BE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C02E78E1-2246-4D51-828D-22EA6C980FD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C02E78E1-2246-4D51-828D-22EA6C980FD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C02E78E1-2246-4D51-828D-22EA6C980FD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEFD00AE-091F-4A50-BFBE-28B3F88F0BE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEFD00AE-091F-4A50-BFBE-28B3F88F0BE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEFD00AE-091F-4A50-BFBE-28B3F88F0BE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEFD00AE-091F-4A50-BFBE-28B3F88F0BE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

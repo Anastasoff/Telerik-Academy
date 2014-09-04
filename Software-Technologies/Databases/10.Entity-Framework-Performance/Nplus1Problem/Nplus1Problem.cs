@@ -5,7 +5,7 @@
     using System.Linq;
     using TelerikAcademy.Models;
 
-    public class Program
+    public class Nplus1Problem
     {
         public static void Main()
         {
@@ -32,7 +32,7 @@
 
         public static void SelectAllEmployeesFromDbWithProblem(TelerikAcademyDbContext db)
         {
-            int i = 0;
+            int i = 1;
             var sw = Stopwatch.StartNew();
             foreach (var empl in db.Employees)
             {
@@ -49,7 +49,7 @@
 
         public static void SelectAllEmployeesFromDbWithInclude(TelerikAcademyDbContext db)
         {
-            int i = 0;
+            int i = 1;
             var sw = Stopwatch.StartNew();
             var query = db.Employees
                 .Include("Department")
@@ -69,7 +69,7 @@
 
         public static void SelectAllEmployeesFromDbWithoProjection(TelerikAcademyDbContext db)
         {
-            int i = 0;
+            int i = 1;
             var sw = Stopwatch.StartNew();
             var query = db.Employees
                 .Select(empl => new

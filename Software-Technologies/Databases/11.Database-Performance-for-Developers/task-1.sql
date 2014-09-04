@@ -1,3 +1,6 @@
+-- Create a table in SQL Server with 10 000 000 log entries (date + text). 
+-- Search in the table by date range. Check the speed (without caching).
+
 USE [master]
 GO
 
@@ -18,7 +21,7 @@ CREATE TABLE Dates(
 )
 GO
 
---
+-- EXECUTE FROM HERE IF TABLE EXISTS
 
 SET NOCOUNT ON
 DECLARE @Rows int = 1000
@@ -58,4 +61,5 @@ SELECT COUNT(*) AS [Rows Count] FROM Dates
 
 CHECKPOINT; DBCC DROPCLEANBUFFERS;
 
+-- IF TABLE Dates NEEDS TO BE CLEARED
 -- DELETE FROM Dates

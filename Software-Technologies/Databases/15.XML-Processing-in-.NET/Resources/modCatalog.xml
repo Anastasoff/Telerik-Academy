@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<catalog>
+  <album>
+    <name>The Dark Side of the Moon</name>
+    <artist>Pink Floyd</artist>
+    <year>1973</year>
+    <producer>Pink Floyd</producer>
+    <price>4.99</price>
+    <songs>
+      <song>
+        <title>Breathe</title>
+        <duration>2.46</duration>
+      </song>
+    </songs>
+  </album>
+  <album>
+    <name>Back in Black</name>
+    <artist>AC/DC</artist>
+    <year>1980</year>
+    <producer>Robert John "Mutt" Lange</producer>
+    <price>4.49</price>
+    <songs>
+      <song>
+        <title>Hells Bells</title>
+        <duration>5.13</duration>
+      </song>
+      <song>
+        <title>Shoot the Thrill</title>
+        <duration>5.18</duration>
+      </song>
+    </songs>
+  </album>
+</catalog>

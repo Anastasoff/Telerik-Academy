@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<persons>
+  <person>
+    <name>Ivaylo Kenov</name>
+    <address>Kyustendil</address>
+    <phone>0888-12-34-56</phone>
+  </person>
+  <person>
+    <name>Doncho Minkov</name>
+    <address>Varna</address>
+    <phone>0898-21-43-65</phone>
+  </person>
+  <person>
+    <name>Nikolay Kostov</name>
+    <address>Sofia</address>
+    <phone>0878-65-43-21</phone>
+  </person>
+</persons>

@@ -5,7 +5,7 @@
     using System;
     using System.Text;
 
-    public class Program
+    public class ConsoleClient
     {
         private static Random rnd = new Random();
         private static ATMDbContext db = new ATMDbContext();

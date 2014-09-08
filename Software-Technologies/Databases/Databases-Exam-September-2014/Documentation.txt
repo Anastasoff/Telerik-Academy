@@ -1,0 +1,17 @@
+Connection string for "Company" database: .\ (I'm using MSSQLSERVER)
+
+Connection string for "Cars" database: .\ (I'm using MSSQLSERVER)
+
+Relationships for "Company" database: (first-table : second-table - type of relationship)
+	Employees : Employees - one-to-one
+	Employees : Departments - many-to-one
+	Employees : Reports - one-to-many
+	Employees : Projects - many-to-many
+
+Relationships for "Cars" database: (first-table : second-table - type of relationship)
+	Cars : Dealers - many-to-one
+	Cars : Manufacturers - many-to-one
+	Dealers : Cities - many-to-one
+
+Query files: 
+	.\Company\Queries\

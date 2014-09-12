@@ -5,10 +5,11 @@ Telerik Academy
 ##### Homeworks and projects
 
 #### Team Projects
-  1. <b>[Table tennis - C# Fundamentals] (https://github.com/Anastasoff/Telerik-Academy/tree/master/TeamProjects/01.TableTennis)</b>
-  2. <b>[Football Stats - C# OOP] (https://github.com/Anastasoff/Telerik-Academy/tree/master/TeamProjects/02.FootballStats)</b>
-  3. <b>[Popcorn - JavaScript UI] (https://github.com/nzhul/Popcorn-Kintaro)</b>
-  4. <b>[Minesweeper - High-Quality Code] (https://github.com/Anastasoff/Minesweeper)</b>
+ 1. <b>[Table tennis - C# Fundamentals] (https://github.com/Anastasoff/Telerik-Academy/tree/master/TeamProjects/01.TableTennis)</b>
+ 2. <b>[Football Stats - C# OOP] (https://github.com/Anastasoff/Telerik-Academy/tree/master/TeamProjects/02.FootballStats)</b>
+ 3. <b>[Popcorn - JavaScript UI] (https://github.com/nzhul/Popcorn-Kintaro)</b>
+ 4. <b>[Minesweeper - High-Quality Code] (https://github.com/Anastasoff/Minesweeper)</b>
+ 5. <b>[AndOneConstructions - Databases] (https://github.com/diana-stancheva/TeamLich)</b> 
 
 #### Programming
  1.  <b>[C# Fundamentals] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharp-Fundamentals)</b>
@@ -23,3 +24,6 @@ Telerik Academy
  4. <b>[JavaScript DOM and UI] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/JavaScript-DOM-And-UI)</b>
  5. <b>[JavaScript OOP] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/JavaScript-OOP)</b>
  6. <b>[JavaScript Apps] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/JavaScript-Apps)</b>
+
+### Software Technologies
+ 1. <b>[Databases] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Software-Technologies/Databases)</b>

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineMarket", "OnlineMarket\OnlineMarket.csproj", "{00476174-DF53-4253-BECB-97F328CEAEB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portals", "Portals\Portals.csproj", "{8C73014B-C66D-4A2F-9B61-7C69C346BE94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GirlsGoneWild", "GirlsGoneWild\GirlsGoneWild.csproj", "{ACAFE2AF-805B-4422-85B2-8F7C568BF006}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00476174-DF53-4253-BECB-97F328CEAEB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00476174-DF53-4253-BECB-97F328CEAEB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00476174-DF53-4253-BECB-97F328CEAEB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00476174-DF53-4253-BECB-97F328CEAEB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C73014B-C66D-4A2F-9B61-7C69C346BE94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C73014B-C66D-4A2F-9B61-7C69C346BE94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C73014B-C66D-4A2F-9B61-7C69C346BE94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C73014B-C66D-4A2F-9B61-7C69C346BE94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACAFE2AF-805B-4422-85B2-8F7C568BF006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACAFE2AF-805B-4422-85B2-8F7C568BF006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACAFE2AF-805B-4422-85B2-8F7C568BF006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACAFE2AF-805B-4422-85B2-8F7C568BF006}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

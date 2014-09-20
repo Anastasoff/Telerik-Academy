@@ -119,6 +119,35 @@
         }
 
         [HttpPost]
+        public IHttpActionResult AddArtist(int id, int artistId)
+        {
+            var existing = this.data
+                .Albums
+                .All()
+                .FirstOrDefault(a => a.AlbumID == id);
+
+            if (existing == null)
+            {
+                return this.NotFound();
+            }
+
+            var artist = this.data
+                .Artists
+                .All()
+                .FirstOrDefault(s => s.ArtistID == artistId);
+
+            if (artist == null)
+            {
+                return this.NotFound();
+            }
+
+            existing.Artists.Add(artist);
+            this.data.SaveChanges();
+
+            return this.Ok();
+        }
+
+        [HttpPost]
         public IHttpActionResult AddSong(int id, int songId)
         {
             var existing = this.data.Albums
@@ -134,6 +163,11 @@
                 .Songs
                 .All()
                 .FirstOrDefault(s => s.SongID == songId);
+
+            if (song == null)
+            {
+                return this.NotFound();
+            }
 
             existing.Songs.Add(song);
             this.data.SaveChanges();

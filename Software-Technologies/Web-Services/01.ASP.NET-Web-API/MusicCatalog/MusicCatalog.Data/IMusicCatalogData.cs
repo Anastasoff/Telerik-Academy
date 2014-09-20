@@ -12,5 +12,7 @@
         IRepository<Song> Songs { get; }
 
         int SaveChanges();
+
+        void Dispose();
     }
 }

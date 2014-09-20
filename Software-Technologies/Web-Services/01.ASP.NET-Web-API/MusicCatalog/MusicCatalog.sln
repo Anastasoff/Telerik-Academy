@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicCatalog.Models", "Musi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicCatalog.Data", "MusicCatalog.Data\MusicCatalog.Data.csproj", "{67D15783-C33F-4185-98D3-F20447A5FC2D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicCatalog.Services", "MusicCatalog.Services\MusicCatalog.Services.csproj", "{8AFAD79B-B573-4F4F-9575-B73ACD6DC4CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{67D15783-C33F-4185-98D3-F20447A5FC2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67D15783-C33F-4185-98D3-F20447A5FC2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67D15783-C33F-4185-98D3-F20447A5FC2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AFAD79B-B573-4F4F-9575-B73ACD6DC4CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AFAD79B-B573-4F4F-9575-B73ACD6DC4CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AFAD79B-B573-4F4F-9575-B73ACD6DC4CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AFAD79B-B573-4F4F-9575-B73ACD6DC4CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

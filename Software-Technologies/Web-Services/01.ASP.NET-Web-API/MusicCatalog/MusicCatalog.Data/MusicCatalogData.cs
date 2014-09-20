@@ -50,6 +50,11 @@
             return this.context.SaveChanges();
         }
 
+        public void Dispose()
+        {
+            this.context.Dispose();
+        }
+
         private IRepository<T> GetRepository<T>() where T : class
         {
             var typeOfRepository = typeof(T);

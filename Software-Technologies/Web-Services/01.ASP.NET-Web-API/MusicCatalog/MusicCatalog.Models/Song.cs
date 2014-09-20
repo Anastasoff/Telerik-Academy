@@ -1,7 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace MusicCatalog.Models
+﻿namespace MusicCatalog.Models
 {
+    using System.ComponentModel.DataAnnotations;
+
     public class Song
     {
         [Key]
@@ -14,7 +14,7 @@ namespace MusicCatalog.Models
 
         public int Year { get; set; }
 
-        public Gender Gender { get; set; }
+        public string Genre { get; set; }
 
         public int AlbumID { get; set; }
 

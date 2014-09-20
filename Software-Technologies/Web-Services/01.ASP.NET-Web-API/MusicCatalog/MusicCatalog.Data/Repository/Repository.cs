@@ -10,10 +10,10 @@
         private IMusicCatalogDbContext context;
         private IDbSet<T> set;
 
-        public Repository()
-            : this(new MusicCatalogDbContext())
-        {
-        }
+        //public Repository()
+        //    : this(new MusicCatalogDbContext())
+        //{
+        //}
 
         public Repository(IMusicCatalogDbContext context)
         {

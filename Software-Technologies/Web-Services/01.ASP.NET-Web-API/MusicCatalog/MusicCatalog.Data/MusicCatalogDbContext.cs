@@ -27,5 +27,10 @@ namespace MusicCatalog.Data
         {
             return base.SaveChanges();
         }
+
+        public new void Dispose()
+        {
+            base.Dispose();
+        }
     }
 }

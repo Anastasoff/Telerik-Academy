@@ -10,6 +10,7 @@ Telerik Academy
  3. <b>[Popcorn - JavaScript UI] (https://github.com/nzhul/Popcorn-Kintaro)</b>
  4. <b>[Minesweeper - High-Quality Code] (https://github.com/Anastasoff/Minesweeper)</b>
  5. <b>[AndOneConstructions - Databases] (https://github.com/diana-stancheva/TeamLich)</b> 
+ 6. <b>[DefinitelyNotGallery - Web Services] (https://github.com/WebServicesAndCloudTeamCurrant)</b>
 
 #### Programming
  1.  <b>[C# Fundamentals] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharp-Fundamentals)</b>
@@ -23,7 +24,8 @@ Telerik Academy
  3. <b>[JavaScript Fundamentals] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/JavaScript-Fundamentals)</b>
  4. <b>[JavaScript DOM and UI] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/JavaScript-DOM-And-UI)</b>
  5. <b>[JavaScript OOP] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/JavaScript-OOP)</b>
- 6. <b>[JavaScript Apps] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/JavaScript-Apps)</b>
+ 6. <b>[JavaScript Applications] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/JavaScript-Apps)</b>
 
 ### Software Technologies
  1. <b>[Databases] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Software-Technologies/Databases)</b>
+ 2. <b>[Web Services] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Software-Technologies/Web-Services)</b>

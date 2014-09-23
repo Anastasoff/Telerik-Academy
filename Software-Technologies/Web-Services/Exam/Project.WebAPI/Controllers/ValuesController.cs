@@ -7,6 +7,7 @@ using System.Web.Http;
 
 namespace Project.WebAPI.Controllers
 {
+    // TODO: delete me
     [Authorize]
     public class ValuesController : ApiController
     {

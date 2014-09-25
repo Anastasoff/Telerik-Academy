@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Models", "Project.Models\Project.Models.csproj", "{3991FACA-B578-44EE-B54D-C922C254AA93}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BullsAndCows.Models", "BullsAndCows.Models\BullsAndCows.Models.csproj", "{3991FACA-B578-44EE-B54D-C922C254AA93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Data", "Project.Data\Project.Data.csproj", "{CE1E37FD-06F6-4E8E-983C-E4721B75C24E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BullsAndCows.Data", "BullsAndCows.Data\BullsAndCows.Data.csproj", "{CE1E37FD-06F6-4E8E-983C-E4721B75C24E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.WCF", "Project.WCF\Project.WCF.csproj", "{2A81E205-6327-4A64-BF31-6FFBE26FBBA5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BullsAndCows.WCF", "BullsAndCows.WCF\BullsAndCows.WCF.csproj", "{2A81E205-6327-4A64-BF31-6FFBE26FBBA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.WebAPI", "Project.WebAPI\Project.WebAPI.csproj", "{A174C068-37A8-44FC-AEA7-5E0CB1BE3848}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BullsAndCows.WebAPI", "BullsAndCows.WebAPI\BullsAndCows.WebAPI.csproj", "{A174C068-37A8-44FC-AEA7-5E0CB1BE3848}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.WebAPI.Tests", "Project.WebAPI.Tests\Project.WebAPI.Tests.csproj", "{0A726035-A67D-484C-B747-4960F829EF79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BullsAndCows.Game.Logic", "BullsAndCows.Game.Logic\BullsAndCows.Game.Logic.csproj", "{A283710C-5AC2-41C3-8B55-9A403DAAA3DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{A174C068-37A8-44FC-AEA7-5E0CB1BE3848}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A174C068-37A8-44FC-AEA7-5E0CB1BE3848}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A174C068-37A8-44FC-AEA7-5E0CB1BE3848}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0A726035-A67D-484C-B747-4960F829EF79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0A726035-A67D-484C-B747-4960F829EF79}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0A726035-A67D-484C-B747-4960F829EF79}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0A726035-A67D-484C-B747-4960F829EF79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A283710C-5AC2-41C3-8B55-9A403DAAA3DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A283710C-5AC2-41C3-8B55-9A403DAAA3DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A283710C-5AC2-41C3-8B55-9A403DAAA3DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A283710C-5AC2-41C3-8B55-9A403DAAA3DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

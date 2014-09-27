@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    
     using BugLogger.Data.Repositories;
     using BugLogger.Models;
 
@@ -13,7 +14,6 @@
         public BugLoggerData()
             : this(new BugLoggerDbContext())
         {
-
         }
 
         public BugLoggerData(IBugLoggerDbContext context)
@@ -45,7 +45,7 @@
                 this.repositories.Add(typeOfModel, Activator.CreateInstance(type, this.context));
             }
 
-            return (IGenericRepository<T>) this.repositories[typeOfModel];
+            return (IGenericRepository<T>)this.repositories[typeOfModel];
         }
     }
 }

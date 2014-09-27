@@ -1,14 +1,15 @@
 ﻿namespace BugLogger.Tests.ControllersTests
 {
-    using System;
     using System.Linq;
     using System.Web.Http.Results;
+    
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    
     using BugLogger.Data.Repositories;
     using BugLogger.Models;
     using BugLogger.Services.Controllers;
     using BugLogger.Services.Models;
     using BugLogger.Tests.RepositoriesTests.BugRepositoryMock;
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
     public class BugsControllerTests

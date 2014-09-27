@@ -1,6 +1,5 @@
 ﻿namespace BugLogger.Data.Repositories
 {
-    using System;
     using System.Data.Entity;
     using System.Linq;
 
@@ -10,9 +9,8 @@
         private IDbSet<T> set;
 
         public GenericRepository()
-            :this(new BugLoggerDbContext())
+            : this(new BugLoggerDbContext())
         {
-
         }
 
         public GenericRepository(IBugLoggerDbContext context)

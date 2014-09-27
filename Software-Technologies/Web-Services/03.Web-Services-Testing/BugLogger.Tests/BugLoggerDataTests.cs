@@ -1,11 +1,11 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using BugLogger.Data;
-using BugLogger.Models;
-using BugLogger.Data.Repositories;
-
-namespace BugLogger.Tests
+﻿namespace BugLogger.Tests
 {
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    
+    using BugLogger.Data;
+    using BugLogger.Data.Repositories;
+    using BugLogger.Models;
+
     [TestClass]
     public class BugLoggerDataTests
     {

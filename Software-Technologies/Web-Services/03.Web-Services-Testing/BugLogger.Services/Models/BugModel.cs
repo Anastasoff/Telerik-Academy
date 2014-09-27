@@ -1,8 +1,9 @@
 ﻿namespace BugLogger.Services.Models
 {
     using System;
-    using BugLogger.Models;
     using System.Linq.Expressions;
+    
+    using BugLogger.Models;
 
     public class BugModel
     {

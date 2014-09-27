@@ -2,11 +2,13 @@
 {
     using System;
     using System.Net;
+
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
     using BugLogger.Data.Repositories;
     using BugLogger.Models;
     using BugLogger.Services.Models;
     using BugLogger.Tests.RepositoriesTests.BugRepositoryMock;
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
     public class BugsControllerIntegrationTests
@@ -77,16 +79,6 @@
 
             Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode);
         }
-
-        //[TestMethod]
-        //public void PutNewBug_WhenIdValid_ShouldReturnOk()
-        //{
-        //    var bug = this.GetValidBug();
-        //    var bugId = 1;
-        //    var response = server.CreatePutRequest("api/bugs/update" + bugId, bug);
-
-        //    Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
-        //}
 
         [TestMethod]
         public void AfterDate_ShouldReturnOkAndAllBugsAfterDate()

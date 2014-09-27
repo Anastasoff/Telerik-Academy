@@ -1,6 +1,7 @@
 ﻿namespace BugLogger.Data
 {
     using System.Data.Entity;
+
     using BugLogger.Data.Migrations;
     using BugLogger.Models;
 

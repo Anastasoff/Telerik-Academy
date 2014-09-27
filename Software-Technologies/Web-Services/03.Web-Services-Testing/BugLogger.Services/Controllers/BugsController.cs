@@ -3,6 +3,7 @@
     using System;
     using System.Linq;
     using System.Web.Http;
+    
     using BugLogger.Data;
     using BugLogger.Data.Repositories;
     using BugLogger.Models;
@@ -114,23 +115,27 @@
                 case "pending":
                     bugStatus = BugStatus.Pending;
                     break;
+
                 case "fixed":
                     bugStatus = BugStatus.Fixed;
                     break;
+
                 case "fortesting":
                     bugStatus = BugStatus.ForTesting;
                     break;
+
                 case "assigned":
                     bugStatus = BugStatus.Assigned;
                     break;
+
                 default:
                     return Ok();
             }
 
             var bugs = this.bugsRepository
-                                .All()
-                                .Where(b => b.Status == bugStatus)
-                                .Select(BugModel.FromBug);
+                           .All()
+                           .Where(b => b.Status == bugStatus)
+                           .Select(BugModel.FromBug);
 
             return Ok(bugs);
         }

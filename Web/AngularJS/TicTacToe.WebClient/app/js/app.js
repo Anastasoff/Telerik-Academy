@@ -1,24 +1,47 @@
 'use strict';
 
-var app = angular.module('myApp', ['ngRoute', 'ngResource', 'ngCookies']).
-    config(['$routeProvider', function ($routeProvider) {
+// Declare app level module which depends on filters, and services
+var ticTacToeApp = angular.module('ticTacToeApp', ['ngRoute', 'ngCookies', 'ngResource'])
+    .config(function ($routeProvider) {
         $routeProvider
-            .when('/', {
-                templateUrl: 'views/partials/home.html'
+            .when('/home', {
+                templateUrl: '../templates/partials/home.html',
+                controller: 'HomeCtrl'
+            })
+            .when('/play', {
+                templateUrl: '../templates/partials/play.html',
+                controller: 'PlayCtrl'
+            })
+            .when('/how-to-play', {
+                templateUrl: '../templates/partials/how-to-play.html',
+                controller: 'HowToPlayCtrl'
+            })
+            .when('/high-scores', {
+                templateUrl: '../templates/partials/high-scores.html',
+                controller: 'HighScoresCtrl'
+            })
+            .when('/login', {
+                templateUrl: '../templates/partials/account/login.html',
+                controller: 'LoginCtrl'
             })
             .when('/register', {
-                templateUrl: 'views/partials/register.html',
-                controller: 'SignUpCtrl'
+                templateUrl: '../templates/partials/account/register.html',
+                controller: 'RegisterCtrl'
             })
-            .when('/partial1', {
-                templateUrl: 'views/partials/partial1.html',
-                controller: 'MyCtrl1'
+            .when('/game/:id', {
+                templateUrl: '../templates/partials/game/game.html',
+                controller: 'GameCtrl'
             })
-            .when('/partial2', {
-                templateUrl: 'views/partials/partial2.html',
-                controller: 'MyCtrl2'
+            .when('/creategame', {
+                templateUrl: '../templates/partials/game/create-game.html',
+                controller: 'CreateGameCtrl'
             })
-            .otherwise({ redirectTo: '/' });
-    }])
-    .value('toastr', toastr)
-    .constant('baseServiceUrl', 'http://localhost:4444');
+            .when('/users', {
+                templateUrl: '../templates/partials/users.html',
+                controller: 'UsersCtrl'
+            })
+            .otherwise({
+                redirectTo: '/home'
+            });
+    })
+    .constant('author', 'Zdravko Georgiev');

@@ -1,19 +1,19 @@
-'use strict';
-
-app.factory('identity', ['$cookieStore', function ($cookieStore) {
+ticTacToeApp.factory('identity',  function($cookieStore) {
     var cookieStorageUserKey = 'currentApplicationUser';
-
+    var localStorageUsernameKey = 'username';
     var currentUser;
+
     return {
-        getCurrentUser: function () {
-            var savedUser = $cookieStore.get(cookieStorageUserKey);
-            if (savedUser) {
-                return savedUser;
+        getCurrentUser: function() {
+            var userFromStorage = $cookieStore.get(cookieStorageUserKey);
+
+            if (userFromStorage) {
+                return userFromStorage
             }
 
             return currentUser;
         },
-        setCurrentUser: function (user) {
+        setCurrentUser: function(user) {
             if (user) {
                 $cookieStore.put(cookieStorageUserKey, user);
             }
@@ -23,8 +23,14 @@ app.factory('identity', ['$cookieStore', function ($cookieStore) {
 
             currentUser = user;
         },
-        isAuthenticated: function () {
+        setCurrentUsername: function(username) {
+            localStorage.setItem(localStorageUsernameKey, username);
+        },
+        getCurrentUsername: function() {
+            return localStorage.getItem(localStorageUsernameKey);
+        },
+        isAuthenticated: function() {
             return !!this.getCurrentUser();
         }
     }
-}]);
+});

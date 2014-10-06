@@ -1,6 +1,5 @@
 'use strict';
 
-// Declare app level module which depends on filters, and services
 var ticTacToeApp = angular.module('ticTacToeApp', ['ngRoute', 'ngCookies', 'ngResource'])
     .config(function ($routeProvider) {
         $routeProvider
@@ -44,4 +43,4 @@ var ticTacToeApp = angular.module('ticTacToeApp', ['ngRoute', 'ngCookies', 'ngRe
                 redirectTo: '/home'
             });
     })
-    .constant('author', 'Zdravko Georgiev');
+    .constant('author', 'Pesho');

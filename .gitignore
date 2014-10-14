@@ -95,8 +95,12 @@ AppPackages/
 ## WebStorm
 .idea/
 
+# npm folders
 node_modules/
+
+# bower folders
 bower_components/
+[Vv]endor/
 
 # Others
 Thumbs.db

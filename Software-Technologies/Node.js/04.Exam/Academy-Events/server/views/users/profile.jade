@@ -1,0 +1,30 @@
+extends ../shared/layout
+
+block main-content
+    br
+    form.form-horizontal(method="post")
+        fieldset
+            legend Profile
+            .form-group
+                label.col-lg-2.control-label(for="phoneNumber") Phone Number
+                .col-lg-10
+                    input.form-control(id="phoneNumber" type="text" name="phoneNumber" placeholder="Phone Number")
+            .form-group
+                label.col-lg-2.control-label(for="facebook") Facebook
+                .col-lg-10
+                    input.form-control(id="facebook" type="text" name="facebook" placeholder="Facebook")
+            .form-group
+                label.col-lg-2.control-label(for="googlePlus") Google+
+                .col-lg-10
+                    input.form-control(id="googlePlus" type="text" name="googlePlus" placeholder="Google+")
+            .form-group
+                label.col-lg-2.control-label(for="linkedIn") LinkedIn
+                .col-lg-10
+                    input.form-control(id="linkedIn" type="text" name="linkedIn" placeholder="LinkedIn")
+            .form-group
+                label.col-lg-2.control-label(for="twitter") Twiter
+                .col-lg-10
+                    input.form-control(id="twitter" type="text" name="twitter" placeholder="Twitter")
+
+            .form-group
+                input.btn.btn-primary(type="submit" value="Update profile")

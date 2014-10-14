@@ -1,0 +1,38 @@
+extends ../shared/layout
+
+block main-content
+    br
+    form.form-horizontal(method="post")
+        fieldset
+            legend Register
+            .form-group
+                label.col-lg-2.control-label(for="username") Username
+                .col-lg-10
+                    input.form-control(id="username" type="text" name="username" placeholder="Username")
+            .form-group
+                label.col-lg-2.control-label(for="password") Password
+                .col-lg-10
+                    input.form-control(id="password" type="password" name="password" placeholder="Password")
+            .form-group
+                label.col-lg-2.control-label(for="confirm-password") Confirm Password
+                .col-lg-10
+                    input.form-control(id="confirm-password" type="password" name="confirmPassword" placeholder="Confirm Password")
+            .form-group
+                label.col-lg-2.control-label(for="firstName") First Name
+                .col-lg-10
+                    input.form-control(id="firstName" type="text" name="firstName" placeholder="First Name")
+            .form-group
+                label.col-lg-2.control-label(for="lastName") Last Name
+                .col-lg-10
+                    input.form-control(id="lastName" type="text" name="lastName" placeholder="Last Name")
+            .form-group
+                label.col-lg-2.control-label(for="email") Email
+                .col-lg-10
+                    input.form-control(id="email" type="email" name="email" placeholder="Email")
+            .form-group
+                label.col-lg-2.control-label(for="avatar") Avatar
+                .col-lg-10
+                    input(id="avatar" type="file" name="avatar")
+
+            .form-group
+                input.btn.btn-primary(type="submit" value="Register")

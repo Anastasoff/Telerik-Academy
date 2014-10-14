@@ -1,0 +1,42 @@
+extends ../shared/layout
+
+block main-content
+    br
+    form.form-horizontal(method="post")
+        fieldset
+            legend Create Event
+            .form-group
+                label.col-lg-2.control-label(for="title") Title
+                .col-lg-10
+                    input.form-control(id="title" type="text" name="title" placeholder="Title")
+            .form-group
+                label.col-lg-2.control-label(for="description") Description
+                .col-lg-10
+                    textarea.form-control(id="description" row="3" name="description" placeholder="Description")
+            .form-group
+                label.col-lg-2.control-label(for="latitude") Latitude
+                .col-lg-10
+                    input.form-control(id="latitude" type="text" name="latitude" placeholder="Latitude")
+            .form-group
+                label.col-lg-2.control-label(for="longitude") Longitude
+                .col-lg-10
+                    input.form-control(id="longitude" type="text" name="longitude" placeholder="Longitude")
+            .form-group
+                label.col-lg-2.control-label(for="eventDate") Event Date
+                .col-lg-10
+                    input.form-control(id="eventDate" type="date" name="eventDate" placeholder="Event Date")
+            .form-group
+                label.col-lg-2.control-label(for="category") Category
+                .col-lg-10
+                    input.form-control(id="category" type="text" name="category" placeholder="Category")
+            .form-group
+                label.col-lg-2.control-label(for="initiative") Initiative
+                .col-lg-10
+                    input.form-control(id="initiative" type="text" name="initiative" placeholder="Initiative")
+            .form-group
+                label.col-lg-2.control-label(for="season") Season
+                .col-lg-10
+                    input.form-control(id="season" type="text" name="season" placeholder="Season")
+
+            .form-group
+                input.btn.btn-primary(type="submit" value="Create")

@@ -11,6 +11,7 @@ Telerik Academy
  4. <b>[Minesweeper - High-Quality Code] (https://github.com/Anastasoff/Minesweeper)</b>
  5. <b>[AndOneConstructions - Databases] (https://github.com/diana-stancheva/TeamLich)</b> 
  6. <b>[DefinitelyNotGallery - Web Services] (https://github.com/WebServicesAndCloudTeamCurrant)</b>
+ 7. <b>[Drasti.bg - Node.js] (https://github.com/Nodejs-Team-Hestia)</b>
 
 #### Programming
  1.  <b>[C# Fundamentals] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharp-Fundamentals)</b>

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileUpload", "FileUpload\FileUpload.csproj", "{EB6723F9-18A2-4BB0-8F98-CE7705E28A29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileUpload.Model", "FileUpload.Model\FileUpload.Model.csproj", "{F525E601-33C3-4CE0-A8EC-94F3C8DA5240}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileUpload.Data", "FileUpload.Data\FileUpload.Data.csproj", "{8901F496-C11C-48C6-A313-9BCBBFBD606C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB6723F9-18A2-4BB0-8F98-CE7705E28A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB6723F9-18A2-4BB0-8F98-CE7705E28A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB6723F9-18A2-4BB0-8F98-CE7705E28A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB6723F9-18A2-4BB0-8F98-CE7705E28A29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F525E601-33C3-4CE0-A8EC-94F3C8DA5240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F525E601-33C3-4CE0-A8EC-94F3C8DA5240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F525E601-33C3-4CE0-A8EC-94F3C8DA5240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F525E601-33C3-4CE0-A8EC-94F3C8DA5240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8901F496-C11C-48C6-A313-9BCBBFBD606C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8901F496-C11C-48C6-A313-9BCBBFBD606C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8901F496-C11C-48C6-A313-9BCBBFBD606C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8901F496-C11C-48C6-A313-9BCBBFBD606C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1.BrowserAndIp", "BrowserAndIp\1.BrowserAndIp.csproj", "{2516299E-E6EE-41D9-94F3-30284E6DC9BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.SesionObjectContent", "SesionObjectContent\2.SesionObjectContent.csproj", "{377140FC-68FD-4702-9D10-B1745686B73C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.ExchangeUserCookie", "ExchangeUserCookie\3.ExchangeUserCookie.csproj", "{7225094C-3EAF-42D2-B2A1-D9FB286D3E93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.DeleteTheViewState", "DeleteTheViewState\4.DeleteTheViewState.csproj", "{82489573-E20B-4D58-B782-7F981CB5D4EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.GraficWebCounter", "GraficWebCounter\5.GraficWebCounter.csproj", "{54D0C1B2-EEF2-44D3-B96D-DEBBABF49FA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6.GraficWebCounterDataBase", "GraficWebCounterDataBase\6.GraficWebCounterDataBase.csproj", "{DC4AA8A6-9488-4DAF-9362-9B4DCF8619DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2516299E-E6EE-41D9-94F3-30284E6DC9BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2516299E-E6EE-41D9-94F3-30284E6DC9BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2516299E-E6EE-41D9-94F3-30284E6DC9BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2516299E-E6EE-41D9-94F3-30284E6DC9BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{377140FC-68FD-4702-9D10-B1745686B73C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{377140FC-68FD-4702-9D10-B1745686B73C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{377140FC-68FD-4702-9D10-B1745686B73C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{377140FC-68FD-4702-9D10-B1745686B73C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7225094C-3EAF-42D2-B2A1-D9FB286D3E93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7225094C-3EAF-42D2-B2A1-D9FB286D3E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7225094C-3EAF-42D2-B2A1-D9FB286D3E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7225094C-3EAF-42D2-B2A1-D9FB286D3E93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82489573-E20B-4D58-B782-7F981CB5D4EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82489573-E20B-4D58-B782-7F981CB5D4EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82489573-E20B-4D58-B782-7F981CB5D4EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82489573-E20B-4D58-B782-7F981CB5D4EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54D0C1B2-EEF2-44D3-B96D-DEBBABF49FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54D0C1B2-EEF2-44D3-B96D-DEBBABF49FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54D0C1B2-EEF2-44D3-B96D-DEBBABF49FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54D0C1B2-EEF2-44D3-B96D-DEBBABF49FA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC4AA8A6-9488-4DAF-9362-9B4DCF8619DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC4AA8A6-9488-4DAF-9362-9B4DCF8619DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC4AA8A6-9488-4DAF-9362-9B4DCF8619DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC4AA8A6-9488-4DAF-9362-9B4DCF8619DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

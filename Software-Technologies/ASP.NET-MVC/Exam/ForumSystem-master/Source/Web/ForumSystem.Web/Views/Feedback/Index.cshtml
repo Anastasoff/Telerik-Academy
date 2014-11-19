@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="col-lg-3">
+        @Html.ActionLink("Send Feedback", "Create", "Feedback", null, new { @class = "btn btn-primary btn-lg btn-block" })
+    </div>
+    @if (Request.IsAuthenticated)
+    {
+        <div class="col-lg-3">
+            @Html.ActionLink("See All Feedbacks", "Display", "PageableFeedbackList", null, new { @class = "btn btn-primary btn-lg btn-block" })
+        </div>
+    }
+</div>
+
+
+

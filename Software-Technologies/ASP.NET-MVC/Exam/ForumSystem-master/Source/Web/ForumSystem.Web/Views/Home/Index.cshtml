@@ -1,0 +1,50 @@
+﻿@model IEnumerable<ForumSystem.Web.ViewModels.Home.IndexBlogPostViewModel>
+@{
+    ViewBag.Title = "Home Page";
+    var ajaxOptions = new AjaxOptions()
+    {
+        UpdateTargetId = "votes",
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "POST"
+    };
+}
+
+@*@using (Ajax.BeginForm("PostVote", "Votes", ajaxOptions))
+    {*@
+<div class="container">
+    @foreach (var post in Model)
+    {
+        <div class="row">
+            <div class="col-md-2">
+                <div class="well text-center">
+                    <div class="row"><input type="submit" id="voteUp" value="Up" /> 0</div>
+                    <div class="row"><input type="submit" id="voteDown" value="Down" /> votes</div>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="well text-center">
+                    <div class="row">0</div>
+                    <div class="row">answers</div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <h4>
+                        <a href="/questions/@post.Id/@post.Title">@post.Title</a>
+                    </h4>
+                </div>
+                <div class="row">
+                    <p>asked @((System.DateTime.Now - post.CreatedOn).Minutes) minutes ago in <a href="#">Category.Name</a> by <a href="#">@(post.Author.UserName)</a> (40 points)</p>
+                </div>
+                <div class="row">
+                    @foreach (var tag in post.Tags)
+                    {
+                        <span class="label label-default">@tag.Name</span>
+                    }
+                </div>
+            </div>
+        </div>
+        <hr />
+    }
+</div>
+@*}*@

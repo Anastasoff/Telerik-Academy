@@ -1,0 +1,28 @@
+﻿﻿@using ForumSystem.Web.Areas.Administration.Controllers
+@using ForumSystem.Web.Areas.Administration.ViewModels
+@model IEnumerable<PostsViewModel>
+@{
+    const string ControllerName = "Posts";
+    ViewBag.Title = ControllerName;
+}
+<h2>@ViewBag.Title</h2>
+@(Html.Kendo()
+    .Grid<PostsViewModel>(Model)
+    .Name("grid")
+    .Columns(c =>
+    {
+        c.Bound(l => l.Author.UserName);
+        c.Bound(l => l.Title);
+        c.Bound(l => l.Content).Width(300);
+        c.Bound(l => l.CreatedOn);
+        c.Bound(l => l.ModifiedOn);
+        c.Bound(l => l.IsDeleted);
+    })
+    .Scrollable()
+    .Groupable()
+    .Sortable()
+    .Pageable(pageable => pageable
+        .Refresh(true)
+        .PageSizes(true)
+        .ButtonCount(5))
+)

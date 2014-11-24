@@ -16,6 +16,8 @@ Telerik Academy
 #### Personal Projects
  1. <b>[Your Workout - ASP.NET MVC] (https://github.com/Anastasoff/Your-Workout)</b>
 
+<br />
+
 #### Programming
  1.  <b>[C# Fundamentals] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharp-Fundamentals)</b>
  2.  <b>[C# OOP] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharp-OOP)</b>

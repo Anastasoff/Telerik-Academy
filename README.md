@@ -13,6 +13,9 @@ Telerik Academy
  6. <b>[DefinitelyNotGallery - Web Services] (https://github.com/WebServicesAndCloudTeamCurrant)</b>
  7. <b>[Drasti.bg - Node.js] (https://github.com/Nodejs-Team-Hestia)</b>
 
+#### Personal Projects
+ 1. <b>[Your Workout - ASP.NET MVC] (https://github.com/Anastasoff/Your-Workout)</b>
+
 #### Programming
  1.  <b>[C# Fundamentals] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharp-Fundamentals)</b>
  2.  <b>[C# OOP] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Programming/CSharp-OOP)</b>
@@ -26,7 +29,11 @@ Telerik Academy
  4. <b>[JavaScript DOM and UI] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/JavaScript-DOM-And-UI)</b>
  5. <b>[JavaScript OOP] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/JavaScript-OOP)</b>
  6. <b>[JavaScript Applications] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/JavaScript-Apps)</b>
+ 7. <b>[AngularJS] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Web/AngularJS)</b>
 
 ### Software Technologies
  1. <b>[Databases] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Software-Technologies/Databases)</b>
  2. <b>[Web Services] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Software-Technologies/Web-Services)</b>
+ 3. <b>[Node.js] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Software-Technologies/Node.js)</b>
+ 4. <b>[ASP.NET Web Forms] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Software-Technologies/ASP.NET-Web-Forms)</b>
+ 5. <b>[ASP.NET MVC] (https://github.com/Anastasoff/Telerik-Academy/tree/master/Software-Technologies/ASP.NET-MVC/Exam)</b>

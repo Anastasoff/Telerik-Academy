@@ -1,0 +1,72 @@
+body {
+  font-family: 'Comic Sans MS', sans-serif;
+  background: url('../images/green_gobbler.png') repeat;
+}
+
+#wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+button, h1 {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.sudoku-menu {
+  width: 50%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  button {
+    border: none;
+    font-size: 26px;
+    margin: 10px 5px;
+    padding: 5px 15px;
+  }
+
+  button:hover {
+    background: #919191;
+    color: #fff;
+    border: none;
+  }
+}
+
+.sudoku-container {
+  background-color: #fff;
+  border: 5px solid #666;
+  margin-left: auto;
+  margin-right: auto;
+
+  td {
+    margin: 0;
+  }
+
+  input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    padding: 0;
+    border: 1px #ccc solid;
+    background: transparent;
+  }
+
+  .sudoku-input-error {
+    background: #E8CF2A;
+  }
+
+  .valid-matrix {
+    border: 5px solid #7edb37;
+  }
+
+  .invalid-matrix {
+    border: 5px solid #DB0000;
+  }
+}
+
+.sudoku-section-one {
+  background: #ccc;
+}
